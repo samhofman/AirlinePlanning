@@ -45,7 +45,7 @@ for row in range(6,10):
         _row.append(S2.cell_value(row,col))
     airport_data.append(_row)
     
-### DEMAND PER WEEK: demand_pw ###    
+ ### DEMAND PER WEEK: demand_pw ###    
  
 demand_pw=[]
 for row in range(15,35):
@@ -80,3 +80,4 @@ for row in range(89,113):
     for col in range(2,26):
         _row.append(S2.cell_value(row,col))
     competition.append(_row)
+    
