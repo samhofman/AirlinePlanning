@@ -8,7 +8,7 @@ This is a temporary script file.
 import numpy as np
 from math import *
 
-from excel_data import*
+from excel_data import *
 
 
 
@@ -29,6 +29,7 @@ def distance(i,j):
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
     d= R * c
+    print d
     return;
 
 
