@@ -14,7 +14,7 @@ from excel_data import *
 
 ### AIRPORT DISTANCES ###
 
-def distance(i,j):
+def d(i,j):
     R = 6373.0
     
     lat_i = radians(airport_data[0][i])
@@ -28,12 +28,28 @@ def distance(i,j):
     a = sin(dlat / 2)**2 + cos(lat_i) * cos(lat_j) * sin(dlon / 2)**2
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
-    d= R * c
-    print d
+    d = R * c
     return;
 
 
+### DEMAND ###
+low_season = True
+high_season = True
 
+if low_season == True and high_season == True:
+    print "low or high season?"    
+
+
+def q(i,j):
+    if low_season == True:
+        q = demand_ls[i][j]
+    elif high_season == True:
+        q = demand_hs[i][j]
+    else:
+        q = demand[i][j]
     
+    print q    
+    return;
+
 
 
