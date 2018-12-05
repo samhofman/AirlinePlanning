@@ -14,6 +14,14 @@ wb = xl.load_workbook("Datasheet.xlsx", read_only=True)
 S1 = wb['General'] #Tab General
 S2 = wb['Group 6'] #Tab Group 6
 
+airport_data = []
+airports = []
+competition = []
+demand = []
+demand_hs = []
+demand_ls = []
+gdp_data = []
+pop_city = []
 
 ##### READ TAB 1 #####
 
@@ -27,6 +35,10 @@ gdp_data = np.array([[i.value for i in j] for j in S1['F4':'G27']])
 
 
 ##### READ TAB 2 #####
+
+### AIRPORTS ###
+
+airports = np.array([[i.value for i in j] for j in S2['C5':'Z5']])
 
 ### AIRPORT DATA: airport_data ###
 

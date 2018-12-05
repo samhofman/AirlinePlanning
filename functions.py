@@ -11,10 +11,13 @@ from math import *
 from excel_data import *
 
 
+### AIRPORT ###
 
-### AIRPORT DISTANCES ###
+nodes = len(airports[0])
 
-def d(i,j):
+# Distances
+
+def dist(i,j):
     R = 6373.0
     
     lat_i = radians(airport_data[0][i])
@@ -33,23 +36,30 @@ def d(i,j):
 
 
 ### DEMAND ###
-low_season = True
-high_season = True
+low_season = False
+high_season = False
 
 if low_season == True and high_season == True:
-    print "low or high season?"    
+    print "low or high season?"  
+    exit()
 
 
-def q(i,j):
+def demand(i,j):
     if low_season == True:
         q = demand_ls[i][j]
     elif high_season == True:
         q = demand_hs[i][j]
     else:
         q = demand[i][j]
-    
-    print q    
+     
     return;
 
 
-
+def cost_fact(i,j):
+    if i == 1 or j == 1:
+        c = 0.7
+    else:
+        c = 1
+    
+    return;
+    
