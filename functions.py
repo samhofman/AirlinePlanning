@@ -15,6 +15,10 @@ from excel_data import *
 
 nodes = len(airports[0])
 
+# Aircraft
+
+commod = 3              #different aircraft
+
 # Distances
 
 def dist(i,j):

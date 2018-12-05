@@ -13,6 +13,7 @@ wb = xl.load_workbook("Datasheet.xlsx", read_only=True)
 
 S1 = wb['General'] #Tab General
 S2 = wb['Group 6'] #Tab Group 6
+S3 = wb['AircraftSpecs'] #Tab AircraftSpecs
 
 airport_data = []
 airports = []
@@ -22,6 +23,7 @@ demand_hs = []
 demand_ls = []
 gdp_data = []
 pop_city = []
+
 
 ##### READ TAB 1 #####
 
@@ -60,3 +62,45 @@ demand_ls = np.array([[i.value for i in j] for j in S2['C64':'Z87']])
     
 competition = np.array([[i.value for i in j] for j in S2['C90':'Z113']])
     
+
+##### READ TAB 3 #####
+
+### SPEED: speed ###
+
+speed = np.array([[i.value for i in j] for j in S3['B2':'F2']])
+
+### SEATS: seats ###
+
+seats = np.array([[i.value for i in j] for j in S3['B3':'F3']]) 
+
+### TAT: tat ###
+
+tat = np.array([[i.value for i in j] for j in S3['B4':'F4']])
+
+### RANGE: max_range ###
+
+max_range = np.array([[i.value for i in j] for j in S3['B5':'F5']])
+
+### RWY REQ: rwy_req ###
+
+rwy_req = np.array([[i.value for i in j] for j in S3['B6':'F6']])
+
+### LEASE COST: lease_cost ###
+
+lease_cost = np.array([[i.value for i in j] for j in S3['B7':'F7']])
+
+### FIXED OPERATING COST: Cx ###
+
+Cx = np.array([[i.value for i in j] for j in S3['B8':'F8']])
+
+### TIME COST PARAMETER: Ct ###
+
+Ct = np.array([[i.value for i in j] for j in S3['B9':'F9']])
+
+### FUEL COST PARAMETER: Cf ###
+
+Cf = np.array([[i.value for i in j] for j in S3['B10':'F10']])
+
+
+
+
