@@ -40,27 +40,51 @@ for i in range(nodes):
 m.update()
 
 
-#d_i,j ** -0.76: distance cannot be 0 -> create function dist_fact(i,j)
+##### OBJECTIVE FUNCTION #################################################################################################
 
-def dist_fact(i,j):
-    if i == j:
-        di = 0
-    else:
-        di = distance(i,j)
-    return di;
-
-obj = grb.quicksum(grb.quicksum( (5.9*dist_fact(i,j)+0.043)*distance(i,j)*(hflow[i,j]+flow[i,j]) -  grb.quicksum((Cl[0][k]+cost_fact(i,j)*(Cx[0][k]+Ct[0][k]*distance(i,j)/speed[0][k]+Cf[0][k]*flights[i,j,k]*distance(i,j)/1.5)) for k in range(commod))for j in range(nodes))for i in range(nodes))
-
-
+obj = grb.quicksum(grb.quicksum( (5.9*dist_fact(i,j)+0.043)*distance(i,j)*(hflow[i,j]+flow[i,j]) -  grb.quicksum((Cl[0][k]+cost_fact(i,j)*(CX(i,j,k)+Ct[0][k]*distance(i,j)/speed[0][k]+Cf[0][k]*flights[i,j,k]*distance(i,j)/1.5)) for k in range(commod))for j in range(nodes))for i in range(nodes))
 
 m.setObjective(obj,GRB.MAXIMIZE) #fill in obj instead of m.getObjective
 
 
+##### CONSTRAINTS ###############################################################################################
 
+### 1 ###
+for i in range(nodes):
+    for j in range(nodes):
+        m.addConstr(flow[i,j] + hflow[i,j], GRB.LESS_EQUAL, demand(i,j))
 
+### 2 ###
+for i in range(nodes):
+    for j in range(nodes):
+        m.addConstr(    hflow[i,j], 
+                        GRB.LESS_EQUAL, 
+                        demand(i,j)*hub(i)*hub(j))
 
+### 3 ###            
+for i in range(nodes):
+    for j in range(nodes):
+        for k in range(commod):
+            m.addConstr(flow[i,j]+grb.quicksum((hflow[i,m]*(1-hub(j)))for m in range(nodes))+grb.quicksum((hflow[m,j]*(1-hub(i)))for m in range(nodes)),
+                        GRB.LESS_EQUAL, 
+                        grb.quicksum((flights[i,j,k]*seats[0][k]*LF)for k in range(commod))) 
             
+### 4 ###
+for i in range(nodes):
+    for j in range(nodes):
+        for k in range(commod):
+            m.addConstr(grb.quicksum( flights[i,j,k] for j in range(nodes)),
+                        GRB.EQUAL,
+                        grb.quicksum( flights[j,i,k] for j in range(nodes)))
             
+### 5 ###
+for i in range(nodes):
+    for j in range(nodes):
+        for k in range(commod):
+            m.addConstr(grb.quicksum((grb.quicksum(((distance(i,j)/speed[0][k]+TAT(j,k))*flights[i,j,k])for j in range(nodes)))for i in range(nodes)),
+                        GRB.LESS_EQUAL,
+                        7*TAT(j,k)*aircraft[k])      
+
 
                  
     

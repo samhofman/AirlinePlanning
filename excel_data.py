@@ -40,7 +40,8 @@ gdp_data = np.array([[i.value for i in j] for j in S1['F4':'G27']])
 
 ### AIRPORTS ###
 
-airports = np.array([[i.value for i in j] for j in S2['C5':'Z5']])
+airports_eu = np.array([[i.value for i in j] for j in S2['C5':'V5']])
+airports    = np.array([[i.value for i in j] for j in S2['C5':'Z5']])
 
 ### AIRPORT DATA: airport_data ###
 
@@ -48,7 +49,7 @@ airport_data = np.array([[i.value for i in j] for j in S2['C7':'Z10']])
 
 ### DEMAND PER WEEK: demand ###    
  
-demand = np.array([[i.value for i in j] for j in S2['C16':'V35']])
+demand_ar = np.array([[i.value for i in j] for j in S2['C16':'V35']])
     
 ### DEMAND PER WEEK HIGH SEASON: demand_hs ###    
 
@@ -75,7 +76,7 @@ seats = np.array([[i.value for i in j] for j in S3['B3':'F3']])
 
 ### TAT: tat ###
 
-tat = np.array([[i.value for i in j] for j in S3['B4':'F4']])
+tat_ar = np.array([[i.value for i in j] for j in S3['B4':'F4']])
 
 ### RANGE: max_range ###
 
@@ -91,7 +92,7 @@ Cl = np.array([[i.value for i in j] for j in S3['B7':'F7']])
 
 ### FIXED OPERATING COST: Cx ###
 
-Cx = np.array([[i.value for i in j] for j in S3['B8':'F8']])
+Cx_ar = np.array([[i.value for i in j] for j in S3['B8':'F8']])
 
 ### TIME COST PARAMETER: Ct ###
 

@@ -2,3 +2,19 @@
 Gurobi 8.1.0 (win64, Python) logging started 12/07/18 14:22:08
 
 Academic license - for non-commercial use only
+
+Gurobi 8.1.0 (win64, Python) logging started 12/07/18 17:31:34
+
+Academic license - for non-commercial use only
+Warning: variables 3 and 11 have the same name "AC_0"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 3 and 11 have the same name "AC_0"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 3 and 11 have the same name "AC_0"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 3 and 11 have the same name "AC_0"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 3 and 11 have the same name "AC_0"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 3 and 11 have the same name "AC_0"
+Warning: to let Gurobi read it back, use rlp format

@@ -13,7 +13,7 @@ from excel_data import *
 
 ### AIRPORT ###
 
-nodes = len(airports[0])
+nodes = len(airports_eu[0])
 
 # Aircraft
 
@@ -44,7 +44,15 @@ dist = np.zeros(shape=(24,24))
 for i in range(nodes):
     for j in range(nodes):
         dist[i,j] = int(distance(i,j))   
-    
+
+#d_i,j ** -0.76: distance cannot be 0 -> create function dist_fact(i,j)
+
+def dist_fact(i,j):
+    if i == j:
+        di = 0
+    else:
+        di = distance(i,j)
+    return di;   
 
 ### DEMAND ###
 low_season = False
@@ -61,7 +69,7 @@ def demand(i,j):
     elif high_season == True:
         q = demand_hs[i][j]
     else:
-        q = demand[i][j]
+        q = demand_ar[i][j]
      
     return q;
 
@@ -73,4 +81,34 @@ def cost_fact(i,j):
         c = 1
     
     return c;
+   
+def hub(h):
+    if h == 0:
+        g = 0
+    else:
+        g = 1
     
+    return g;
+
+### Load Factor ###
+
+LF = 0.75
+
+def TAT(j,k):
+    if j == 1:
+        tat = max(2*tat_ar[0][k],60)
+    else:
+        tat = tat_ar[0][k]
+        
+    return tat;
+
+def CX(i,j,k):
+    if distance(i,j) <= max_range[0][k]:
+        Cx = 1000000
+    else:
+        Cx = Cx_ar[0][k]
+    
+    return Cx;
+    
+
+
