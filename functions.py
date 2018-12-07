@@ -21,7 +21,7 @@ commod = 3              #different aircraft
 
 # Distances
 
-def dist(i,j):
+def distance(i,j):
     R = 6373.0
     
     lat_i = radians(airport_data[0][i])
@@ -36,8 +36,15 @@ def dist(i,j):
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
     d = R * c
-    return;
+    return d;
 
+
+dist = np.zeros(shape=(24,24))
+
+for i in range(nodes):
+    for j in range(nodes):
+        dist[i,j] = int(distance(i,j))   
+    
 
 ### DEMAND ###
 low_season = False
@@ -56,7 +63,7 @@ def demand(i,j):
     else:
         q = demand[i][j]
      
-    return;
+    return q;
 
 
 def cost_fact(i,j):
@@ -65,5 +72,5 @@ def cost_fact(i,j):
     else:
         c = 1
     
-    return;
+    return c;
     

@@ -85,9 +85,9 @@ max_range = np.array([[i.value for i in j] for j in S3['B5':'F5']])
 
 rwy_req = np.array([[i.value for i in j] for j in S3['B6':'F6']])
 
-### LEASE COST: lease_cost ###
+### LEASE COST: Cl ###
 
-lease_cost = np.array([[i.value for i in j] for j in S3['B7':'F7']])
+Cl = np.array([[i.value for i in j] for j in S3['B7':'F7']])
 
 ### FIXED OPERATING COST: Cx ###
 
