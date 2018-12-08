@@ -19,7 +19,7 @@ m = grb.Model('MaxProfit')
 flow     = {}    #x_i,j
 hflow    = {}    #w_i,j
 flights  = {}    #z_i,j_k
-aircraft = {}    #AC_k
+#aircraft = {}    #AC_k
 
 
 
@@ -34,8 +34,8 @@ for i in range(nodes):
         for k in range(commod):
             flights[i,j,k] = m.addVar(vtype=GRB.INTEGER, lb=0,
                         name="z_%s,%s_%s"%(i,j,k))
-            aircraft[k] = m.addVar(vtype=GRB.INTEGER, lb=0,
-                        name="AC_%s"%(k))
+            #aircraft[k] = m.addVar(vtype=GRB.INTEGER, lb=0,
+                        #name="AC_%s"%(k))
 
 m.update()
 
@@ -83,9 +83,15 @@ for i in range(nodes):
         for k in range(commod):
             m.addConstr(grb.quicksum((grb.quicksum(((distance(i,j)/speed[0][k]+TAT(j,k))*flights[i,j,k])for j in range(nodes)))for i in range(nodes)),
                         GRB.LESS_EQUAL,
-                        7*TAT(j,k)*aircraft[k])      
+                        7*TAT(j,k)*AC[0][k])      
 
+
+m.update()
+m.optimize()
 
                  
-    
-    
+for v in m.getVars():
+    print (v.varName, v.x)    
+print ('Obj:', m.objVal) 
+
+m.write('MaxProfit.sol')   

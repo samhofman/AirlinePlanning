@@ -38,6 +38,10 @@ gdp_data = np.array([[i.value for i in j] for j in S1['F4':'G27']])
 
 ##### READ TAB 2 #####
 
+### AIRCRAFT ###
+
+AC = np.array([[i.value for i in j] for j in S2['B13':'F13']])
+
 ### AIRPORTS ###
 
 airports_eu = np.array([[i.value for i in j] for j in S2['C5':'V5']])
