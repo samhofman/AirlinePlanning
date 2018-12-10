@@ -51,7 +51,7 @@ def dist_fact(i,j):
     if i == j:
         di = 0
     else:
-        di = distance(i,j)
+        di = distance(i,j)**(-0.76)
     return di;   
 
 ### DEMAND ###
@@ -75,7 +75,7 @@ def demand(i,j):
 
 
 def cost_fact(i,j):
-    if i == 1 or j == 1:
+    if i == 0 or j == 0:
         c = 0.7
     else:
         c = 1
@@ -95,20 +95,20 @@ def hub(h):
 LF = 0.75
 
 def TAT(j,k):
-    if j == 1:
+    if j == 0:
         tat = max(2*tat_ar[0][k],60)
     else:
         tat = tat_ar[0][k]
         
     return tat;
 
-def CX(i,j,k):
+def a(i,j,k):
     if distance(i,j) <= max_range[0][k]:
-        Cx = 1000000
+        ax = 10000
     else:
-        Cx = Cx_ar[0][k]
+        ax = 0
     
-    return Cx;
+    return ax;
     
 
 

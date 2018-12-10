@@ -15,14 +15,6 @@ S1 = wb['General'] #Tab General
 S2 = wb['Group 6'] #Tab Group 6
 S3 = wb['AircraftSpecs'] #Tab AircraftSpecs
 
-airport_data = []
-airports = []
-competition = []
-demand = []
-demand_hs = []
-demand_ls = []
-gdp_data = []
-pop_city = []
 
 
 ##### READ TAB 1 #####
@@ -41,6 +33,8 @@ gdp_data = np.array([[i.value for i in j] for j in S1['F4':'G27']])
 ### AIRCRAFT ###
 
 AC = np.array([[i.value for i in j] for j in S2['B13':'F13']])
+
+BT = 10
 
 ### AIRPORTS ###
 
@@ -106,6 +100,7 @@ Ct = np.array([[i.value for i in j] for j in S3['B9':'F9']])
 
 Cf = np.array([[i.value for i in j] for j in S3['B10':'F10']])
 
-
+F17 = 1.42 
+F22 = 1.6
 
 
