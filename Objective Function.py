@@ -105,7 +105,10 @@ def mycallback(model, where):
     if where == GRB.Callback.MIP:
         objbnd = model.cbGet(GRB.Callback.MIP_OBJBND)
         objbst = model.cbGet(GRB.Callback.MIP_OBJBST)
-        if abs(objbst - objbnd) <= 0.0033 * (abs(objbst)):
+        runtime = model.cbGet(GRB.Callback.RUNTIME)
+        if runtime > 60:
+            model.terminate()
+        elif abs(objbst - objbnd) <= 0.0033 * (abs(objbst)):
             print('Stop early - 0.33% gap achieved')
             model.terminate()
             
@@ -144,6 +147,7 @@ with open('out.csv', 'wb') as myfile:
      wr.writerows(var_x)
      wr.writerows(var_w)
      wr.writerows(var_z)
+
 
 
 
