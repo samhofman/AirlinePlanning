@@ -32,7 +32,7 @@ def distance(i,j):
     dlon = lon_j - lon_i
     dlat = lat_j - lat_i
     
-    a = sin(dlat / 2)**2 + cos(lat_i) * cos(lat_j) * sin(dlon / 2)**2
+    a = sin(dlat / 2.)**2 + cos(lat_i) * cos(lat_j) * sin(dlon / 2.)**2
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
     d = R * c
