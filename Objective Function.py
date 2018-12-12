@@ -21,7 +21,7 @@ flow     = {}    #x_i,j
 hflow    = {}    #w_i,j
 flights  = {}    #z_i,j_k
 #aircraft = {}    #AC_k
-
+#aircraft_sell = {}    #ACsell_k
 
 
 ### CREATE DECISION VARIABLES ###########################################################################################
@@ -37,7 +37,8 @@ for i in range(nodes):
                         name="z_%s,%s_%s"%(i,j,k))
             #aircraft[k] = m.addVar(vtype=GRB.INTEGER, lb=0,
                         #name="AC_%s"%(k))
-
+            #aircraft_sell[k] = m.addVar(vtype=GRB.INTEGER, lb=0,
+                        #name="ACsell_%s"%(k)) 
 m.update()
 
 
@@ -51,18 +52,19 @@ print "Objective function created."
 
 ##### CONSTRAINTS ########################################################################################################
 
+print "Constraint 1 loading"
 ### 1 ################################################################
 for i in range(nodes):
     for j in range(nodes):
         m.addConstr(flow[i,j] + hflow[i,j], GRB.LESS_EQUAL, demand(i,j))
-print "Constraint 1"
+print "Constraint 2 loading"
 ### 2 ################################################################
 for i in range(nodes):
     for j in range(nodes):
         m.addConstr(    hflow[i,j], 
                         GRB.LESS_EQUAL, 
                         demand(i,j)*hub(i)*hub(j))
-print "Constraint 2"
+print "Constraint 3 loading"
 ### 3 ################################################################           
 for i in range(nodes):
     for j in range(nodes):
@@ -70,7 +72,7 @@ for i in range(nodes):
             m.addConstr(flow[i,j]+grb.quicksum((hflow[i,m]*(1-hub(j)))for m in range(nodes))+grb.quicksum((hflow[m,j]*(1-hub(i)))for m in range(nodes)),
                         GRB.LESS_EQUAL, 
                         grb.quicksum((flights[i,j,k]*seats[0][k]*LF)for k in range(commod))) 
-print "Constraint 3"            
+print "Constraint 4 loading"            
 ### 4 ################################################################
 for i in range(nodes):
     for j in range(nodes):
@@ -78,7 +80,7 @@ for i in range(nodes):
             m.addConstr(grb.quicksum( flights[i,j,k] for j in range(nodes)),
                         GRB.EQUAL,
                         grb.quicksum( flights[j,i,k] for j in range(nodes)))
-print "Constraint 4"            
+print "Constraint 5 loading"            
 ### 5 ################################################################
 for i in range(nodes):
     for j in range(nodes):
@@ -86,7 +88,7 @@ for i in range(nodes):
             m.addConstr(grb.quicksum(grb.quicksum((((distance(i,j)/speed[0][k])+(TAT(j,k)/60.))*flights[i,j,k])for j in range(nodes))for i in range(nodes)),
                         GRB.LESS_EQUAL,
                         7*BT*AC[0][k])      
-print "Constraint 5"
+print "Constraint 6 loading"
 ### 6 ################################################################
 for i in range(nodes):
     for j in range(nodes):
