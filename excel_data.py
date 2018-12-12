@@ -8,7 +8,6 @@ Created on Tue Dec 04 09:34:11 2018
 import openpyxl as xl
 import numpy as np
 
-
 wb = xl.load_workbook("Datasheet.xlsx", read_only=True)
 
 S1 = wb['General'] #Tab General

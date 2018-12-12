@@ -73,6 +73,7 @@ def demand(i,j):
      
     return q;
 
+### Cost factor ###
 
 def cost_fact(i,j):
     if i == 0 or j == 0:
@@ -81,6 +82,8 @@ def cost_fact(i,j):
         c = 1
     
     return c;
+
+### Hub factor ###
    
 def hub(h):
     if h == 0:
@@ -94,6 +97,8 @@ def hub(h):
 
 LF = 0.75
 
+### Turn-around time ###
+
 def TAT(j,k):
     if j == 0:
         tat = max(2*tat_ar[0][k],60)
@@ -101,6 +106,8 @@ def TAT(j,k):
         tat = tat_ar[0][k]
         
     return tat;
+
+### Range limit factor ###
 
 def a(i,j,k):
     if distance(i,j) <= max_range[0][k]:
