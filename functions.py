@@ -6,6 +6,7 @@ This is a temporary script file.
 """
 
 import numpy as np
+import xlsxwriter
 from math import *
 
 from excel_data import *
@@ -39,11 +40,24 @@ def distance(i,j):
     return d;
 
 
-dist = np.zeros(shape=(24,24))
+dist = np.zeros(shape=(20,20))
 
 for i in range(nodes):
     for j in range(nodes):
-        dist[i,j] = int(distance(i,j))   
+        dist[i,j] = int(distance(i,j))
+
+#Write distance matrix to excel for problem 2
+workbook = xlsxwriter.Workbook('Distances.xlsx')
+worksheet = workbook.add_worksheet()
+
+array = dist
+
+row = 0
+
+for col, data in enumerate(array):
+    worksheet.write_column(row, col, data)
+
+workbook.close()
 
 #d_i,j ** -0.76: distance cannot be 0 -> create function dist_fact(i,j)
 
