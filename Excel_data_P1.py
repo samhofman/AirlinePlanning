@@ -20,11 +20,11 @@ S3 = wb['AircraftSpecs'] #Tab AircraftSpecs
 
 ### POPULATION PER CITY: pop_city ###
 
-pop_city = np.array([[i.value for i in j] for j in S1['B4':'C27']])
+#pop_city = np.array([[i.value for i in j] for j in S1['B4':'C27']])
 
 #### GDP PER COUNTRY: gdp_data ###
 
-gdp_data = np.array([[i.value for i in j] for j in S1['F4':'G27']])
+#gdp_data = np.array([[i.value for i in j] for j in S1['F4':'G27']])
 
 
 ##### READ TAB 2 #####
@@ -33,7 +33,9 @@ gdp_data = np.array([[i.value for i in j] for j in S1['F4':'G27']])
 
 AC = np.array([[i.value for i in j] for j in S2['B13':'F13']])
 
-BT = 10
+### AVERAGE UTILISATION TIME ###
+
+BT = 10 
 
 ### AIRPORTS ###
 

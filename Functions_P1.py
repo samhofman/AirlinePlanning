@@ -9,7 +9,7 @@ import numpy as np
 import xlsxwriter
 from math import *
 
-from excel_data import *
+from Excel_data_P1 import *
 
 
 ### AIRPORT ###

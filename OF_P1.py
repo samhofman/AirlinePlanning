@@ -13,7 +13,7 @@ import os
 sys.path.append(os.path.abspath("C:\Users\hofma\AirlinePlanning"))
 
 
-from functions import *
+from Functions_P1 import *
 
 GRB = grb.GRB
 
