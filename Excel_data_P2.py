@@ -8,12 +8,12 @@ Created on Tue Dec 04 09:34:11 2018
 import openpyxl as xl
 import numpy as np
 
-wb = xl.load_workbook("Datasheet.xlsx", read_only=True)
+wb = xl.load_workbook("Datasheet.xlsx", data_only=True) #data only to prevent importing excel functions
 
 S1 = wb['General'] #Tab General
 S2 = wb['Group 6'] #Tab Group 6
 S3 = wb['AircraftSpecs'] #Tab AircraftSpecs
-
+S5 = wb['Calibration'] #Tab future demand prediction
 
 
 ##### READ TAB 1 #####
@@ -35,7 +35,7 @@ AC = np.array([[i.value for i in j] for j in S2['B13':'F13']])
 
 ### AVERAGE UTILISATION TIME ###
 
-BT = 10
+BT = 10.
 
 ### AIRPORTS ###
 
@@ -45,10 +45,12 @@ airports    = np.array([[i.value for i in j] for j in S2['C5':'Z5']])
 ### AIRPORT DATA: airport_data ###
 
 airport_data = np.array([[i.value for i in j] for j in S2['C7':'Z10']])
+rwy_length = airport_data[2]
+slots = airport_data[3]
 
-### DEMAND PER WEEK: demand ###    
+### DEMAND PER WEEK: demand 2022 ###    
  
-demand_ar = np.array([[i.value for i in j] for j in S2['C16':'V35']])
+demand_ar = np.array([[i.value for i in j] for j in S5['B219':'Y242']])
     
 ### DEMAND PER WEEK HIGH SEASON: demand_hs ###    
 

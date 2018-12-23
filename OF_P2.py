@@ -13,7 +13,7 @@ import os
 sys.path.append(os.path.abspath("C:\Users\hofma\AirlinePlanning"))
 
 
-from functions import *
+from Functions_P2 import *
 
 GRB = grb.GRB
 
@@ -25,9 +25,9 @@ m = grb.Model('MaxProfit')
 # DECISION VARIABLES
 flow     = {}    #x_i,j
 hflow    = {}    #w_i,j
-flights  = {}    #z_i,j_k
-#aircraft = {}    #AC_k
-#aircraft_sell = {}    #ACsell_k
+flights  = {}    #z_i,j^k
+aircraft = {}    #AC^k
+aircraft_leased = {}    #m^k
 
 
 ### CREATE DECISION VARIABLES ###########################################################################################
@@ -41,16 +41,16 @@ for i in range(nodes):
         for k in range(commod):
             flights[i,j,k] = m.addVar(vtype=GRB.INTEGER, lb=0,
                         name="z_%s,%s_%s"%(i,j,k))
-            #aircraft[k] = m.addVar(vtype=GRB.INTEGER, lb=0,
-                        #name="AC_%s"%(k))
-            #aircraft_sell[k] = m.addVar(vtype=GRB.INTEGER, lb=0,
-                        #name="ACsell_%s"%(k)) 
+            #aircraft[k] = m.addVar(vtype=GRB.INTEGER, lb=0, #No. of aircraft
+            #            name="AC_%s"%(k))
+            aircraft_leased[k] = m.addVar(vtype=GRB.INTEGER, lb=0, #No. of extra leased aircraft
+                        name="m_%s"%(k)) 
 m.update()
 
 
 ##### OBJECTIVE FUNCTION #################################################################################################
 
-obj = grb.quicksum(grb.quicksum( (5.9*dist_fact(i,j)+0.043)*distance(i,j)*(hflow[i,j]+flow[i,j]) -  grb.quicksum((flights[i,j,k]*cost_fact(i,j)*(Cx_ar[0][k]+Ct[0][k]*distance(i,j)/speed[0][k]+Cf[0][k]*F17*distance(i,j)/1.5)) for k in range(commod))for j in range(nodes))for i in range(nodes)) - grb.quicksum(AC[0][k]*Cl[0][k] for k in range(commod))
+obj = grb.quicksum(grb.quicksum( y(i,j)*distance(i,j)*(hflow[i,j]+flow[i,j]) -  grb.quicksum((flights[i,j,k]*cost_fact(i,j)*(Cx_ar[0][k]+Ct[0][k]*distance(i,j)/speed[0][k]+Cf[0][k]*F22*distance(i,j)/1.5)) for k in range(commod))for j in range(nodes))for i in range(nodes)) - grb.quicksum((AC[0][k]+aircraft_leased[k])*Cl[0][k]+2000.*aircraft_leased[k] for k in range(commod))
 
 m.setObjective(obj,GRB.MAXIMIZE) #fill in obj instead of m.getObjective
 
@@ -58,53 +58,88 @@ print "Objective function created."
 
 ##### CONSTRAINTS ########################################################################################################
 
-print "Constraint 1 loading"
 ### 1 ################################################################
+print "Constraint 1 loading"
 for i in range(nodes):
     for j in range(nodes):
         m.addConstr(flow[i,j] + hflow[i,j], GRB.LESS_EQUAL, demand(i,j))
-print "Constraint 2 loading"
+
 ### 2 ################################################################
+print "Constraint 2 loading"
 for i in range(nodes):
     for j in range(nodes):
         m.addConstr(    hflow[i,j], 
                         GRB.LESS_EQUAL, 
                         demand(i,j)*hub(i)*hub(j))
-print "Constraint 3 loading"
+
 ### 3 ################################################################           
+print "Constraint 3 loading"
 for i in range(nodes):
     for j in range(nodes):
         for k in range(commod):
             m.addConstr(flow[i,j]+grb.quicksum((hflow[i,m]*(1-hub(j)))for m in range(nodes))+grb.quicksum((hflow[m,j]*(1-hub(i)))for m in range(nodes)),
                         GRB.LESS_EQUAL, 
-                        grb.quicksum((flights[i,j,k]*seats[0][k]*LF)for k in range(commod))) 
-print "Constraint 4 loading"            
+                        grb.quicksum((flights[i,j,k]*seats[0][k]*LF(i,j))for k in range(commod)))           
+
 ### 4 ################################################################
+print "Constraint 4 loading"  
 for i in range(nodes):
     for j in range(nodes):
         for k in range(commod):
             m.addConstr(grb.quicksum( flights[i,j,k] for j in range(nodes)),
                         GRB.EQUAL,
-                        grb.quicksum( flights[j,i,k] for j in range(nodes)))
-print "Constraint 5 loading"            
+                        grb.quicksum( flights[j,i,k] for j in range(nodes)))           
+
 ### 5 ################################################################
+print "Constraint 5 loading" 
 for i in range(nodes):
     for j in range(nodes):
         for k in range(commod):
             m.addConstr(grb.quicksum(grb.quicksum((((distance(i,j)/speed[0][k])+(TAT(j,k)/60.))*flights[i,j,k])for j in range(nodes))for i in range(nodes)),
                         GRB.LESS_EQUAL,
-                        7*BT*AC[0][k])      
-print "Constraint 6 loading"
+                        7*BT*(AC[0][k]+aircraft_leased[k]))      
+
 ### 6 ################################################################
+print "Constraint 6 loading"
 for i in range(nodes):
     for j in range(nodes):
         for k in range(commod):
             m.addConstr(flights[i,j,k],
                         GRB.LESS_EQUAL,
                         a(i,j,k))
-print "Constraint 6"
 
-
+### 7 ################################################################
+print "Constraint 7 loading"
+for i in range(nodes):
+    for j in range(nodes):
+        for k in range(commod):
+            m.addConstr(flights[i,j,k],
+                        GRB.LESS_EQUAL,
+                        r(i,j,k))
+            
+### 8 ################################################################
+print "Constraint 8 loading"
+for i in range(20):
+    for j in range(20):
+        for k in range(3,4):
+            m.addConstr(grb.quicksum(flights[i,j,k] for j in range(20)),
+                        GRB.EQUAL,
+                        0.)
+            
+### 9 ################################################################
+print "Constraint 9 loading"
+for i in range(20,24):
+    for j in range(20,24):
+        for k in range(commod):
+            m.addConstr(grb.quicksum(flights[i,j,k] for j in range(20,24)),
+                        GRB.EQUAL,
+                        0.)
+            
+### 10 ################################################################
+print "Constraint 10 loading"
+m.addConstr(grb.quicksum(grb.quicksum((flow[i,j] + hflow[i,j] + flow[j,i] + hflow[j,i]) for j in range(20,24)) for i in range(nodes)),
+            GRB.LESS_EQUAL,
+            7500.)
 
 m.update()
 
@@ -115,6 +150,7 @@ def mycallback(model, where):
         objbst = model.cbGet(GRB.Callback.MIP_OBJBST)
         runtime = model.cbGet(GRB.Callback.RUNTIME)
         if runtime > 60:
+            print('Stop early - 60s passed')
             model.terminate()
         elif abs(objbst - objbnd) <= 0.0033 * (abs(objbst)):
             print('Stop early - 0.33% gap achieved')
@@ -139,6 +175,7 @@ if m.SolCount == 0:
 var_x = []    
 var_w = []
 var_z = []
+var_m = []
 
 
 for var in m.getVars():
@@ -148,13 +185,16 @@ for var in m.getVars():
     if 'w' == str(var.VarName[0]) and var.x > 0:
         var_w.append([var.VarName, var.x])    
     if 'z' == str(var.VarName[0]) and var.x > 0:
-        var_z.append([var.VarName, var.x])    
+        var_z.append([var.VarName, var.x])
+    if 'm' == str(var.VarName[0]) and var.x > 0:
+        var_m.append([var.VarName, var.x]) 
 # Write to csv
-with open('out.csv', 'wb') as myfile:
+with open('outP2.csv', 'wb') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerows(var_x)
      wr.writerows(var_w)
      wr.writerows(var_z)
+     wr.writerows(var_m)
 
 
 

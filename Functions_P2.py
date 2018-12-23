@@ -9,7 +9,7 @@ import numpy as np
 import xlsxwriter
 from math import *
 
-from excel_data import *
+from Excel_data_P2 import *
 
 
 ### AIRPORT ###
@@ -18,7 +18,7 @@ nodes = len(airports[0])
 
 # Aircraft
 
-commod = 3              #different aircraft
+commod = 5              #different aircraft
 
 # Distances
 
@@ -47,7 +47,7 @@ for i in range(nodes):
         dist[i,j] = int(distance(i,j))
 
 #Write distance matrix to excel for problem 2
-workbook = xlsxwriter.Workbook('Distances.xlsx')
+workbook = xlsxwriter.Workbook('DistancesP2.xlsx')
 worksheet = workbook.add_worksheet()
 
 array = dist
@@ -109,7 +109,12 @@ def hub(h):
 
 ### Load Factor ###
 
-LF = 0.75
+def LF(i,j):
+    if 20 <= i <= 23 or 20 <= j <= 23: #Load factor for flights to/from USA
+        LF = 0.85
+    else: #Load factor intra-European flights
+        LF = 0.75
+    return LF;
 
 ### Turn-around time ###
 
@@ -125,11 +130,27 @@ def TAT(j,k):
 
 def a(i,j,k):
     if distance(i,j) <= max_range[0][k]:
-        ax = 10000
+        ax = 10000 #Possible to fly
     else:
-        ax = 0
+        ax = 0 #Impossible to fly
     
     return ax;
+
+### RWY length limit factor ###
     
+def r(i,j,k):
+    if rwy_length[i] >= rwy_req[0][k] and rwy_length[j] >= rwy_req[0][k]:
+        rx = 10000 #Possible to fly
+    else:
+        rx = 0 #Imossible to fly
+    return rx;
 
+### Yield function ###
 
+def y(i,j):
+    if 20 <= i <= 23 or 20 <= j <= 23: #For flights to/from USA
+        y_ij = 0.05 
+    else: #For intra-European flights
+        y_ij = 5.9*dist_fact(i,j)+0.043
+    return y_ij;
+    

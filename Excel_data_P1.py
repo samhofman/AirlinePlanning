@@ -35,7 +35,7 @@ AC = np.array([[i.value for i in j] for j in S2['B13':'F13']])
 
 ### AVERAGE UTILISATION TIME ###
 
-BT = 10 
+BT = 10.0 
 
 ### AIRPORTS ###
 
@@ -46,7 +46,7 @@ airports    = np.array([[i.value for i in j] for j in S2['C5':'Z5']])
 
 airport_data = np.array([[i.value for i in j] for j in S2['C7':'Z10']])
 
-### DEMAND PER WEEK: demand ###    
+### DEMAND PER WEEK: demand 2017 ###    
  
 demand_ar = np.array([[i.value for i in j] for j in S2['C16':'V35']])
     
