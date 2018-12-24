@@ -59,12 +59,14 @@ print "Objective function created."
 ##### CONSTRAINTS ########################################################################################################
 
 ### 1 ################################################################
+# Flow cannot be higher than demand
 print "Constraint 1 loading"
 for i in range(nodes):
     for j in range(nodes):
         m.addConstr(flow[i,j] + hflow[i,j], GRB.LESS_EQUAL, demand(i,j))
 
 ### 2 ################################################################
+# Flow transferring at hub cannot be higher than demand
 print "Constraint 2 loading"
 for i in range(nodes):
     for j in range(nodes):
@@ -72,7 +74,8 @@ for i in range(nodes):
                         GRB.LESS_EQUAL, 
                         demand(i,j)*hub(i)*hub(j))
 
-### 3 ################################################################           
+### 3 ################################################################  
+# Number of passengers per leg cannot be higher than available seats         
 print "Constraint 3 loading"
 for i in range(nodes):
     for j in range(nodes):
@@ -82,6 +85,7 @@ for i in range(nodes):
                         grb.quicksum((flights[i,j,k]*seats[0][k]*LF(i,j))for k in range(commod)))           
 
 ### 4 ################################################################
+# Number of inbound and outbound flights must be equal per aircrafttype and per airport
 print "Constraint 4 loading"  
 for i in range(nodes):
     for j in range(nodes):
@@ -91,6 +95,7 @@ for i in range(nodes):
                         grb.quicksum( flights[j,i,k] for j in range(nodes)))           
 
 ### 5 ################################################################
+# Hours of operation cannot be higher than average utilisation time
 print "Constraint 5 loading" 
 for i in range(nodes):
     for j in range(nodes):
@@ -100,6 +105,7 @@ for i in range(nodes):
                         7*BT*(AC[0][k]+aircraft_leased[k]))      
 
 ### 6 ################################################################
+# Aircraft of type k cannot fly flight leg if its range is smaller than the distance
 print "Constraint 6 loading"
 for i in range(nodes):
     for j in range(nodes):
@@ -109,6 +115,7 @@ for i in range(nodes):
                         a(i,j,k))
 
 ### 7 ################################################################
+# Aircraft type k cannot fly if runway is too short
 print "Constraint 7 loading"
 for i in range(nodes):
     for j in range(nodes):
@@ -118,6 +125,7 @@ for i in range(nodes):
                         r(i,j,k))
             
 ### 8 ################################################################
+# No intra-EU flights for aircraft types 4 and 5
 print "Constraint 8 loading"
 for i in range(20):
     for j in range(20):
@@ -127,8 +135,9 @@ for i in range(20):
                         0.)
             
 ### 9 ################################################################
+# Only US-hub flights are allowed
 print "Constraint 9 loading"
-for i in range(20,24):
+for i in range(1,24):
     for j in range(20,24):
         for k in range(commod):
             m.addConstr(grb.quicksum(flights[i,j,k] for j in range(20,24)),
@@ -136,10 +145,19 @@ for i in range(20,24):
                         0.)
             
 ### 10 ################################################################
+# Only 7500 seats to/from USA available per week
 print "Constraint 10 loading"
 m.addConstr(grb.quicksum(grb.quicksum((flow[i,j] + hflow[i,j] + flow[j,i] + hflow[j,i]) for j in range(20,24)) for i in range(nodes)),
             GRB.LESS_EQUAL,
             7500.)
+
+### 11 ################################################################
+# No more flights than slots available
+print "Constraint 11 loading"
+for j in range(nodes):         
+    m.addConstr(grb.quicksum(grb.quicksum(flights[i,j,k] for k in range(commod)) for i in range(nodes)),
+                GRB.LESS_EQUAL,
+                slots[j])
 
 m.update()
 
@@ -152,9 +170,9 @@ def mycallback(model, where):
         if runtime > 60:
             print('Stop early - 60s passed')
             model.terminate()
-        elif abs(objbst - objbnd) <= 0.0033 * (abs(objbst)):
-            print('Stop early - 0.33% gap achieved')
-            model.terminate()
+#        elif abs(objbst - objbnd) <= 0.0033 * (abs(objbst)):
+#            print('Stop early - 0.33% gap achieved')
+#            model.terminate()
             
             return;
    
