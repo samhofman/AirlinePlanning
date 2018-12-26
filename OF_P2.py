@@ -151,12 +151,6 @@ for i in range(1,24):
 ### 10 ################################################################
 # Only 7500 seats to/from USA available per week
 print "Constraint 10 loading"
-#m.addConstr(grb.quicksum(grb.quicksum((flow[i,j] + hflow[i,j] + flow[j,i] + hflow[j,i]) for j in range(20,24)) for i in range(nodes)),
-#            GRB.LESS_EQUAL,
-#            7500.)
-#for i in range(nodes):
-#    for j in range(20,24):
-#        for k in range(commod):
 m.addConstr(grb.quicksum(grb.quicksum(grb.quicksum((flights[i,j,k]+flights[j,i,k])*seats[0][k] for j in range(20,24)) for k in range(commod)) for i in range(nodes)),
             GRB.LESS_EQUAL,
             7500.) 
