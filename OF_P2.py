@@ -28,7 +28,7 @@ hflow    = {}    #w_i,j
 flights  = {}    #z_i,j^k
 aircraft = {}    #AC^k
 aircraft_leased = {}    #m^k
-aircraft_sold = {}
+aircraft_sold = {}  #n^k
 
 
 ### CREATE DECISION VARIABLES ###########################################################################################
@@ -89,7 +89,7 @@ for i in range(nodes):
                         grb.quicksum((flights[i,j,k]*seats[0][k]*LF(i,j))for k in range(commod)))           
 
 ### 4 ################################################################
-# Number of inbound and outbound flights must be equal per aircrafttype and per airport
+# Number of inbound and outbound flights must be equal per aircraft type and per airport
 print "Constraint 4 loading"  
 for i in range(nodes):
     for j in range(nodes):
