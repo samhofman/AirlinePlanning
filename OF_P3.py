@@ -13,7 +13,7 @@ import os
 sys.path.append(os.path.abspath("C:\Users\hofma\AirlinePlanning"))
 
 
-from Functions_P2 import *
+from Functions_P3 import *
 
 GRB = grb.GRB
 
@@ -23,9 +23,9 @@ m = grb.Model('MaxProfit')
 
 
 # DECISION VARIABLES
-flow     = {}    #x_i,j
-hflow    = {}    #w_i,j
-flights  = {}    #z_i,j^k
+flow     = {}    #x_i,j^w
+hflow    = {}    #w_i,j^w
+flights  = {}    #z_i,j^k,w
 aircraft = {}    #AC^k
 aircraft_leased = {}    #m^k
 aircraft_sold = {}  #n^k
@@ -34,14 +34,14 @@ aircraft_sold = {}  #n^k
 ### CREATE DECISION VARIABLES ###########################################################################################
 for i in range(nodes):
     for j in range(nodes):
-        flow[i,j] = m.addVar(vtype=GRB.INTEGER, lb=0,
-                        name="x_%s,%s"%(i,j))
-        hflow[i,j] = m.addVar(vtype=GRB.INTEGER, lb=0,
-                        name="w_%s,%s"%(i,j))
+        flow[i,j,w] = m.addVar(vtype=GRB.INTEGER, lb=0,
+                        name="x_%s,%s_%s"%(i,j,w))
+        hflow[i,j,w] = m.addVar(vtype=GRB.INTEGER, lb=0,
+                        name="w_%s,%s_%s"%(i,j,w))
         
         for k in range(commod):
-            flights[i,j,k] = m.addVar(vtype=GRB.INTEGER, lb=0,
-                        name="z_%s,%s_%s"%(i,j,k))
+            flights[i,j,k,w] = m.addVar(vtype=GRB.INTEGER, lb=0,
+                        name="z_%s,%s_%s_%s"%(i,j,k,w))
             #aircraft[k] = m.addVar(vtype=GRB.INTEGER, lb=0, #No. of aircraft
             #            name="AC_%s"%(k))
             aircraft_leased[k] = m.addVar(vtype=GRB.INTEGER, lb=0, #No. of extra leased aircraft
@@ -230,13 +230,6 @@ with open('outP2.csv', 'wb') as myfile:
      wr.writerows(var_z)
      wr.writerows(var_m)
      wr.writerows(var_n)
-
-### Make frequency table for use in P3 ###
-f_direct  = np.zeros(shape=(nodes,nodes))
-
-for i in range(nodes):
-    for j in range(nodes):
-        f_direct[i][j] = grb.LinExpr.getValue(grb.quicksum(flights[i,j,k].x for k in range(commod)))
 
 
 
