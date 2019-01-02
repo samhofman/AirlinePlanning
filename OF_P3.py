@@ -54,7 +54,7 @@ m.update()
 
 ##### OBJECTIVE FUNCTION #################################################################################################
 
-obj = grb.quicksum(grb.quicksum( y(i,j)*distance(i,j)*(hflow[i,j]+flow[i,j]) -  grb.quicksum((flights[i,j,k]*cost_fact(i,j)*(Cx_ar[0][k]+Ct[0][k]*distance(i,j)/speed[0][k]+Cf[0][k]*F22*distance(i,j)/1.5)) for k in range(commod))for j in range(nodes))for i in range(nodes)) - grb.quicksum((AC[0][k]+aircraft_leased[k]-aircraft_sold[k])*Cl[0][k]+2000.*aircraft_leased[k]+8000.*aircraft_sold[k] for k in range(commod))
+obj = grb.quicksum(grb.quicksum(grb.quicksum( y(i,j)*distance(i,j)*(hflow[i,j,w]+flow[i,j,w]) -  grb.quicksum((flights[i,j,k,w]*cost_fact(i,j)*(Cx_ar[0][k]+Ct[0][k]*distance(i,j)/speed[0][k]+Cf[0][k]*F22*distance(i,j)/1.5)) for k in range(commod))for w in range(weeks)) for j in range(nodes))for i in range(nodes)) - grb.quicksum((AC[0][k]+aircraft_leased[k]-aircraft_sold[k])*Cl[0][k]+2000.*aircraft_leased[k]+8000.*aircraft_sold[k] for k in range(commod))
 
 m.setObjective(obj,GRB.MAXIMIZE) #fill in obj instead of m.getObjective
 
