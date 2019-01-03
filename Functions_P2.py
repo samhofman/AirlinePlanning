@@ -153,4 +153,5 @@ def y(i,j):
     else: #For intra-European flights
         y_ij = 5.9*dist_fact(i,j)+0.043
     return y_ij;
-    
+
+

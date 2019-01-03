@@ -10,7 +10,7 @@ import xlsxwriter
 from math import *
 
 from Excel_data_P3 import *
-from OF_P2 import f_direct
+#from OF_P2 import f_direct #Only needed when initial demand needs to be re-calculated
 import csv
 
 
@@ -155,7 +155,7 @@ def y(i,j):
     return y_ij;
 
 ### Frequency functions ###
-
+f_direct = np.zeros(shape=(24,24))
 def freq_direct(i,j):
     freq = f_direct[i][j]
     return freq;
@@ -179,28 +179,28 @@ def MS(i,j):
     return MS;
 
 ### Create demand for first iteration ###
-initial_demand_week1 = np.zeros(shape=(24,24))
-initial_demand_week2 = np.zeros(shape=(24,24))
-
-for i in range(nodes):
-    for j in range(nodes):
-        w = 0
-        initial_demand_week1[i,j] = int(demand(i,j,w))
-        
-
-for i in range(nodes):
-    for j in range(nodes):
-        w = 1
-        initial_demand_week2[i,j] = int(demand(i,j,w))
-
-### Write demand matrix to csv for problem 3 ###
-
-
-with open('Initial_Demand_P3_0.csv', 'wb') as myfile:
-     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
-     wr.writerows(initial_demand_week1)
-
-with open('Initial_Demand_P3_1.csv', 'wb') as myfile:
-     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
-     wr.writerows(initial_demand_week2)
+#initial_demand_week1 = np.zeros(shape=(24,24))
+#initial_demand_week2 = np.zeros(shape=(24,24))
+#
+#for i in range(nodes):
+#    for j in range(nodes):
+#        w = 0
+#        initial_demand_week1[i,j] = int(demand(i,j,w))
+#        
+#
+#for i in range(nodes):
+#    for j in range(nodes):
+#        w = 1
+#        initial_demand_week2[i,j] = int(demand(i,j,w))
+#
+#### Write demand matrix to csv for problem 3 ###
+#
+#
+#with open('Initial_Demand_P3_0.csv', 'wb') as myfile:
+#     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+#     wr.writerows(initial_demand_week1)
+#
+#with open('Initial_Demand_P3_1.csv', 'wb') as myfile:
+#     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+#     wr.writerows(initial_demand_week2)
     
