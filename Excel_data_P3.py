@@ -2,7 +2,7 @@
 """
 Created on Tue Dec 04 09:34:11 2018
 
-@author: woute
+@author: sam
 """
 
 import openpyxl as xl

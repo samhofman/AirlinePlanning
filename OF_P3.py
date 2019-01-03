@@ -2,7 +2,7 @@
 """
 Created on Wed Dec 05 17:16:14 2018
 
-@author: woute
+@author: sam
 """
 import gurobipy as grb
 from math import *
@@ -22,14 +22,14 @@ week1_init = pd.read_csv('Initial_Demand_P3_0.csv', sep=',',header=None)
 week1_init = week1_init.values
 week2_init = pd.read_csv('Initial_Demand_P3_1.csv', sep=',',header=None)
 week2_init = week2_init.values
-#week1 = pd.read_csv('Demand_P3_0.csv', sep=',',header=None)
-#week1 = week1.values
-#week2 = pd.read_csv('Demand_P3_1.csv', sep=',',header=None)
-#week2 = week2.values
+week1 = pd.read_csv('Demand_P3_0.csv', sep=',',header=None)
+week1 = week1.values
+week2 = pd.read_csv('Demand_P3_1.csv', sep=',',header=None)
+week2 = week2.values
 
 # GET DEMAND FOR P3
 
-iteration = 0 # Change manually for every iteration
+iteration = 3 # Change manually for every iteration
 
 def demandP3(i,j,w):
     if iteration == 0:
@@ -220,7 +220,7 @@ def mycallback(model, where):
         objbnd = model.cbGet(GRB.Callback.MIP_OBJBND)
         objbst = model.cbGet(GRB.Callback.MIP_OBJBST)
         runtime = model.cbGet(GRB.Callback.RUNTIME)
-        if runtime > 60:
+        if runtime > 300:
             print('Stop early - 60s passed')
             model.terminate()
 #        elif abs(objbst - objbnd) <= 0.0033 * (abs(objbst)):
@@ -272,7 +272,47 @@ with open('outP3.csv', 'wb') as myfile:
      wr.writerows(var_m)
      wr.writerows(var_n)
      
-# Calculate new demand for nect iteration
+# Calculate new demand for next iteration
+### FUNCTIONS ###
+
+def freq_direct_it(i,j,w):
+    if w == 0:
+        freq = f_direct_week1[i][j]
+    elif w == 1:
+        freq = f_direct_week2[i][j]
+    return freq;
+
+def freq_indirect_it(i,j,w):
+    if w == 0:
+        freq = min(freq_direct_it(i,0,w),freq_direct_it(0,j,w))
+    elif w == 1:
+        freq = min(freq_direct_it(i,0,w),freq_direct_it(0,j,w))
+    return freq;
+
+### Market share function ###
+
+def MS_it(i,j,w):
+    a = 1.0
+    b = 1.7
+    if freq_direct_it(i,j,w) + freq_indirect_it(i,j,w) > 0: #We already have route
+        MS = ((freq_direct_it(i,j,w)**a)+(freq_indirect_it(i,j,w)**b))/((freq_direct_it(i,j,w)**a)+(freq_indirect_it(i,j,w)**b)+(competition[i,j]**a))
+    elif freq_direct_it(i,j,w) + freq_indirect_it(i,j,w) == 0: #We don't fly the route
+        if competition[i,j] > 0: #Competition already flies the route
+            MS = 0.
+        else: #Competition doesn't fly the route
+            MS = 1.
+    return MS;
+
+def demand_it(i,j,w):
+    if w == 0:
+        q = demand_hs[i][j]*MS_it(i,j,w)
+    elif w == 1:
+        q = demand_ls[i][j]*MS_it(i,j,w)
+    else:
+        print "Error: more than 2 weeks."
+        exit()
+     
+    return q;
 
 f_direct_week1  = np.zeros(shape=(nodes,nodes))
 f_direct_week2  = np.zeros(shape=(nodes,nodes))
@@ -287,27 +327,23 @@ for i in range(nodes):
         w = 1
         f_direct_week2[i][j] = grb.LinExpr.getValue(grb.quicksum(flights[i,j,k,w].x for k in range(commod)))
 
-f_direct = f_direct_week1
-
 week1 = np.zeros(shape=(24,24))
 
 for i in range(nodes):
     for j in range(nodes):
         w = 0
-        week1[i,j] = int(demand(i,j,w))
+        week1[i,j] = int(demand_it(i,j,w))
 
 with open('Demand_P3_0.csv', 'wb') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerows(week1)
- 
-f_direct = f_direct_week2
        
 week2 = np.zeros(shape=(24,24))
  
 for i in range(nodes):
     for j in range(nodes):
         w = 1
-        week2[i,j] = int(demand(i,j,w))  
+        week2[i,j] = int(demand_it(i,j,w))  
         
 with open('Demand_P3_1.csv', 'wb') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)

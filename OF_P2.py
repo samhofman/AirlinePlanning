@@ -2,7 +2,7 @@
 """
 Created on Wed Dec 05 17:16:14 2018
 
-@author: woute
+@author: sam
 """
 import gurobipy as grb
 from math import *

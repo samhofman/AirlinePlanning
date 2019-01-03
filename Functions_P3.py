@@ -76,16 +76,16 @@ def dist_fact(i,j):
 
 ### DEMAND ###
 
-def demand(i,j,w):
-    if w == 0:
-        q = demand_hs[i][j]*MS(i,j)
-    elif w == 1:
-        q = demand_ls[i][j]*MS(i,j)
-    else:
-        print "Error: more than 2 weeks."
-        exit()
-     
-    return q;
+#def demand(i,j,w):
+#    if w == 0:
+#        q = demand_hs[i][j]*MS(i,j)
+#    elif w == 1:
+#        q = demand_ls[i][j]*MS(i,j)
+#    else:
+#        print "Error: more than 2 weeks."
+#        exit()
+#     
+#    return q;
 
 ### Cost factor ###
 
@@ -155,28 +155,28 @@ def y(i,j):
     return y_ij;
 
 ### Frequency functions ###
-f_direct = np.zeros(shape=(24,24))
-def freq_direct(i,j):
-    freq = f_direct[i][j]
-    return freq;
 
-def freq_indirect(i,j):
-    freq = min(freq_direct(i,0),freq_direct(0,j))
-    return freq;
-
-### Market share function ###
-
-def MS(i,j):
-    a = 1.0
-    b = 1.7
-    if freq_direct(i,j) + freq_indirect(i,j) > 0: #We already have route
-        MS = ((freq_direct(i,j)**a)+(freq_indirect(i,j)**b))/((freq_direct(i,j)**a)+(freq_indirect(i,j)**b)+(competition[i,j]**a))
-    elif freq_direct(i,j) + freq_indirect(i,j) == 0: #We don't fly the route
-        if competition[i,j] > 0: #Competition already flies the route
-            MS = 0.
-        else: #Competition doesn't fly the route
-            MS = 1.
-    return MS;
+#def freq_direct(i,j):
+#    freq = f_direct[i][j]
+#    return freq;
+#
+#def freq_indirect(i,j):
+#    freq = min(freq_direct(i,0),freq_direct(0,j))
+#    return freq;
+#
+#### Market share function ###
+#
+#def MS(i,j):
+#    a = 1.0
+#    b = 1.7
+#    if freq_direct(i,j) + freq_indirect(i,j) > 0: #We already have route
+#        MS = ((freq_direct(i,j)**a)+(freq_indirect(i,j)**b))/((freq_direct(i,j)**a)+(freq_indirect(i,j)**b)+(competition[i,j]**a))
+#    elif freq_direct(i,j) + freq_indirect(i,j) == 0: #We don't fly the route
+#        if competition[i,j] > 0: #Competition already flies the route
+#            MS = 0.
+#        else: #Competition doesn't fly the route
+#            MS = 1.
+#    return MS;
 
 ### Create demand for first iteration ###
 #initial_demand_week1 = np.zeros(shape=(24,24))
