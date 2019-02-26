@@ -5,17 +5,18 @@ Created on Mon Feb 25 14:46:21 2019
 @author: woute
 """
 
-import xlrd
+import openpyxl as xl
 import numpy as np
 
-wb = xlrd.open_workbook("Input_Ass1P1.xlsx")
-S1 = wb.sheet_by_index(0)
-S2 = wb.sheet_by_index(1)
+wb = xl.load_workbook("Input_Ass1P1.xlsx", read_only=True)
+S1 = wb['Arcs'] #Tab arcs
+S2 = wb['Commodities'] #Tab commodities
 
+### Read Tab 1 ###
 
-Arcs = []   #From, To, Cost
+arcs = np.array([[i.value for i in j] for j in S1['A2':'E31']])
 
+### Read Tab 2 ###
 
-for i in range(1,31):
-    arc = (str(S1.cell_value(i,1)), str(S1.cell_value(i,2)), S1.cell_value(i,3))
-    Arcs.append(arc)    
+commodities = np.array([[i.value for i in j] for j in S2['A2':'D41']])
+
