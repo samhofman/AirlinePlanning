@@ -1,0 +1,60 @@
+
+Gurobi 8.1.0 (win64, Python) logging started 02/26/19 16:52:25
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.0 (win64, Python) logging started 03/01/19 12:24:56
+
+Academic license - for non-commercial use only
+Optimize a model with 30720 rows, 10240 columns and 727040 nonzeros
+Variable types: 0 continuous, 10240 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [3e+00, 3e+01]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 30274 rows and 8344 columns
+Presolve time: 0.29s
+Presolved: 446 rows, 1896 columns, 6112 nonzeros
+Variable types: 0 continuous, 1896 integer (0 binary)
+
+Root relaxation: objective 2.631000e+03, 260 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    2631.0000000 2631.00000  0.00%     -    0s
+
+Explored 0 nodes (260 simplex iterations) in 0.49 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 2631 
+
+Solve interrupted
+Best objective 2.631000000000e+03, best bound 2.631000000000e+03, gap 0.0000%
+Optimize a model with 30720 rows, 10240 columns and 727040 nonzeros
+Variable types: 0 continuous, 10240 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [3e+00, 3e+01]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 30274 rows and 8344 columns
+Presolve time: 0.37s
+Presolved: 446 rows, 1896 columns, 6112 nonzeros
+Variable types: 0 continuous, 1896 integer (0 binary)
+
+Root relaxation: objective 2.631000e+03, 260 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    2631.0000000 2631.00000  0.00%     -    0s
+
+Explored 0 nodes (260 simplex iterations) in 0.69 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 2631 
+
+Solve interrupted
+Best objective 2.631000000000e+03, best bound 2.631000000000e+03, gap 0.0000%
