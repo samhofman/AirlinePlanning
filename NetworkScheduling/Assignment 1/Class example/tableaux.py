@@ -49,7 +49,7 @@ quantity = commodities[:,3]
 
 ### Calculate shortest path for each commodity ###
 
-G = nx.Graph()
+G = nx.DiGraph()
 
 for i in range(len(arcs)):
     G.add_edge(arcs[i][1], arcs[i][2], weight = arcs[i][3])

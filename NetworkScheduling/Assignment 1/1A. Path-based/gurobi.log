@@ -582,3 +582,140 @@ Iteration    Objective       Primal Inf.    Dual Inf.      Time
 
 Solved in 2 iterations and 0.20 seconds
 Optimal objective  2.200000000e+02
+
+Gurobi 8.1.0 (win64, Python) logging started 03/06/19 15:22:52
+
+Academic license - for non-commercial use only
+Optimize a model with 70 rows, 13971 columns and 69058 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+00]
+  Objective range  [3e+00, 1e+03]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+01]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 16 rows and 9074 columns
+Presolve time: 0.05s
+Presolved: 54 rows, 4897 columns, 26095 nonzeros
+
+Ordering time: 0.00s
+
+Barrier performed 0 iterations in 0.06 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 18 iterations and 0.07 seconds
+Optimal objective  8.180000000e+02
+Optimize a model with 70 rows, 13971 columns and 68158 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+00]
+  Objective range  [3e+00, 6e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+01]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 16 rows and 9075 columns
+Presolve time: 0.04s
+Presolved: 54 rows, 4896 columns, 26065 nonzeros
+
+Ordering time: 0.00s
+
+Barrier performed 0 iterations in 0.05 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 22 iterations and 0.06 seconds
+Optimal objective  8.180000000e+02
+Optimize a model with 70 rows, 13971 columns and 68158 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+00]
+  Objective range  [3e+00, 6e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+01]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 16 rows and 9075 columns
+Presolve time: 0.04s
+Presolved: 54 rows, 4896 columns, 26065 nonzeros
+
+Ordering time: 0.00s
+
+Barrier performed 0 iterations in 0.06 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 22 iterations and 0.06 seconds
+Optimal objective  8.180000000e+02
+
+Gurobi 8.1.0 (win64, Python) logging started 03/06/19 16:11:53
+
+Academic license - for non-commercial use only
+Optimize a model with 70 rows, 13971 columns and 19291 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+00]
+  Objective range  [1e+01, 1e+03]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 70 rows and 13971 columns
+Presolve time: 0.01s
+Presolve: All rows and columns removed
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.5080000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 0 iterations and 0.01 seconds
+Optimal objective  2.508000000e+03
+Optimize a model with 70 rows, 13971 columns and 125176 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+00]
+  Objective range  [1e+01, 1e+03]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+01]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 0 rows and 30 columns
+Presolve time: 0.05s
+Presolved: 70 rows, 13941 columns, 125176 nonzeros
+
+Ordering time: 0.00s
+
+Barrier performed 0 iterations in 0.07 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 9 iterations and 0.08 seconds
+Infeasible model
+Optimize a model with 70 rows, 13971 columns and 125176 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+00]
+  Objective range  [1e+01, 1e+03]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+01]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 0 rows and 30 columns
+Presolve time: 0.06s
+Presolved: 70 rows, 13941 columns, 125176 nonzeros
+
+Ordering time: 0.00s
+
+Barrier performed 0 iterations in 0.08 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 9 iterations and 0.08 seconds
+Infeasible model
