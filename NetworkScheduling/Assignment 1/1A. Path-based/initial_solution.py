@@ -27,14 +27,14 @@ for k in range(len(commodities)):
                         name="f_%s,%s"%(k,p))
 
 for a in range(len(arcs)):
-            slack[a] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,
+            slack[a] = m.addVar(vtype=GRB.INTEGER, lb=0,
                         name="s_%s"%(a))
 
 m.update()
 
 ##### OBJECTIVE FUNCTION #################################################################################################
 
-obj = grb.quicksum(grb.quicksum(d(k)*cp(k,p)*fraction[k,p] for p in range(len(P[k]))) for k in range(len(commodities))) + 1000 * grb.quicksum(slack[a] for a in range(len(arcs)))
+obj = grb.quicksum(grb.quicksum(d(k)*cp(k,p)*fraction[k,p] for p in range(len(P[k]))) for k in range(len(commodities))) + 100000. * grb.quicksum(slack[a] for a in range(len(arcs)))
 
 m.setObjective(obj,GRB.MINIMIZE) #fill in obj instead of m.getObjective
 
@@ -47,7 +47,7 @@ print "Objective function created."
 print "Constraint 1 loading"
 
 for i in range(len(arcs)):
-    m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,i) for p in range(len(P[k]))) for k in range(len(commodities))) - slack[i],
+    m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,i)-slack[i] for p in range(len(P[k]))) for k in range(len(commodities))),
                             GRB.LESS_EQUAL,
                             u(i))
 
@@ -57,7 +57,7 @@ print "Constraint 2 loading"
 for k in range(len(commodities)):
     m.addConstr(grb.quicksum(fraction[k,p] for p in range(len(P[k]))),
                             GRB.EQUAL,
-                            1)
+                            1.)
  
 #for a in range(len(arcs)):
 #    m.addConstr(slack[a], 
@@ -70,15 +70,15 @@ m.write("model.lp")
 m.optimize()
 
 
-pi = [c.Pi for c in m.getConstrs()]
-
-sigma = pi[len(arcs):(len(arcs)+len(commodities))]
-pi = pi[:len(arcs)]
-    
-for v in m.getVars():
-    if v.x > 0:
-        print (v.varName, v.x)    
-print ('Obj:', m.objVal) 
+#pi = [c.Pi for c in m.getConstrs()]
+#
+#sigma = pi[len(arcs):(len(arcs)+len(commodities))]
+#pi = pi[:len(arcs)]
+#    
+#for v in m.getVars():
+#    if v.x > 0:
+#        print (v.varName, v.x)    
+#print ('Obj:', m.objVal) 
 
 
 
