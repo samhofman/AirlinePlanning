@@ -34,7 +34,7 @@ m.update()
 
 ##### OBJECTIVE FUNCTION #################################################################################################
 
-obj = grb.quicksum(grb.quicksum(d(k)*cp(k,p)*fraction[k,p] for p in range(len(P[k]))) for k in range(len(commodities))) #+ 1000 * grb.quicksum(slack[a] for a in range(len(arcs)))
+obj = grb.quicksum(grb.quicksum(d(k)*cp(k,p)*fraction[k,p] for p in range(len(P[k]))) for k in range(len(commodities))) + 1000 * grb.quicksum(slack[a] for a in range(len(arcs)))
 
 m.setObjective(obj,GRB.MINIMIZE) #fill in obj instead of m.getObjective
 
@@ -47,8 +47,8 @@ print "Objective function created."
 print "Constraint 1 loading"
 
 for i in range(len(arcs)):
-    m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,i) for p in range(len(P[k]))) for k in range(len(commodities))) #- grb.quicksum(slack[a] for a in range(len(arcs))),
-                            ,GRB.LESS_EQUAL,
+    m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,i) for p in range(len(P[k]))) for k in range(len(commodities))) - slack[i],
+                            GRB.LESS_EQUAL,
                             u(i))
 
 ### 2 ################################################################
@@ -71,6 +71,9 @@ m.optimize()
 
 
 pi = [c.Pi for c in m.getConstrs()]
+
+sigma = pi[len(arcs):(len(arcs)+len(commodities))]
+pi = pi[:len(arcs)]
     
 for v in m.getVars():
     if v.x > 0:
