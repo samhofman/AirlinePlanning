@@ -34,7 +34,10 @@ m.update()
 
 ##### OBJECTIVE FUNCTION #################################################################################################
 
-obj = grb.quicksum(grb.quicksum(d(k)*cp(k,p)*fraction[k,p] for p in range(len(P[k]))) for k in range(len(commodities))) + 100000. * grb.quicksum(slack[a] for a in range(len(arcs)))
+obj = grb.quicksum(grb.quicksum(d(k)*cp(k,p)*fraction[k,p] for p in range(1)) for k in range(len(commodities))) + 1000 * grb.quicksum(slack[a] for a in range(len(arcs)))
+
+
+
 
 m.setObjective(obj,GRB.MINIMIZE) #fill in obj instead of m.getObjective
 
@@ -47,7 +50,7 @@ print "Objective function created."
 print "Constraint 1 loading"
 
 for i in range(len(arcs)):
-    m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,i) for p in range(len(P[k]))) for k in range(len(commodities))) - slack[i],
+    m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,i) for p in range(1)) for k in range(len(commodities))) - slack[i],
                             GRB.LESS_EQUAL,
                             u(i))
 
@@ -55,9 +58,9 @@ for i in range(len(arcs)):
 print "Constraint 2 loading"
 
 for k in range(len(commodities)):
-    m.addConstr(grb.quicksum(fraction[k,p] for p in range(len(P[k]))),
+    m.addConstr(grb.quicksum(fraction[k,p] for p in range(1)),
                             GRB.EQUAL,
-                            1.)
+                            1)
  
 #for a in range(len(arcs)):
 #    m.addConstr(slack[a], 
@@ -65,20 +68,42 @@ for k in range(len(commodities)):
 #                max{0,grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,arcs[i][1],arcs[i][2]) for p in range(len(P[k]))) for k in range(len(commodities))) - u(a)} )
     
 
+
 m.write("model.lp")
  
 m.optimize()
 
 
-#pi = [c.Pi for c in m.getConstrs()]
-#
-#sigma = pi[len(arcs):(len(arcs)+len(commodities))]
-#pi = pi[:len(arcs)]
-#    
-#for v in m.getVars():
-#    if v.x > 0:
-#        print (v.varName, v.x)    
-#print ('Obj:', m.objVal) 
+pi = [c.Pi for c in m.getConstrs()]
+
+sigma = pi[len(arcs):(len(arcs)+len(commodities))]
+pi = pi[:len(arcs)]
+    
+for v in m.getVars():
+    if v.x > 0:
+        print (v.varName, v.x)    
+print ('Obj:', m.objVal) 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

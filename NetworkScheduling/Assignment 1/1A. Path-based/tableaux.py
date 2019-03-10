@@ -68,23 +68,40 @@ for i in range(len(commodities)):
     SP.append([p for p in nx.shortest_path(G, source = commodities[i][1], target = commodities[i][2] )])
     P.append([p for p in nx.all_simple_paths(G, source = commodities[i][1], target = commodities[i][2] )])
     
-
-delta_arc = {}  #delta[k][a][p]  
-for k in range(len(commodities)):
-    delta_arc[k] = np.zeros((len(arcs),len(P[k])))
-    
-for k in range(len(commodities)):
-    for p in range(len(P[k])):
-        for a in range(len(arcs)):
-                for n in range(len(P[k][p])-1):
-                    if P[k][p][n] == arcs[a][1] and P[k][p][n+1] == arcs[a][2]:
-                        delta_arc[k][a][p] = 1.
-                    elif P[k][p][n] == arcs[a][2] and P[k][p][n+1] == arcs[a][1]:
-                        delta_arc[k][a][p] = 1.
+###TABLEAU
+#delta_arc = {}  #delta[k][a][p]  
+#for k in range(len(commodities)):
+#    delta_arc[k] = np.zeros((len(arcs),len(P[k])))
+#
+#   
+#for k in range(len(commodities)):
+#    for p in range(len(P[k])):
+#        for a in range(len(arcs)):
+#                for n in range(len(P[k][p])-1):
+#                    if P[k][p][n] == arcs[a][1] and P[k][p][n+1] == arcs[a][2]:
+#                        delta_arc[k][a][p] = 1.
+#                    elif P[k][p][n] == arcs[a][2] and P[k][p][n+1] == arcs[a][1]:
+#                        delta_arc[k][a][p] = 1.
             
+#Shortest paths
+delta_sp= {}    #delta[k][a][p]    
+for k in range(len(commodities)):
+    delta_sp[k] = np.zeros((len(arcs),1))
+
+
+for k in range(len(commodities)):
+    for a in range(len(arcs)):
+        p = 0
+        for n in range(len(SP[k])-1):
+            if SP[k][n] == arcs[a][1] and SP[k][n+1] == arcs[a][2]:
+                delta_sp[k][a][p] = 1.
+            elif SP[k][n] == arcs[a][2] and SP[k][n+1] == arcs[a][1]:
+                delta_sp[k][a][p] = 1.            
+        
+
 
 def delta(k,p,i):
-    delta = delta_arc[k][i][p]
+    delta = delta_sp[k][i][p]
     return delta
     
        
@@ -103,7 +120,7 @@ def d(k):
 def cp(k,p):
     cp = 0.
     for a in range(len(arcs)):
-        cp = cp + delta_arc[k][a][p] * arcs[a][3]
+        cp = cp + delta_sp[k][a][p] * arcs[a][3]
     return cp 
 
         
