@@ -47,7 +47,7 @@ print "Objective function created."
 print "Constraint 1 loading"
 
 for i in range(len(arcs)):
-    m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,i)-slack[i] for p in range(len(P[k]))) for k in range(len(commodities))),
+    m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,i) for p in range(len(P[k]))) for k in range(len(commodities))) - slack[i],
                             GRB.LESS_EQUAL,
                             u(i))
 

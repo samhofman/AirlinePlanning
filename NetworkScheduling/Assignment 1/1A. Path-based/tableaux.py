@@ -61,10 +61,11 @@ for i in range(len(arcs)):
 
 
 # Implement arcs and weights
-
+SP = []
 P = []        #P[k][p][n] k commodity, p path number, n node
 
 for i in range(len(commodities)):
+    SP.append([p for p in nx.shortest_path(G, source = commodities[i][1], target = commodities[i][2] )])
     P.append([p for p in nx.all_simple_paths(G, source = commodities[i][1], target = commodities[i][2] )])
     
 
@@ -87,8 +88,8 @@ def delta(k,p,i):
     return delta
     
        
-def c(i,j):
-    c = cost[i][j] 
+def c(a):
+    c = arcs[a][3] 
     return c
 
 def u(v):
