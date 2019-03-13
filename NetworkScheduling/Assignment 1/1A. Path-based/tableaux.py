@@ -14,18 +14,19 @@ from math import *
 import matplotlib.pyplot as plt
 
 
+#wb = xl.load_workbook("Class_example_data.xlsx", read_only=True)
 wb = xl.load_workbook("Input_Ass1P1.xlsx", read_only=True)
 S1 = wb['Arcs']
 S2 = wb['Commodities']
-
+#S1 = wb['Sheet1']
 ### Read Tab 1 ###
 
 arcs = np.array([[i.value for i in j] for j in S1['A2':'E31']])
-
+#arcs = np.array([[i.value for i in j] for j in S1['A2':'E8']])
 ### Read Tab 2 ###
 
 commodities = np.array([[i.value for i in j] for j in S2['A2':'D41']])
-
+#commodities = np.array([[i.value for i in j] for j in S1['A12':'D15']])
 
 ### COST ###
 
@@ -62,11 +63,11 @@ for i in range(len(arcs)):
 
 # Implement arcs and weights
 SP = []
-P = []        #P[k][p][n] k commodity, p path number, n node
+#P = []        #P[k][p][n] k commodity, p path number, n node
 
 for i in range(len(commodities)):
-    SP.append([p for p in nx.shortest_path(G, source = commodities[i][1], target = commodities[i][2] )])
-    P.append([p for p in nx.all_simple_paths(G, source = commodities[i][1], target = commodities[i][2] )])
+    SP.append([[p for p in nx.dijkstra_path(G, source = commodities[i][1], target = commodities[i][2] )]])
+    #P.append([p for p in nx.shortest_simple_paths(G, source = commodities[i][1], target = commodities[i][2] )])
     
 ###TABLEAU
 #delta_arc = {}  #delta[k][a][p]  
@@ -91,12 +92,12 @@ for k in range(len(commodities)):
 
 for k in range(len(commodities)):
     for a in range(len(arcs)):
-        p = 0
-        for n in range(len(SP[k])-1):
-            if SP[k][n] == arcs[a][1] and SP[k][n+1] == arcs[a][2]:
-                delta_sp[k][a][p] = 1.
-            elif SP[k][n] == arcs[a][2] and SP[k][n+1] == arcs[a][1]:
-                delta_sp[k][a][p] = 1.            
+        for p in range(len(SP[k])):
+            for n in range(len(SP[k][p])-1):
+                if SP[k][p][n] == arcs[a][1] and SP[k][p][n+1] == arcs[a][2]:
+                    delta_sp[k][a][p] = 1.
+                elif SP[k][p][n] == arcs[a][2] and SP[k][p][n+1] == arcs[a][1]:
+                    delta_sp[k][a][p] = 1.            
         
 
 
@@ -121,8 +122,24 @@ def cp(k,p):
     cp = 0.
     for a in range(len(arcs)):
         cp = cp + delta_sp[k][a][p] * arcs[a][3]
-    return cp 
+    return cp
 
+def sl(a):
+    slack = 0.
+    for k in range(len(commodities)):
+        slack = slack + delta_sp[k][a][0]*d(k)
+    
+    if slack > u(a):
+        sl = 1.
+    
+    else:
+        sl = 0.
+    return sl  
+            
+                     
+
+    
+   
         
         
 
