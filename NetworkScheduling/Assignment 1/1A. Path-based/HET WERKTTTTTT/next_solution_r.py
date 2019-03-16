@@ -53,7 +53,7 @@ while z > 0.5:
 #                        delta_spnew[k][a][p] = 1.    
                         
     
-    z = 0.          
+    z = 0.       
     for k in range(len(commodities)):
         if cppi(k) < sigma[k]/d(k):
             it = 0.
@@ -65,7 +65,7 @@ while z > 0.5:
                 SP[k].append(SPnew[k][0])
                 delta_sp[k] = np.hstack((delta_sp[k],delta_spnew[k]))
                 z = z + 1
-    
+    print "Columns added:", z
     if z == 0.:
         
         break
