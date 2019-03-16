@@ -5,13 +5,25 @@ Created on Mon Mar 11 10:58:22 2019
 @author: woute
 """
 
-from initial_solution import *
+#from initial_solution import *
+from tableaux import *
+from initial_solution import slack_row
 
+
+
+def slack_row_add(a): #Make function that, for every row, decides whether a slack variable is used
+    for row in slack_row: #For all the values of the slack_row matrix
+        if row == a: #Check if that value is equal to the row number currently used in Gurobi
+            slack_row_add = 1. #If that's true, assign value 1, and use a slack variable in Gurobi
+        else:
+            slack_row_add = 0. #If that's not true, assign value 0, and do not use a slack variable in Gurobi
+    return slack_row_add
+        
 
 
 z = 1
 
-while z > 0:
+while z <2:
     
 
     m = grb.Model('MaxExample')
@@ -19,7 +31,7 @@ while z > 0:
     
     # DECISION VARIABLES
     fraction     = {}    #f_k,p
-    slack        = {}    #s_i,j
+    slack2        = {}    #s_i,j
     
     ### CREATE DECISION VARIABLES ###########################################################################################
     for k in range(len(commodities)):
@@ -28,7 +40,7 @@ while z > 0:
                             name="f_%s,%s"%(k,p))
     
     for a in range(len(arcs)):
-                slack[a] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,
+                slack2[a] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,
                             name="s_%s"%(a))
     
     m.update()
@@ -38,7 +50,7 @@ while z > 0:
     
     ##### OBJECTIVE FUNCTION #################################################################################################
     
-    obj = grb.quicksum(grb.quicksum(d(k)*cp(k,p)*fraction[k,p] for p in range(len(delta_sp[k][p]))) for k in range(len(commodities)))# + 1000 * grb.quicksum( sl(a) * slack[a] for a in range(len(arcs)))
+    obj = grb.quicksum(grb.quicksum(d(k)*cp(k,p)*fraction[k,p] for p in range(len(delta_sp[k][p]))) for k in range(len(commodities))) + 1000 * grb.quicksum(slack_row_add(a) * slack2[a] for a in range(len(arcs)))
     
        
     
@@ -53,7 +65,7 @@ while z > 0:
     print "Constraint 1 loading"
     
     for i in range(len(arcs)):
-        m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,i) for p in range(len(delta_sp[k][p]))) for k in range(len(commodities))) #- sl(i) * slack[i]
+        m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,i) for p in range(len(delta_sp[k][p]))) for k in range(len(commodities))) - slack_row_add(i) * slack2[i]
         ,
                                 GRB.LESS_EQUAL,
                                 u(i))

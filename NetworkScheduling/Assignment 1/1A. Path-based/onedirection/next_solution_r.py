@@ -6,11 +6,9 @@ Created on Thu Mar 14 16:32:27 2019
 """
 
 from tableaux_r import *
-from initial_solution_r import pi, sigma, c_pi, c_sigma, slack_row, end_init, start_init
+from initial_solution_r import pi, sigma, c_pi, c_sigma, slack_row
 
-start_next = time.time()
 
-GRB = grb.GRB
 
 
 ### CPPI ###
@@ -28,7 +26,7 @@ z = 1.
 while z > 0.5:
     
 ### NEW GRAPH WITH UPDATED WEIGHTS ###    
-    G = nx.DiGraph()
+    G = nx.Graph()
 
     for i in range(len(arcs)):
         G.add_edge(arcs[i][1], arcs[i][2], weight = arcs[i][3]-pi[i])
@@ -49,8 +47,8 @@ while z > 0.5:
                 for n in range(len(SPnew[k][p])-1):
                     if SPnew[k][p][n] == arcs[a][1] and SPnew[k][p][n+1] == arcs[a][2]:
                         delta_spnew[k][a][p] = 1.
-#                    elif SPnew[k][p][n] == arcs[a][2] and SPnew[k][p][n+1] == arcs[a][1]:
-#                        delta_spnew[k][a][p] = 1.    
+                    elif SPnew[k][p][n] == arcs[a][2] and SPnew[k][p][n+1] == arcs[a][1]:
+                        delta_spnew[k][a][p] = 1.    
                         
     
     z = 0.          
@@ -110,7 +108,7 @@ while z > 0.5:
     print "Constraint 1 loading"
     
     for a in range(len(arcs)):
-        m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta_sp[k][a][p] for p in range(len(SP[k]))) for k in range(len(commodities))) - slack_row[a] *  slack[a]
+        m.addConstr(grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta_sp[k][a][p] for p in range(len(SP[k]))) for k in range(len(commodities))) #- slack_row[a] *  slack[a]
         ,
                                 GRB.LESS_EQUAL,
                                 u(a))
@@ -145,9 +143,4 @@ while z > 0.5:
     c_pi.append([pi])
 
 
-end_next = time.time()
 
-print "Tableaux time:", end_tab-start_tab
-print "Initial run time:", end_init-start_init
-print "Iterations run time:", end_next-start_next
-print "Total run time:", end_tab-start_tab+end_init-start_init+end_next-start_next

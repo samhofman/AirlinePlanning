@@ -20,6 +20,8 @@ m = grb.Model('MaxExample')
 fraction     = {}    #f_k,p
 slack        = {}    #s_i,j
 
+
+
 ### CREATE DECISION VARIABLES ###########################################################################################
 for k in range(len(commodities)):
     for p in range(len(SP[k])):
@@ -35,8 +37,6 @@ m.update()
 ##### OBJECTIVE FUNCTION #################################################################################################
 
 obj = grb.quicksum(grb.quicksum(d(k)*cp(k,p)*fraction[k,p] for p in range(len(delta_sp[k][p]))) for k in range(len(commodities))) + 1000 * grb.quicksum( sl(a) * slack[a] for a in range(len(arcs)))
-
-
 
 
 m.setObjective(obj,GRB.MINIMIZE) #fill in obj instead of m.getObjective
@@ -139,14 +139,10 @@ for k in range(len(commodities)):
                 delta_sp[k] = np.hstack((delta_sp[k],delta_spnew[k]))
        
                 
-
-def sl2(a):
-    if slack[a] > 0:
-        sl = 1.
-    else:
-        sl = 0.
-    return sl
-
+slack_row = [] # Make matrix in which it is defined which rows have a slack variable
+for a in range(len(arcs)): #Go over all the rows
+    if sl(a) == 1.: #If that row has a slack variable
+        slack_row.append(a) #Append the matrix with that row number 
 
 
 

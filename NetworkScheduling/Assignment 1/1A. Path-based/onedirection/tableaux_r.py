@@ -12,15 +12,13 @@ import numpy as np
 from math import *
 #import csv
 import matplotlib.pyplot as plt
-import time
 
-start_tab = time.time()
 
-wb = xl.load_workbook("Input_Ass1P1copy.xlsx", read_only=True)
+wb = xl.load_workbook("Input_Ass1P1.xlsx", read_only=True)
 S1 = wb['Arcs']
 S2 = wb['Commodities']
 
-arcs = np.array([[i.value for i in j] for j in S1['A2':'E61']])
+arcs = np.array([[i.value for i in j] for j in S1['A2':'E31']])
 commodities = np.array([[i.value for i in j] for j in S2['A2':'D41']])
 
 
@@ -46,7 +44,7 @@ quantity = commodities[:,3]
 
 ### Calculate shortest path for each commodity ###
 
-G = nx.DiGraph()
+G = nx.Graph()
 
 for i in range(len(arcs)):
     G.add_edge(arcs[i][1], arcs[i][2], weight = arcs[i][3])
@@ -75,8 +73,8 @@ for k in range(len(commodities)):
             for n in range(len(SP[k][p])-1):
                 if SP[k][p][n] == arcs[a][1] and SP[k][p][n+1] == arcs[a][2]:
                     delta_sp[k][a][p] = 1.
-#                elif SP[k][p][n] == arcs[a][2] and SP[k][p][n+1] == arcs[a][1]:
-#                    delta_sp[k][a][p] = 1.            
+                elif SP[k][p][n] == arcs[a][2] and SP[k][p][n+1] == arcs[a][1]:
+                    delta_sp[k][a][p] = 1.            
         
 
 
@@ -116,4 +114,4 @@ def sl(a):
         sl = 0.
     return sl  
             
-end_tab = time.time()                   
+                     

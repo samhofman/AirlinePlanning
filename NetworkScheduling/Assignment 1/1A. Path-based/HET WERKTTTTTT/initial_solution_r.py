@@ -10,6 +10,8 @@ import csv
 from math import *
 from tableaux_r import *
 
+start_init = time.time()
+
 GRB = grb.GRB
 
 # CREATE MODEL
@@ -91,7 +93,7 @@ for a in range(len(arcs)):
     if sl(a) == 1.:
         slack_row.append(1.)
         
-
+end_init = time.time()
 
 
 
