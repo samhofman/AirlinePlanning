@@ -6,6 +6,7 @@ Created on Thu Mar 14 16:32:27 2019
 """
 
 from tableaux_r import *
+import openpyxl as xl
 from initial_solution_r import pi, sigma, c_pi, c_sigma, slack_row, end_init, start_init
 
 start_next = time.time()
@@ -68,6 +69,10 @@ while z > 0.5:
     print "Columns added:", z
     if z == 0.:
         
+        for v in m.getVars():
+            if v.x > 0:
+                print (v.varName, v.x)    
+        print ('Obj:', m.objVal)
         break
    
                 
@@ -131,10 +136,10 @@ while z > 0.5:
     
     m.optimize()
 
-    for v in m.getVars():
-        if v.x > 0:
-            print (v.varName, v.x)    
-    print ('Obj:', m.objVal)
+#    for v in m.getVars():
+#        if v.x > 0:
+#            print (v.varName, v.x)    
+#    print ('Obj:', m.objVal)
 
     pi = [c.Pi for c in m.getConstrs()]
     
@@ -151,3 +156,40 @@ print "Tableaux time:", end_tab-start_tab
 print "Initial run time:", end_init-start_init
 print "Iterations run time:", end_next-start_next
 print "Total run time:", end_tab-start_tab+end_init-start_init+end_next-start_next
+
+
+import pandas as pd
+
+wb2 = xl.load_workbook("InputLetters.xlsx", read_only=True)
+S3 = wb2['Arcs']
+codes = np.array([[i.value for i in j] for j in S3['A2':'A17']])
+codes_l = np.array([[i.value for i in j] for j in S3['B2':'B17']])
+
+SP_let = SP
+
+
+for k in range(len(commodities)):
+    for p in range(len(SP[k])):
+        for n in range(len(SP[k][p])):
+            for a in range(16):
+                if SP[k][p][n] == codes[a][0]:
+                    SP_let[k][p][n] = str(codes_l[a][0])
+
+#for k in range(len(commodities)):
+#    for p in range(len(SP[k])):                    
+#        if fraction[k,p].x > 0.:
+#            print k, fraction[k,p].x, SP_let[k][p]
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    

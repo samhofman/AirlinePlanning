@@ -69,10 +69,10 @@ m.write("model.lp")
  
 m.optimize()
 
-for v in m.getVars():
-    if v.x > 0:
-        print (v.varName, v.x)    
-print ('Obj:', m.objVal) 
+#for v in m.getVars():
+#    if v.x > 0:
+#        print (v.varName, v.x)    
+#print ('Obj:', m.objVal) 
 
 
 
