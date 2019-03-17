@@ -73,6 +73,14 @@ while z > 0.5:
             if v.x > 0:
                 print (v.varName, v.x)    
         print ('Obj:', m.objVal)
+        
+        pi = [c.Pi for c in m.getConstrs()]
+    
+        sigma = pi[len(arcs):(len(arcs)+len(commodities))]
+        pi = pi[:len(arcs)]
+        
+
+                
         break
    
                 
@@ -158,12 +166,13 @@ print "Iterations run time:", end_next-start_next
 print "Total run time:", end_tab-start_tab+end_init-start_init+end_next-start_next
 
 
-import pandas as pd
 
 wb2 = xl.load_workbook("InputLetters.xlsx", read_only=True)
 S3 = wb2['Arcs']
+S4 = wb2['Arcs2']
 codes = np.array([[i.value for i in j] for j in S3['A2':'A17']])
 codes_l = np.array([[i.value for i in j] for j in S3['B2':'B17']])
+codes_arcs = np.array([[i.value for i in j] for j in S4['B2':'C31']])
 
 SP_let = SP
 
@@ -179,9 +188,19 @@ for k in range(len(commodities)):
 #    for p in range(len(SP[k])):                    
 #        if fraction[k,p].x > 0.:
 #            print k, fraction[k,p].x, SP_let[k][p]
+print " "
+print "ANALYSIS:"
+print "resting pi values "
+for i in range(len(arcs)):
+    if pi[i] < 0:
+        if i >= 30:
+            i = i - 30
+            print codes_arcs[i][1], "-", codes_arcs[i][0] , pi[i+30]
+        else:
+            print codes_arcs[i][0], "-", codes_arcs[i][1] , pi[i]
 
-
-        
+#for i in range(len(commodities)):
+#    print i, sigma[i]              
     
         
         
