@@ -22,27 +22,28 @@ S1 = wb['Flight']
 S2 = wb['Itinerary']
 S3 = wb['Recapture Rate']
 
+K = 2 #Number of commodities. k=0: economy; k=1: business
 
 ### Read Tab 1 ###
 
-flight_no = np.array([[str(i.value) for i in j] for j in S1['A2':'C233']])
-flight_time = np.array([[float(i.value) for i in j] for j in S1['D2':'E233']])
-flight_cap = np.array([[float(i.value) for i in j] for j in S1['F2':'G233']])
+arc_no = np.array([[int(i.value) for i in j] for j in S1['A2':'A233']]) #Arc number (integer number!)
+flight_no = np.array([[str(i.value) for i in j] for j in S1['B2':'D233']]) #Flight number, origin, destination
+flight_time = np.array([[float(i.value) for i in j] for j in S1['E2':'F233']]) #Departure time, ready time
+flight_cap = np.array([[float(i.value) for i in j] for j in S1['G2':'H233']]) #Capacity Y, capacity J
 
 ### Read Tab 2 ###
 
-itinerary_no = np.array([[float(i.value) for i in j] for j in S2['A2':'A738']])
-itinerary = np.array([[str(i.value) for i in j] for j in S2['B2':'C738']])
-demand = np.array([[float(i.value) for i in j] for j in S2['D2':'E738']])
-fare = np.array([[float(i.value) for i in j] for j in S2['F2':'G738']])
-leg = np.array([[str(i.value) for i in j] for j in S2['H2':'I738']])
+itinerary_no = np.array([[int(i.value) for i in j] for j in S2['A2':'A738']]) #Itinerary number (integer number!)
+itinerary = np.array([[str(i.value) for i in j] for j in S2['B2':'C738']]) #Origin, destination
+demand = np.array([[float(i.value) for i in j] for j in S2['D2':'E738']]) #Demand Y, demand J
+fare = np.array([[float(i.value) for i in j] for j in S2['F2':'G738']]) #Fare Y, fare J
+leg = np.array([[str(i.value) for i in j] for j in S2['H2':'I738']]) #Flight number leg 1, flight number leg 2
+# !!! IF LEG 2 IS EMPTY, FLIGHT NUMBER IS AR0000
 
 ### Read Tab 3 ###
 
-recapture = np.array([[float(i.value) for i in j] for j in S3['A2':'C300']])
-
-
-
+recapture_from_to = np.array([[int(i.value) for i in j] for j in S3['A2':'B300']]) #From itinerary, to itinerary (integer numbers!)
+r_rate = np.array([[float(i.value) for i in j] for j in S3['C2':'C300']]) #Recapture rate
 
         
         
