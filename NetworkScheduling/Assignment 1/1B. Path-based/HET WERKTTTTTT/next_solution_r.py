@@ -8,6 +8,7 @@ Created on Thu Mar 14 16:32:27 2019
 from tableaux_r import *
 import openpyxl as xl
 from initial_solution_r import pi, sigma, c_pi, c_sigma, slack_row, end_init, start_init
+import csv
 
 start_next = time.time()
 
@@ -74,12 +75,29 @@ while z > 0.5:
                 print (v.varName, v.x)    
         print ('Obj:', m.objVal)
         
+#        var_x = []    
+#
+#
+#        for var in m.getVars():
+#            # Or use list comprehensions instead 
+#            if 'f' == str(var.VarName[0]) and var.x > 0.:
+#                var_x.append([var.VarName, var.x])
+#           
+#        # Write to csv
+#        with open('Out_P1B.csv', 'wb') as myfile:
+#             wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+#             wr.writerows(var_x)
+        
         pi = [c.Pi for c in m.getConstrs()]
     
         sigma = pi[len(arcs):(len(arcs)+len(commodities))]
         pi = pi[:len(arcs)]
         
 
+        
+#        with open('Out_P1B_duals.csv', 'wb') as myfile:
+#             wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+#             wr.writerows([pi,sigma])        
                 
         break
    
@@ -167,6 +185,11 @@ print "Total run time:", end_tab-start_tab+end_init-start_init+end_next-start_ne
 
 
 
+
+
+
+
+
 wb2 = xl.load_workbook("InputLetters.xlsx", read_only=True)
 S3 = wb2['Arcs']
 S4 = wb2['Arcs2']
@@ -188,27 +211,57 @@ for k in range(len(commodities)):
 #    for p in range(len(SP[k])):                    
 #        if fraction[k,p].x > 0.:
 #            print k, fraction[k,p].x, SP_let[k][p]
+
+
+### Dual variables after last iteration ###
+
 print " "
 print "ANALYSIS:"
-print "resting pi values "
-for i in range(len(arcs)):
-    if pi[i] < 0:
-        if i >= 30:
-            i = i - 30
-            print codes_arcs[i][1], "-", codes_arcs[i][0] , pi[i+30]
-        else:
-            print codes_arcs[i][0], "-", codes_arcs[i][1] , pi[i]
+#print "resting pi values "
+#for i in range(len(arcs)):
+#    if pi[i] < 0:
+#        if i >= 30:
+#            i = i - 30
+#            print i+30, codes_arcs[i][1], "-", codes_arcs[i][0] , pi[i+30]
+#        else:
+#            print i, codes_arcs[i][0], "-", codes_arcs[i][1] , pi[i]
+#
+#for k in range(len(commodities)):
+#    print k, sigma[k]/d(k)
 
-#for i in range(len(commodities)):
-#    print i, sigma[i]              
+
+
+
+### Possible capacities to be increased ###             
+#cap_arc = []
+#for a in range(len(arcs)):
+#    cap_a = 0.
+#    for k in range(len(commodities)):
+#        for p in range(len(SP[k])):
+#            cap_a = cap_a + d(k)*fraction[k,p].x*delta_sp[k][a][p]    
+#    cap_arc.append(cap_a)
+#
+#print ""
+#print "arcs on full capacity:"
+#print "a, "
+#for a in range(len(cap_arc)):
+#    if cap_arc[a] == u(a):
+#        print a, cap_arc[a], u(a), pi[a]
     
-        
-        
     
     
-    
-    
-    
+pi_k = np.zeros((len(commodities),1))
+
+for k in range(len(commodities)):
+    for a in range(len(arcs)):
+        for p in range(len(SP[k])):
+            pi_k[k] = pi_k[k] + pi[a]*delta_sp[k][a][p]
+
+
+for k in range(len(commodities)):
+    if abs(pi_k[k]) > sigma[k]/d(k):
+        print k, pi_k[k], sigma[k]/d(k)
+   
     
     
     
