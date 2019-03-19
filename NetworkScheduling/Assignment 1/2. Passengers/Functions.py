@@ -20,7 +20,7 @@ def path_fare(p,k):
 #Determine recapture rate
 def recap_rate(p,r,k):
     if k == 0: #For economy
-        for n in range(len(recapture)):
+        for n in range(len(recapture_from_to)):
             if recapture_from_to[n][0] == p and recapture_from_to[n][1] == r:
                 recap_rate = r_rate[n][0]
                 break
@@ -66,3 +66,8 @@ def Q(f,k):
     for p in range(len(itinerary_no)):
         unconstr_demand_flight = unconstr_demand_flight + (delta(f,p)*D(p,k))
     return unconstr_demand_flight
+
+#Determine function needed for initial column generation
+def Q_CAP(f,k):
+    RHS = Q(f,k)-CAP(f,k)
+    return RHS
