@@ -33,11 +33,11 @@ flight_cap = np.array([[float(i.value) for i in j] for j in S1['G2':'H233']]) #C
 
 ### Read Tab 2 ###
 
-itinerary_no = np.array([[int(i.value) for i in j] for j in S2['A2':'A738']]) #Itinerary number (integer number!)
-itinerary = np.array([[str(i.value) for i in j] for j in S2['B2':'C738']]) #Origin, destination
-demand = np.array([[float(i.value) for i in j] for j in S2['D2':'E738']]) #Demand Y, demand J
-fare = np.array([[float(i.value) for i in j] for j in S2['F2':'G738']]) #Fare Y, fare J
-leg = np.array([[str(i.value) for i in j] for j in S2['H2':'I738']]) #Flight number leg 1, flight number leg 2
+itinerary_no = np.array([[int(i.value) for i in j] for j in S2['A2':'A739']]) #Itinerary number (integer number!)
+itinerary = np.array([[str(i.value) for i in j] for j in S2['B2':'C739']]) #Origin, destination
+demand = np.array([[float(i.value) for i in j] for j in S2['D2':'E739']]) #Demand Y, demand J
+fare = np.array([[float(i.value) for i in j] for j in S2['F2':'G739']]) #Fare Y, fare J
+leg = np.array([[str(i.value) for i in j] for j in S2['H2':'I739']]) #Flight number leg 1, flight number leg 2
 # !!! IF LEG 2 IS EMPTY, FLIGHT NUMBER IS AR0000
 
 ### Read Tab 3 ###
@@ -46,5 +46,16 @@ recapture_from_to = np.array([[int(i.value) for i in j] for j in S3['A2':'B300']
 r_rate = np.array([[float(i.value) for i in j] for j in S3['C2':'C300']]) #Recapture rate
 
         
-        
+ 
+
+
+
+
+
+
+
+
+
+
+       
 

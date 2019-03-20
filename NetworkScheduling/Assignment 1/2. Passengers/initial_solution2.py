@@ -41,8 +41,8 @@ reallo     = {}    #t_p^r,k
 ### CREATE DECISION VARIABLES ###########################################################################################
 for p in range(len(itinerary_no)):
     r = 0
-    for k in range(2):
-        reallo[p,r,k] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,
+    k = 0
+    reallo[p,r,k] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,
 name="t_%s^{%s,%s}"%(p,r,k))
 
 
@@ -51,7 +51,7 @@ name="t_%s^{%s,%s}"%(p,r,k))
 
 ##### OBJECTIVE FUNCTION #################################################################################################
 
-obj = grb.quicksum(grb.quicksum(fare[p][k] * reallo[p,r,k] for k in range(2)) for p in range(len(itinerary_no)))
+obj = grb.quicksum(path_fare(p, k) * reallo[p,r,k] for p in range(len(itinerary_no)))
 
 
 
@@ -70,14 +70,14 @@ print "Objective function created."
 print "Constraint 1 loading"
 
 for f in range(len(flight_no)):
-    k = 1.
+    k = 0
     m.addConstr(grb.quicksum(delta(f,p)*reallo[p,r,k] for p in range(len(itinerary_no)))# - grb.quicksum(delta(f,p)*recap_rate(p,r,k)*reallo[p,r,k] for p in range(len(itinerary_no)))
                         ,GRB.GREATER_EQUAL,
                             Q_CAP(f,k))
 
 ### 2 ################################################################
 #print "Constraint 2 loading"
-
+#
 #for p in range(len(itinerary_no)):
 #    for k in range(2):
 #        m.addConstr(reallo[p,r,k],
@@ -107,15 +107,10 @@ for v in m.getVars():
 print ('Obj:', m.objVal)
 
 
-business_cost = 0.
 
-for p in range(len(itinerary_no)):
-    business_cost = business_cost + path_fare(p, 1) * reallo[p, 0, 1].x
 
 
 tableau = {}
-
-
 
 
 
@@ -136,7 +131,25 @@ for p in range(len(itinerary_no)):
 
     
 
+def add_col_init(p,r):
+    pi_i = 0.
+    pi_j = 0.
+    
+    for f in range(len(flight_no)):
+        pi_i = pi_i + delta(f, p) * pi[f]
+        pi_j = pi_j + delta(f, r) * pi[f]
+        
+    tpr = (path_fare(p,0)-pi_i) - recap_rate(p, r, 0) * (path_fare(r, k) - pi_j)
 
+    return tpr
+#
+#def tab_add_col(p):
+#    col = {}
+#    col[0] = np.zeros((len(flight_no), 1))
+#    
+#    for f in range(len(flight_no)):
+#        col[0][f] = delta(f, p)
+#    return col[0]
 
 
  
