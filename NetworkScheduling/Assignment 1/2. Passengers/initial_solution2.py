@@ -14,23 +14,6 @@ from Functions import *
 GRB = grb.GRB
 
 
-
-### Initial Tableau ###
-#
-#delta_init = {}
-#
-#for p in range(len(itinerary_no)):
-#    delta_init[p] = np.zeros((len(flight_no),1))
-#
-#for p in range(len(itinerary_no)):
-#    for f in range(len(flight_no)):
-#        delta_init[p][f] = delta(f,p)
-#
-#for i in range(len(delta_init[0])):
-#    if delta_init[0][i] > 0.:
-#        print i, delta_init[0][i]
-
-
 # CREATE MODEL
 m = grb.Model('MinPaxCost')
 
@@ -38,14 +21,13 @@ m = grb.Model('MinPaxCost')
 # DECISION VARIABLES
 reallo     = {}    #t_p^r,k
 
-### CREATE DECISION VARIABLES ###########################################################################################
+### CREATE INITIAL DECISION VARIABLES ###########################################################################################
+
 for p in range(len(itinerary_no)):
-    r = 0
+    r = 737
     k = 0
     reallo[p,r,k] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,
 name="t_%s^{%s,%s}"%(p,r,k))
-
-
 
 
 
@@ -84,13 +66,6 @@ for f in range(len(flight_no)):
 #                            GRB.LESS_EQUAL,
 #                            D(p, k))
  
-#for a in range(len(arcs)):
-#    m.addConstr(slack[a], 
-#                GRB.EQUAL, 
-#                max{0,grb.quicksum(grb.quicksum(d(k)*fraction[k,p]*delta(k,p,arcs[i][1],arcs[i][2]) for p in range(len(P[k]))) for k in range(len(commodities))) - u(a)} )
-    
-
-
 m.write("model.lp")
  
 m.optimize()
@@ -100,36 +75,27 @@ pi = [c.Pi for c in m.getConstrs()]
 
 sigma = pi[len(flight_no):(len(flight_no)+len(itinerary_no))]
 pi = pi[:len(flight_no)]
-    
+ 
+c_pi = [pi]
+
+   
 for v in m.getVars():
     if v.x > 0:
         print (v.varName, v.x)    
 print ('Obj:', m.objVal)
 
 
-
-
-
 tableau = {}
 
 
-
-
-
-
+for p in range(len(itinerary_no)):
+    tableau[p] = np.zeros((1,1))
 
 for p in range(len(itinerary_no)):
-    tableau[p] = np.zeros((len(flight_no),1))
-
-for p in range(len(itinerary_no)):
-    for r in range(1):
-        for f in range(len(flight_no)):
-            if reallo[p,0,0].x > 0:
-                tableau[p][f][r] = delta(f, p)
+    if reallo[p,737,0].x > 0:
+        tableau[p][0][0] = 1
     
 
-
-    
 
 def add_col_init(p,r):
     pi_i = 0.
@@ -138,29 +104,42 @@ def add_col_init(p,r):
     for f in range(len(flight_no)):
         pi_i = pi_i + delta(f, p) * pi[f]
         pi_j = pi_j + delta(f, r) * pi[f]
-        
-    tpr = (path_fare(p,0)-pi_i) - recap_rate(p, r, 0) * (path_fare(r, k) - pi_j)
-
+    
+    if len(sigma) == 0:
+        tpr = (path_fare(p,0)-pi_i) - recap_rate(p, r, 0) * (path_fare(r, k) - pi_j)
+    
+    else:
+        tpr = (path_fare(p,0)-pi_i) - recap_rate(p, r, 0) * (path_fare(r, k) - pi_j) - sigma[p]
+    
     return tpr
 #
-#def tab_add_col(p):
-#    col = {}
-#    col[0] = np.zeros((len(flight_no), 1))
-#    
-#    for f in range(len(flight_no)):
-#        col[0][f] = delta(f, p)
-#    return col[0]
+#i = 0
+#p_list = []
+#r_list = [737]
+#for p in range(len(itinerary_no)):
+#    for c in range(len(recapture_from_to)):
+#        if p == recapture_from_to[c][0]:
+#            if add_col_init(p, recapture_from_to[c][1]) < 0. :
+#                col = {}
+#                col[0] = np.zeros((1,1))
+#                col[0][0][0] = 1.
+#                tableau[p] = np.hstack((tableau[p],col[0]))
+#                
+#                p_list.append(p)
+#                r_list.append(recapture_from_to[c][1])
+#                
+#                i = i + 1
 
 
- 
-
-
-
-
-
-
-
-
+#columns = {}
+#
+#for p in range(len(itinerary_no)):
+#    columns[p] = [737]
+#    for c in range(len(recapture_from_to)):
+#        if p == recapture_from_to[c][0]:
+#            if add_col_init(p, recapture_from_to[c][1]) < 0. :
+#                columns[p].append(recapture_from_to[c][1])
+            
 
 
 

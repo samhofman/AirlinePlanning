@@ -26,10 +26,10 @@ K = 2 #Number of commodities. k=0: economy; k=1: business
 
 ### Read Tab 1 ###
 
-arc_no = np.array([[int(i.value) for i in j] for j in S1['A2':'A233']]) #Arc number (integer number!)
-flight_no = np.array([[str(i.value) for i in j] for j in S1['B2':'D233']]) #Flight number, origin, destination
-flight_time = np.array([[float(i.value) for i in j] for j in S1['E2':'F233']]) #Departure time, ready time
-flight_cap = np.array([[float(i.value) for i in j] for j in S1['G2':'H233']]) #Capacity Y, capacity J
+arc_no = np.array([[int(i.value) for i in j] for j in S1['A2':'A234']]) #Arc number (integer number!)
+flight_no = np.array([[str(i.value) for i in j] for j in S1['B2':'D234']]) #Flight number, origin, destination
+flight_time = np.array([[float(i.value) for i in j] for j in S1['E2':'F234']]) #Departure time, ready time
+flight_cap = np.array([[float(i.value) for i in j] for j in S1['G2':'H234']]) #Capacity Y, capacity J
 
 ### Read Tab 2 ###
 
@@ -45,11 +45,12 @@ leg = np.array([[str(i.value) for i in j] for j in S2['H2':'I739']]) #Flight num
 recapture_from_to = np.array([[int(i.value) for i in j] for j in S3['A2':'B300']]) #From itinerary, to itinerary (integer numbers!)
 r_rate = np.array([[float(i.value) for i in j] for j in S3['C2':'C300']]) #Recapture rate
 
-        
- 
+recapture_from = []
+recapture_to = []
 
-
-
+for i in range(len(recapture_from_to)):
+    recapture_from.append(recapture_from_to[i][0])
+    recapture_to.append(recapture_from_to[i][1])
 
 
 

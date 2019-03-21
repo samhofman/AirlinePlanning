@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Mar 20 12:25:01 2019
+Created on Thu Mar 21 15:19:34 2019
 
 @author: woute
 """
 
+import gurobipy as grb
 from tableaux2 import *
 from Functions import *
-from initial_solution2 import tableau, pi, sigma, r_list, columns, p_list, add_col_init
-import gurobipy as grb
+from initial_solution2 import tableau, pi, sigma, r_list, columns, p_list
+from next_solution import r_row, p_row, pi, sigma
+
 
 GRB = grb.GRB
 
 # CREATE MODEL
-m = grb.Model('MinPaxCost')
+m = grb.Model('row')
 
 
 # DECISION VARIABLES
@@ -61,15 +63,15 @@ for f in range(len(flight_no)):
                             Q_CAP(f,k))
 
 ### 2 ################################################################
-#print "Constraint 2 loading"
-#
-#for p in range(len(itinerary_no)):
-#    for k in range(2):
-#        m.addConstr(reallo[p,r,k],
-#                            GRB.LESS_EQUAL,
-#                            D(p, k))
+print "Constraint 2 loading"
+
+for p in list(p_row):
+    r = r_row[p_row.index(p)]
+    m.addConstr(reallo[p,r,0],
+                            GRB.LESS_EQUAL,
+                            D(p, 0))
  
-   
+
 
 
 m.write("model.lp")
@@ -90,6 +92,7 @@ print ('Obj:', m.objVal)
 
 
 ### ADD ROWS ###
+
 p_row = []
 r_row = []
 for p in list(recapture_from):
@@ -98,30 +101,3 @@ for p in list(recapture_from):
             print p,r
             p_row.append(p)
             r_row.append(r)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-                
-                
-                
-                
