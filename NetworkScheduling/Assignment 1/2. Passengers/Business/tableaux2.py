@@ -42,8 +42,8 @@ leg = np.array([[str(i.value) for i in j] for j in S2['H2':'I739']]) #Flight num
 
 ### Read Tab 3 ###
 
-recapture_from_to = np.array([[int(i.value) for i in j] for j in S3['A2':'B301']]) #From itinerary, to itinerary (integer numbers!)
-r_rate = np.array([[float(i.value) for i in j] for j in S3['C2':'C301']]) #Recapture rate
+recapture_from_to = np.array([[int(i.value) for i in j] for j in S3['A2':'B300']]) #From itinerary, to itinerary (integer numbers!)
+r_rate = np.array([[float(i.value) for i in j] for j in S3['C2':'C300']]) #Recapture rate
 
 recapture_from = []
 recapture_to = []
