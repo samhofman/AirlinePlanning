@@ -9,6 +9,11 @@ from tableaux2 import *
 from Functions import *
 from initial_solution2 import *
 import gurobipy as grb
+import csv
+import sys
+import time
+
+start = time.time()
 
 
 constr_p = []
@@ -52,6 +57,8 @@ while loop == True:
         optimize = True
     
     while optimize == True:
+        
+        m = grb.Model('MinCost')
         
         ### CREATE DECISION VARIABLES ###
         reallo = {}
@@ -114,7 +121,23 @@ while loop == True:
             if v.x > 0:
                 print (v.varName, v.x)    
         print ('Obj:', m.objVal)    
-
+        
+        
+        if m.objVal == 335204.9:
+            var = []
+            for v in m.getVars():
+                if v.x > 0:
+                    var.append([v.varName, v.x])
+            with open('Results.csv', 'wb') as myfile:
+                wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+                wr.writerows(var)
+            with open('Duals.csv', 'wb') as myfile:
+                wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+                wr.writerows([pi, sigma])
+            end = time.time() 
+            print end - start                   
+            sys.exit()
+            
         optimize = False
         
         if col_count == 1:
@@ -133,8 +156,10 @@ while loop == True:
         p_row = []
         r_row = []
         for p in range(len(itinerary_no)):
+            reallosum = 0.
             for r in list(columns[p]):
-                if reallo[p,r,0].x > D(p, 0):
+                reallosum = reallosum + reallo[p,r,0].x
+                if reallosum > D(p, 0):
                     print p, r, D(p,0)
                     constr_p.append(p)
                     constr_r.append(r)
