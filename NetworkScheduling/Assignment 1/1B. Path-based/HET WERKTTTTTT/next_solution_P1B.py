@@ -5,9 +5,9 @@ Created on Thu Mar 14 16:32:27 2019
 @author: woute
 """
 
-from tableaux_r import *
+from tableaux_P1B import *
 import openpyxl as xl
-from initial_solution_r import pi, sigma, c_pi, c_sigma, slack_row, end_init, start_init
+from initial_solution_P1B import pi, sigma, c_pi, c_sigma, slack_row, end_init, start_init
 import csv
 
 start_next = time.time()

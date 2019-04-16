@@ -5,7 +5,7 @@ Created on Sun Mar 17 13:09:39 2019
 @author: hofma
 """
 
-from tableaux2 import *
+from tableaux_P2_business import *
 
 #Note: k=0: economy; k=1: business
 

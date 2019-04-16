@@ -6,7 +6,7 @@ Created on Tue Feb 26 15:09:28 2019
 """
 
 import xlsxwriter
-from Data import *
+from Data_P1A import *
 
 ### Make cost matrix ###
 

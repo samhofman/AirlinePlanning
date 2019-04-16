@@ -1368,3 +1368,154 @@ Solved in 503 iterations and 0.14 seconds
 Optimal objective  2.802780000e+05
 Warning: variables 0 and 738 have the same name "t_0^{737,1}"
 Warning: to let Gurobi read it back, use rlp format
+
+Gurobi 8.1.0 (win64, Python) logging started 03/25/19 17:32:45
+
+Academic license - for non-commercial use only
+Optimize a model with 971 rows, 738 columns and 1981 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 923 rows and 581 columns
+Presolve time: 0.02s
+Presolved: 48 rows, 157 columns, 215 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.6607984e+05   1.595335e+02   0.000000e+00      0s
+Extra one simplex iteration after uncrush
+      41    2.8027800e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 41 iterations and 0.02 seconds
+Optimal objective  2.802780000e+05
+Optimize a model with 971 rows, 738 columns and 1981 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 923 rows and 581 columns
+Presolve time: 0.00s
+Presolved: 48 rows, 157 columns, 215 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.6607984e+05   1.595335e+02   0.000000e+00      0s
+Extra one simplex iteration after uncrush
+      41    2.8027800e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 41 iterations and 0.02 seconds
+Optimal objective  2.802780000e+05
+Optimize a model with 971 rows, 738 columns and 1981 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 923 rows and 581 columns
+Presolve time: 0.02s
+Presolved: 48 rows, 157 columns, 215 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.6607984e+05   1.595335e+02   0.000000e+00      0s
+Extra one simplex iteration after uncrush
+      41    2.8027800e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 41 iterations and 0.03 seconds
+Optimal objective  2.802780000e+05
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 1204 rows, 2214 columns and 3224 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.636000e+03   0.000000e+00      0s
+     142    1.3610100e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 142 iterations and 0.02 seconds
+Optimal objective  1.361010000e+05
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 1543 rows, 3690 columns and 4573 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.636000e+03   0.000000e+00      0s
+     226    1.6946400e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 226 iterations and 0.02 seconds
+Optimal objective  1.694640000e+05
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 1882 rows, 5166 columns and 5922 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.636000e+03   0.000000e+00      0s
+     226    1.6946400e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 226 iterations and 0.02 seconds
+Optimal objective  1.694640000e+05
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2309 rows, 6642 columns and 7359 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.636000e+03   0.000000e+00      0s
+     316    1.9838100e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 316 iterations and 0.02 seconds
+Optimal objective  1.983810000e+05
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2736 rows, 8118 columns and 8796 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.636000e+03   0.000000e+00      0s
+     317    1.9838100e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 317 iterations and 0.02 seconds
+Optimal objective  1.983810000e+05
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 738 have the same name "t_0^{737,1}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 3230 rows, 9594 columns and 10300 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.636000e+03   0.000000e+00      0s
+     384    2.3110400e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 384 iterations and 0.02 seconds
+Optimal objective  2.311040000e+05

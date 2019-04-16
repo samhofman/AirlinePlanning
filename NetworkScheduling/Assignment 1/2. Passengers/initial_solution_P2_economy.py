@@ -8,8 +8,8 @@ Created on Tue Mar  5 11:00:13 2019
 import gurobipy as grb
 import csv
 from math import *
-from tableaux2 import *
-from Functions import *
+from tableaux_P2_economy import *
+from Functions_P2_economy import *
 
 GRB = grb.GRB
 
@@ -25,15 +25,15 @@ reallo     = {}    #t_p^r,k
 
 for p in range(len(itinerary_no)):
     r = 737
-    k = 1
-    reallo[p,r,k] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,
-name="t_%s^{%s,%s}"%(p,r,k))
+    for k in range(2):
+        reallo[p,r,k] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,
+    name="t_%s^{%s,%s}"%(p,r,k))
 
 
 
 ##### OBJECTIVE FUNCTION #################################################################################################
 
-obj = grb.quicksum(path_fare(p, k) * reallo[p,r,k] for p in range(len(itinerary_no)))
+obj = grb.quicksum(grb.quicksum(path_fare(p, k) * reallo[p,r,k] for k in list([0]))for p in range(len(itinerary_no)))
 
 
 
@@ -52,19 +52,19 @@ print "Objective function created."
 print "Constraint 1 loading"
 
 for f in range(len(flight_no)):
-    k = 1
-    m.addConstr(grb.quicksum(delta(f,p)*reallo[p,r,k] for p in range(len(itinerary_no)))# - grb.quicksum(delta(f,p)*recap_rate(p,r,k)*reallo[p,r,k] for p in range(len(itinerary_no)))
-                        ,GRB.GREATER_EQUAL,
-                            Q_CAP(f,k))
+    for k in list([0]):
+        m.addConstr(grb.quicksum(delta(f,p)*reallo[p,r,k] for p in range(len(itinerary_no)))# - grb.quicksum(delta(f,p)*recap_rate(p,r,k)*reallo[p,r,k] for p in range(len(itinerary_no)))
+                            ,GRB.GREATER_EQUAL,
+                                Q_CAP(f,k))
 
 ### 2 ################################################################
-print "Constraint 2 loading"
-
-for p in range(len(itinerary_no)):
-    k = 1
-    m.addConstr(reallo[p,r,k],
-                            GRB.LESS_EQUAL,
-                            D(p, k))
+#print "Constraint 2 loading"
+#
+#for p in range(len(itinerary_no)):
+#    for k in range(2):
+#        m.addConstr(reallo[p,r,k],
+#                            GRB.LESS_EQUAL,
+#                            D(p, k))
  
 m.write("model.lp")
  
@@ -92,7 +92,7 @@ for p in range(len(itinerary_no)):
     tableau[p] = np.zeros((1,1))
 
 for p in range(len(itinerary_no)):
-    if reallo[p,737,1].x > 0:
+    if reallo[p,737,0].x > 0:
         tableau[p][0][0] = 1
     
 
@@ -106,10 +106,10 @@ def add_col_init(p,r):
         pi_j = pi_j + delta(f, r) * pi[f]
     
     if len(sigma) == 0:
-        tpr = (path_fare(p,1)-pi_i) - recap_rate(p, r, 1) * (path_fare(r, k) - pi_j)
+        tpr = (path_fare(p,0)-pi_i) - recap_rate(p, r, 0) * (path_fare(r, k) - pi_j)
     
     else:
-        tpr = (path_fare(p,1)-pi_i) - recap_rate(p, r, 1) * (path_fare(r, k) - pi_j) - sigma[p]
+        tpr = (path_fare(p,0)-pi_i) - recap_rate(p, r, 0) * (path_fare(r, k) - pi_j) - sigma[p]
     
     return tpr
 #

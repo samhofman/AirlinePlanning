@@ -8,7 +8,7 @@ Created on Tue Mar  5 11:00:13 2019
 import gurobipy as grb
 import csv
 from math import *
-from tableaux_r import *
+from tableaux_P1B import *
 
 start_init = time.time()
 

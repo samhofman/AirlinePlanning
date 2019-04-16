@@ -5,9 +5,9 @@ Created on Sat Mar 23 14:10:38 2019
 @author: woute
 """
 
-from tableaux2 import *
-from Functions import *
-from initial_solution2 import *
+from tableaux_P2_economy import *
+from Functions_P2_economy import *
+from initial_solution_P2_economy import *
 import gurobipy as grb
 import csv
 import sys

@@ -4743,3 +4743,57 @@ Iteration    Objective       Primal Inf.    Dual Inf.      Time
 
 Solved in 2 iterations and 0.02 seconds
 Optimal objective  2.448691524e+05
+
+Gurobi 8.1.0 (win64, Python) logging started 03/24/19 11:07:18
+
+Academic license - for non-commercial use only
+Optimize a model with 233 rows, 1476 columns and 1243 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [4e+01, 3e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 173 rows and 1341 columns
+Presolve time: 0.02s
+Presolved: 60 rows, 135 columns, 239 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3159000e+04   5.681000e+03   0.000000e+00      0s
+      55    2.4524900e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 55 iterations and 0.03 seconds
+Optimal objective  2.452490000e+05
+Optimize a model with 233 rows, 1476 columns and 1243 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [4e+01, 3e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 173 rows and 1341 columns
+Presolve time: 0.02s
+Presolved: 60 rows, 135 columns, 239 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3159000e+04   5.681000e+03   0.000000e+00      0s
+      55    2.4524900e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 55 iterations and 0.03 seconds
+Optimal objective  2.452490000e+05
+Optimize a model with 233 rows, 1476 columns and 1243 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [4e+01, 3e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 173 rows and 1341 columns
+Presolve time: 0.02s
+Presolved: 60 rows, 135 columns, 239 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3159000e+04   5.681000e+03   0.000000e+00      0s
+      55    2.4524900e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 55 iterations and 0.03 seconds
+Optimal objective  2.452490000e+05
+Warning: variables 1528 and 1529 have the same name "t_737^{737,0}"
+Warning: to let Gurobi read it back, use rlp format
