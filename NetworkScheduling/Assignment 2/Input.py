@@ -31,6 +31,18 @@ flight_no = np.array([[str(i.value) for i in j] for j in S1['B2':'D210']]) #Flig
 flight_time = np.array([[float(i.value) for i in j] for j in S1['E2':'F210']]) #Departure time, arrival time in minutes past midnight
 flight_cost = np.array([[float(i.value) for i in j] for j in S1['G2':'J210']]) #Operating cost A330, A340, B737, B738
 
+
+#Create list of unique airports
+origin = np.array([[str(i.value) for i in j] for j in S1['C2':'C210']]) #List of origin airports
+destination = np.array([[str(i.value) for i in j] for j in S1['D2':'D210']]) #List of destination airports
+airports = []
+for i in range(len(origin)):
+    airports.append(origin[i][0]) #add all airports (origin from flights)
+    airports.append(destination[i][0])
+airports = list(set(airports)) #remove duplicates
+airports.sort()
+airports.remove('HALLO')
+airports.remove('METGERT')
 ### Read Tab 2 ###
 
 arc_no_bus = np.array([[int(i.value) for i in j] for j in S2['A2':'A25']]) #Arc number (integer number!)
