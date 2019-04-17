@@ -31,8 +31,11 @@ for k in range(len(TAT)):                                                       
 
 #Create time-space network and ground arcs
 
+#time_space = [arc nr, airport, time, arriving/departing, flight nr.]
 time_space = {}                                                                                     #Create empty list for the time-space network
+#arcs = [arc nr, originating node, terminating node]
 arcs = {}                                                                                           #Create empty list for the ground arcs (incl. overnight arcs)
+#night_arcs = [arc nr, orignating node (last time point of the day), terminating node (first time point of the day)]
 night_arcs = {}                                                                                     #Create empty list for the overnight arcs
 
 
