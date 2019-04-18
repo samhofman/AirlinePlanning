@@ -21,7 +21,7 @@ S2 = wb['Bus']
 S3 = wb['Itinerary']
 S4 = wb['Recapture Rate']
 S5 = wb['Aircraft']
-
+S6 = wb['All Flights']
 
 
 ### Read Tab 1 ###
@@ -43,6 +43,7 @@ airports = list(set(airports)) #remove duplicates
 airports.sort()
 airports.remove('HALLO')
 airports.remove('METGERT')
+
 ### Read Tab 2 ###
 
 arc_no_bus = np.array([[int(i.value) for i in j] for j in S2['A2':'A25']]) #Arc number (integer number!)
@@ -77,6 +78,12 @@ k_units = np.array([[float(i.value) for i in j] for j in S5['C2':'C5']]) #Number
 seats = np.array([[float(i.value) for i in j] for j in S5['D2':'E5']]) #Number of seats for each fleet type k (economy, business)
 TAT = np.array([[float(i.value) for i in j] for j in S5['F2':'F5']]) #TAT for each fleet type k
 
+### Read Tab 6 ###
+
+arc_no_allflights = np.array([[int(i.value) for i in j] for j in S6['A2':'A234']]) #Arc number (integer number!)
+flight_no_allflights = np.array([[str(i.value) for i in j] for j in S6['B2':'D234']]) #Flight number, origin, destination
+flight_time_allflights = np.array([[float(i.value) for i in j] for j in S6['E2':'F234']]) #Departure time, arrival time in minutes past midnight
+flight_cost_allflights = np.array([[float(i.value) for i in j] for j in S6['G2':'J234']]) #Operating cost A330, A340, B737, B738
 
        
 
