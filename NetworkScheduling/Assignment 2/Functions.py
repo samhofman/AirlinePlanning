@@ -6,10 +6,14 @@ Created on Wed Apr 17 12:21:11 2019
 """
 
 from Input import *
+from Time_Space import *
 
 #Make function to get cost of operating flight i with a/c type k
 def c(k,i):
     row_no = 0
+    cost = 0
+    if i > 217:
+        return 'Cost function error: i larger than number of flights'
     for j in arc_no:
         if i == j:
             cost = flight_cost[row_no,k]
@@ -86,6 +90,7 @@ def Q_i_b(i):
     return unconstr_demand_flight
 
 
+    
 
 
 

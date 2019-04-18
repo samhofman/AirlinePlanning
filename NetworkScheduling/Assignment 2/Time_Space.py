@@ -67,6 +67,4 @@ for k in range(len(TAT)):                                                       
         for j in range(len(night_arcs[k])):                                                         #####For each overnight arc
             if arcs[k][i][0] == night_arcs[k][j][0]:                                                #######Replace overnight arcs with correct starting node
                 arcs[k][i] = night_arcs[k][j]
-    arcs[k].append(night_arcs[k][-1])                                                               ###Final overnight arc needs to be since it has not been generated in the arcs loop    
-
-                    
+    arcs[k].append(night_arcs[k][-1])                                                               ###Final overnight arc needs to be since it has not been generated in the arcs loop                       
