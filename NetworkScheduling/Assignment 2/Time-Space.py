@@ -29,6 +29,7 @@ for k in range(len(TAT)):                                                       
                     nodes[k][a].append([int(arc_no[i]), 'a', flight_time[i][1]+int(TAT[k])])
         nodes[k][a] = sorted(nodes[k][a], key=itemgetter(2))                                        ###Sort times chronologically
 
+
 #Create time-space network and ground arcs
 
 #time_space = [arc nr, airport, time, arriving/departing, flight nr.]
@@ -68,5 +69,31 @@ for k in range(len(TAT)):                                                       
             if arcs[k][i][0] == night_arcs[k][j][0]:                                                #######Replace overnight arcs with correct starting node
                 arcs[k][i] = night_arcs[k][j]
     arcs[k].append(night_arcs[k][-1])                                                               ###Final overnight arc needs to be since it has not been generated in the arcs loop    
+
+
+#Count double nodes
+double = {}
+
+for k in range(len(TAT)):
+    double[k]=[]
+    for i in range(len(time_space[k])-1):
+        if time_space[k][i+1][2] == time_space[k][i][2]:
+            double[k].append(time_space[k][i+1])
+
+#Sets O(k,n) & I(k,n)
+Okn = {}
+Ikn = {}
+
+for k in range(len(TAT)):
+    Okn[k] = []
+    Ikn[k] = []
+    for i in range(len(time_space[k])):
+        if time_space[k][i][3] == 'd':
+            Okn[k].append([k, time_space[k][i][0], time_space[k][i][4]])
+        if time_space[k][i][3] == 'a':
+            Ikn[k].append([k, time_space[k][i][0], time_space[k][i][4]])
+
+
+
 
                     
