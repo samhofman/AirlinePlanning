@@ -77,8 +77,8 @@ double = {}
 for k in range(len(TAT)):
     double[k]=[]
     for i in range(len(time_space[k])-1):
-        if time_space[k][i+1][2] == time_space[k][i][2]:
-            double[k].append(time_space[k][i+1])
+        if time_space[k][i+1][2] == time_space[k][i][2] and time_space[k][i+1][1] == time_space[k][i][1]:
+            double[k].append([time_space[k][i], time_space[k][i+1]])
 
 #Sets O(k,n) & I(k,n)
 Okn = {}
