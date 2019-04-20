@@ -93,6 +93,74 @@ for k in range(len(TAT)):
         if time_space[k][i][3] == 'a':
             Ikn[k].append([k, time_space[k][i][0], time_space[k][i][4]])
 
+#Make Okn and Ikn sets
+
+Ikn_set0 = []
+k = 0
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'a':
+        Ikn_set0.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'd':
+        Ikn_set0.append(232)
+
+Ikn_set1 = []
+k = 1
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'a':
+        Ikn_set1.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'd':
+        Ikn_set1.append(232)
+        
+Ikn_set2 = []
+k = 2
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'a':
+        Ikn_set2.append(time_space[k][j][4])        
+    elif time_space[k][j][3] == 'd':
+        Ikn_set2.append(232)
+        
+Ikn_set3 = []
+k = 3
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'a':
+        Ikn_set3.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'd':
+        Ikn_set3.append(232)
+        
+Okn_set0 = []
+k = 0
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'd':
+        Okn_set0.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'a':
+        Okn_set0.append(232)
+        
+Okn_set1 = []
+k = 1
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'd':
+        Okn_set1.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'a':
+        Okn_set1.append(232)
+       
+Okn_set2 = []
+k = 2
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'd':
+        Okn_set2.append(time_space[k][j][4])        
+    elif time_space[k][j][3] == 'a':
+        Okn_set2.append(232)
+        
+Okn_set3 = []
+k = 3
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'd':
+        Okn_set3.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'a':
+        Okn_set3.append(232)
+        
+Ikn_set = np.vstack((Ikn_set0,Ikn_set1,Ikn_set2,Ikn_set3)) #4 rows (for each k); per row the arriving flight numbers
+Okn_set = np.vstack((Okn_set0,Okn_set1,Okn_set2,Okn_set3)) #4 rows (for each k); per row the departing flight numbers
 
 
 
