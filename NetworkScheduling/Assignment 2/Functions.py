@@ -12,8 +12,6 @@ from Time_Space import *
 def c(k,i):
     row_no = 0
     cost = 0
-    if i > 217:
-        return 'Cost function error: i larger than number of flights'
     for j in arc_no:
         if i == j:
             cost = flight_cost[row_no,k]
@@ -89,7 +87,12 @@ def Q_i_b(i):
         unconstr_demand_flight = unconstr_demand_flight + (delta_i_p(i,p)*D_p_b(p))
     return unconstr_demand_flight
 
-
+def terminating_arc(n,k):
+    a = 0
+    for i in range(len(arcs[k])):
+        if n == arcs[k][i][2]:
+            a = arcs[k][i][0]
+    return a
     
 
 

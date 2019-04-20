@@ -19,6 +19,11 @@ Lf = []
 for i in range(len(arc_no)-1):
     Lf.append(arc_no[i][0])
 
+Lfbis = []
+for i in range(len(arc_no)-1):
+    Lfbis.append(arc_no[i][0])
+Lfbis.append(232)
+
 Lb = []
 for i in range(len(arc_no_bus)):
     Lb.append(arc_no_bus[i][0])
@@ -47,7 +52,7 @@ for p in range(len(itinerary_no)):
     name="t_%s^{%s,b}"%(p,r))
     
 #f_i^k
-for i in Lf:      #Do not take fictitious itinerary into account
+for i in Lfbis:      #Take fictitious itinerary into account
     for k in range(len(k_units)):
         fik[i,k] = m.addVar(vtype=GRB.CONTINUOUS, lb=0,
     name="f_%s^{%s}"%(i,k))
@@ -61,7 +66,7 @@ for k in range(len(k_units)):
         
 ##### OBJECTIVE FUNCTION #################################################################################################
 
-obj = grb.quicksum(grb.quicksum(c(k,i)*fik[i,k] for k in range(len(k_units))) for i in Lf) \
+obj = grb.quicksum(grb.quicksum(c(k,i)*fik[i,k] for k in range(len(k_units))) for i in Lfbis) \
         + grb.quicksum(fare_e(p)*tpre[p,r] for p in range(len(itinerary_no))) \
         + grb.quicksum(fare_b(p)*tprb[p,r] for p in range(len(itinerary_no))) \
         + (24.*4500.)
@@ -75,33 +80,101 @@ print "Objective function created."
     
 ##### CONSTRAINTS ########################################################################################################
 
-### 1 ################################################################
-print "Constraint 1 loading"
+### 1a ################################################################
+print "Constraint 1a loading"
 
 for i in Lf:
-    i = int(i)
     m.addConstr(grb.quicksum(fik[i,k] for k in range(len(k_units)))
                             ,GRB.EQUAL,
                                 1.)
 
+### 1b ################################################################
+print "Constraint 1b loading"
+
+for k in range(len(k_units)):
+    i = 232
+    m.addConstr(fik[i,k]
+                            ,GRB.EQUAL,
+                                0.)
+
 ### 2 ################################################################
 print "Constraint 2 loading"
 
+Ikn_set0 = []
+k = 0
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'a':
+        Ikn_set0.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'd':
+        Ikn_set0.append(232)
 
+Ikn_set1 = []
+k = 1
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'a':
+        Ikn_set1.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'd':
+        Ikn_set1.append(232)
+        
+Ikn_set2 = []
+k = 2
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'a':
+        Ikn_set2.append(time_space[k][j][4])        
+    elif time_space[k][j][3] == 'd':
+        Ikn_set2.append(232)
+        
+Ikn_set3 = []
+k = 3
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'a':
+        Ikn_set3.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'd':
+        Ikn_set3.append(232)
+        
+Okn_set0 = []
+k = 0
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'd':
+        Okn_set0.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'a':
+        Okn_set0.append(232)
+        
+Okn_set1 = []
+k = 1
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'd':
+        Okn_set1.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'a':
+        Okn_set1.append(232)
+       
+Okn_set2 = []
+k = 2
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'd':
+        Okn_set2.append(time_space[k][j][4])        
+    elif time_space[k][j][3] == 'a':
+        Okn_set2.append(232)
+        
+Okn_set3 = []
+k = 3
+for j in range(len(time_space[k])):
+    if time_space[k][j][3] == 'd':
+        Okn_set3.append(time_space[k][j][4])
+    elif time_space[k][j][3] == 'a':
+        Okn_set3.append(232)
+        
+Ikn_set = np.vstack((Ikn_set0,Ikn_set1,Ikn_set2,Ikn_set3)) #4 rows (for each k); per row the arriving flight numbers
+Okn_set = np.vstack((Okn_set0,Okn_set1,Okn_set2,Okn_set3)) #4 rows (for each k); per row the departing flight numbers
 
 for k in range(len(k_units)):
-    Okn_set = []
-    for u in range(len(Okn[k])):
-        Okn_set.append(Okn[k][u][2])
-    Ikn_set = []
-    for v in range(len(Ikn[k])):
-        Ikn_set.append(Ikn[k][v][2])
-    m.addConstr(grb.quicksum(fik[i,k] for i in Okn_set)-grb.quicksum(fik[j,k] for j in Ikn_set),
-                            GRB.EQUAL,
-                            0.)
+    for n in range(len(Ikn_set[k])):
+        m.addConstr(yak[n,k] + fik[Okn_set[k][n],k] - yak[terminating_arc(n,k),k] - fik[Ikn_set[k][n],k],
+                    GRB.EQUAL,
+                    0.)
 
-Okn_set = [] #Clear list
-Ikn_set = [] #Clear list
+#Okn_set = [] #Clear list
+#Ikn_set = [] #Clear list
 
 ### 3 ################################################################
 print "Constraint 3 loading"
@@ -146,7 +219,6 @@ for i in Lb:
     
 ### Constraints 5a and 5b relaxed in initial solution ###
 
-
 ### Run 
     
 m.write("model.lp")
@@ -160,14 +232,17 @@ pi = pi[:len(arc_no)]
  
 c_pi = [pi]
 
-   
+#for var in m.getVars():
+#    # Or use list comprehensions instead 
+#    if 'f' == str(var.VarName[0]) and var.x > 0:
+#        print var.VarName, var.x 
+
 for v in m.getVars():
     if v.x > 0:
         print (v.varName, v.x)    
 print ('Obj:', m.objVal)
 
-    
-    
+
     
     
     
