@@ -58,7 +58,7 @@ itinerary = np.array([[str(i.value) for i in j] for j in S3['B2':'C773']]) #Orig
 demand = np.array([[float(i.value) for i in j] for j in S3['D2':'E773']]) #Demand Y, demand J
 fare = np.array([[float(i.value) for i in j] for j in S3['F2':'G773']]) #Fare Y, fare J
 leg = np.array([[str(i.value) for i in j] for j in S3['H2':'I773']]) #Flight number leg 1, flight number leg 2
-# !!! IF LEG 2 IS EMPTY, FLIGHT NUMBER IS AR0000
+# !!! IF LEG 2 IS EMPTY, FLIGHT NUMBER IS AR9999
 
 ### Read Tab 4 ###
 
