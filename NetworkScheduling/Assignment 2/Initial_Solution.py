@@ -160,9 +160,13 @@ m.optimize()
  
 pi = [c.Pi for c in m.getConstrs()]
 
-sigma = pi[len(arc_no):(len(arc_no)+len(itinerary_no))]
-pi = pi[:len(arc_no)]
- 
+#sigma = pi[len(arc_no):(len(arc_no)+len(itinerary_no))]
+#pi = pi[:len(arc_no)]
+sigma = []
+pi_fe = pi[-(len(Lb)+2*len(Lf)):-(len(Lb)+len(Lf))]
+pi_fb = pi[-(len(Lb)+len(Lf)):-len(Lb)]
+pi_b = pi[-len(Lb):] 
+
 c_pi = [pi]
 
 #for var in m.getVars():
@@ -174,6 +178,59 @@ for v in m.getVars():
     if v.x > 0:
         print (v.varName, v.x)    
 print ('Obj:', m.objVal)
+
+
+#definition to add column
+def add_col(a,p,r):
+    
+    pi_i = 0.
+    pi_j = 0.
+    
+    #for constraint 4a
+    if a == 0:
+        for i in range(len(flight_no)-1):
+            pi_i = pi_i + delta_i_p(i, p) * pi_fe[i]
+            pi_j = pi_j + delta_i_p(i, r) * pi_fe[i]
+
+        if len(sigma) == 0:
+            tpr = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j)
+        
+        else:
+            tpr = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j) - sigma[p]
+    
+    #for constraint 4b
+    if a == 1:
+        for i in range(len(flight_no)-1):
+            pi_i = pi_i + delta_i_p(i, p) * pi_fb[i]
+            pi_j = pi_j + delta_i_p(i, r) * pi_fb[i]
+    
+        if len(sigma) == 0:
+            tpr = (fare_b(p)-pi_i)
+        
+        else:
+            tpr = (fare_b(p)-pi_i)
+            
+    #for constraint 4c        
+    if a == 2:
+        for i in range(len(flight_no_bus)):
+            pi_i = pi_i + delta_i_p(i, p) * pi_b[i]
+            pi_j = pi_j + delta_i_p(i, r) * pi_b[i]
+    
+        if len(sigma) == 0:
+            tpr = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j)
+        
+        else:
+            tpr = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j) - sigma[p]
+    
+    
+    return tpr
+    
+
+
+
+
+
+
 
 
     
