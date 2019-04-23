@@ -19,6 +19,7 @@ from Functions import *
 from Input import *
 from Time_Space import *
 import sys
+import time
 
 GRB = grb.GRB
 
@@ -46,6 +47,9 @@ cols = 0
 rows = 0
 iters = 0
 z = 0
+
+col_list = []
+row_list = []
 
 while loop == True:
     
@@ -112,7 +116,7 @@ while loop == True:
             stop = stop + 1.    
         
         print 'columns:', (col_loop_a + col_loop_b + col_loop_c)
-        
+        col_list.append(col_loop_a + col_loop_b + col_loop_c)
         col_loop = False
         optimize = True
         
@@ -288,7 +292,8 @@ while loop == True:
         print 'cont: ', cont
         print 'bin:  ', bina
         print ('Obj:', m.objVal)        
-
+        obj_list.append(m.objVal)
+        iters = iters + 1
         pi = [c.Pi for c in m.getConstrs()]
         
         pi_fe = pi[1880:1880+len(Lf)]
@@ -351,14 +356,63 @@ while loop == True:
             
             
         print 'rows:', (row_loop_a + row_loop_b)
+        row_list.append(row_loop_a + row_loop_b)
         if stop == 2.:
+            t_end = time.time()
+            loop = False
+            row_loop = False
+            column_loop = False
+            optimize = False
             print 'final obj', m.objVal
-            sys.exit()
+            
+            
         optimize = True
         row_loop = False
         #col_loop = False
             
         
         
-        
+print "Generating results"   
+
+fres = []
+yres = []
+teres = []
+tbres = []
+
+
+for v in m.getVars():
+    if 'f' == str(v.varName[0]) and v.x > 0:
+        fres.append([v.varName, v.x])
+    if 'y' == str(v.varName[0]) and v.x > 0:
+        yres.append([v.varName, v.x])        
+    if 't' == str(v.varName[0]) and 'e' == str(v.varName[-2]) and v.x > 0:
+        teres.append([v.varName, v.x])
+    if 't' == str(v.varName[0]) and 'b' == str(v.varName[-2]) and v.x > 0:
+        tbres.append([v.varName, v.x])        
+    
+with open('RES_ground_arcs.csv', 'wb') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerows(yres) 
+
+with open('RES_flights.csv', 'wb') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerows(fres)
+
+with open('RES_ec_reallocation.csv', 'wb') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerows(teres)     
+
+with open('RES_bus_reallocation.csv', 'wb') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerows(tbres)
+
+print 'runtime:', (t_end-t_start)
+print 'iterations:', iters
+print '#fik:', len(fres)
+print '#yak:', len(yres)
+print '#tpre:', len(teres)
+print '#tprb:', len(tbres)
+print 'columns:', cols
+print 'rows:', rows
+
         

@@ -8,6 +8,10 @@ Created on Tue Apr 16 11:42:35 2019
 
 from Input import *
 from operator import itemgetter
+import time
+
+
+t_start = time.time()
 
 
 #Create list with times of in- and outgoing flights (nodes)

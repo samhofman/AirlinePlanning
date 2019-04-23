@@ -12,7 +12,14 @@ from Functions import *
 from Input import *
 from Time_Space import *
 
+
+
 GRB = grb.GRB
+
+
+
+obj_list = []
+
 
 #Make list of Lf and Lb arc numbers, without fictional arc
 Lf = []
@@ -180,7 +187,7 @@ for v in m.getVars():
     if v.x > 0:
         print (v.varName, v.x)    
 print ('Obj:', m.objVal)
-
+obj_list.append(m.objVal)
 
 
 
@@ -245,8 +252,6 @@ def add_col(a,p,r,p_sigmae,p_sigmab,sigma_e,sigma_b,pi_fe,pi_fb,pi_b):
     
     return tpr_val
     
-
-
 
 
 
