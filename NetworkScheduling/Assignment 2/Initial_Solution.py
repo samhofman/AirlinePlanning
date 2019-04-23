@@ -66,7 +66,7 @@ for k in range(len(k_units)):
         
 ##### OBJECTIVE FUNCTION #################################################################################################
 
-obj = grb.quicksum(grb.quicksum(c(k,i)*fik[i,k] for k in range(len(k_units))) for i in Lfbis) \
+obj = grb.quicksum(grb.quicksum(costki(k,i)*fik[i,k] for k in range(len(k_units))) for i in Lfbis) \
         + grb.quicksum(fare_e(p)*tpre[p,r] for p in range(len(itinerary_no))) \
         + grb.quicksum(fare_b(p)*tprb[p,r] for p in range(len(itinerary_no))) \
         + (24.*4500.)
@@ -162,10 +162,12 @@ pi = [c.Pi for c in m.getConstrs()]
 
 #sigma = pi[len(arc_no):(len(arc_no)+len(itinerary_no))]
 #pi = pi[:len(arc_no)]
-sigma = []
-pi_fe = pi[-(len(Lb)+2*len(Lf)):-(len(Lb)+len(Lf))]
-pi_fb = pi[-(len(Lb)+len(Lf)):-len(Lb)]
-pi_b = pi[-len(Lb):] 
+sigma_e = []
+sigma_b = []
+
+pi_fe = pi[1880:1880+len(Lf)]
+pi_fb = pi[1880+len(Lf):1880+len(Lf)+len(Lf)]
+pi_b = pi[1880+len(Lf)+len(Lf):1880+len(Lf)+len(Lf)+len(Lb)] 
 
 c_pi = [pi]
 
@@ -180,9 +182,14 @@ for v in m.getVars():
 print ('Obj:', m.objVal)
 
 
+
+
+p_sigmae = []
+p_sigmab = []
 #definition to add column
-def add_col(a,p,r):
+def add_col(a,p,r,p_sigmae,p_sigmab,sigma_e,sigma_b,pi_fe,pi_fb,pi_b):
     
+    tpr_val = 0.
     pi_i = 0.
     pi_j = 0.
     
@@ -192,38 +199,51 @@ def add_col(a,p,r):
             pi_i = pi_i + delta_i_p(i, p) * pi_fe[i]
             pi_j = pi_j + delta_i_p(i, r) * pi_fe[i]
 
-        if len(sigma) == 0:
-            tpr = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j)
+        if len(p_sigmae) == 0:
+            tpr_val = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j)
         
         else:
-            tpr = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j) - sigma[p]
+            #print 'column'
+            for j in range(len(p_sigmae)):
+                if p_sigmae[j] == p:
+                    #print 'sigma', sigma_e[j]
+                    tpr_val = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j) + sigma_e[j]
     
     #for constraint 4b
-    if a == 1:
+    elif a == 1:
         for i in range(len(flight_no)-1):
             pi_i = pi_i + delta_i_p(i, p) * pi_fb[i]
             pi_j = pi_j + delta_i_p(i, r) * pi_fb[i]
     
-        if len(sigma) == 0:
-            tpr = (fare_b(p)-pi_i)
-        
+        if len(p_sigmab) == 0:
+            tpr_val = (fare_b(p)-pi_i)
+            #tpr = 1 #>0 -> only spill to fictitious
         else:
-            tpr = (fare_b(p)-pi_i)
-            
+            #print 'column'
+            for j in range(len(p_sigmab)):
+                
+                if p_sigmab[j] == p:
+                    #print 'sigma', sigma_b[j]
+                    tpr_val = (fare_b(p)-pi_i) - sigma_b[j]
+            #tpr = 1
     #for constraint 4c        
-    if a == 2:
+    elif a == 2:
         for i in range(len(flight_no_bus)):
             pi_i = pi_i + delta_i_p(i, p) * pi_b[i]
             pi_j = pi_j + delta_i_p(i, r) * pi_b[i]
     
-        if len(sigma) == 0:
-            tpr = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j)
+        if len(p_sigmab) == 0:
+            tpr_val = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j)
         
         else:
-            tpr = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j) - sigma[p]
+            #print 'column'
+            for j in range(len(p_sigmae)):
+                if p_sigmae[j] == p:
+                    #print 'sigma', sigma_e[j]
+                    tpr_val = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j) + sigma_e[j]
     
     
-    return tpr
+    return tpr_val
     
 
 

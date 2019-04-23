@@ -9,7 +9,7 @@ from Input import *
 from Time_Space import *
 
 #Make function to get cost of operating flight i with a/c type k
-def c(k,i):
+def costki(k,i):
     row_no = 0
     cost = 0
     for j in arc_no:

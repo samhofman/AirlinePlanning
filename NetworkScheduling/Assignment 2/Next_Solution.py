@@ -129,9 +129,7 @@ for i in Lf:
 print "Constraint 4c loading"
 
 for i in Lb:
-    m.addConstr(216 + grb.quicksum(grb.quicksum((delta_i_p(i,p)*tpre[p,r]) for p in range(len(itinerary_no))) for r in range(len(itinerary_no))) \
-                - grb.quicksum(grb.quicksum((delta_i_p(i,p)*b_p_r(r,p)*tpre[r,p]) for p in range(len(itinerary_no))) for r in range(len(itinerary_no))) \ 
-                + grb.quicksum((delta_i_p(i,p)*tprb[p,771]) for p in range(len(itinerary_no))),
+    m.addConstr(216 + grb.quicksum(grb.quicksum((delta_i_p(i,p)*tpre[p,r]) for p in range(len(itinerary_no))) for r in range(len(itinerary_no))) - grb.quicksum(grb.quicksum((delta_i_p(i,p)*b_p_r(r,p)*tpre[r,p]) for p in range(len(itinerary_no))) for r in range(len(itinerary_no))) + grb.quicksum((delta_i_p(i,p)*tprb[p,771]) for p in range(len(itinerary_no))),
                             GRB.GREATER_EQUAL,
                                 (Q_i_e(i) + Q_i_b(i)))
     

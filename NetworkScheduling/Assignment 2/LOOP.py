@@ -12,6 +12,7 @@ i = 0
 add_col_a = {}
 add_col_b = {}
 add_col_c = {}
+r_obj = {}
 
 for p in range(len(itinerary_no)):
     add_col_a[p] = [771]
@@ -56,7 +57,12 @@ for a in list([0, 1, 2]):
                         if it == 0.:
                             add_col_c[p].append(r) 
 
+#separate list r_obj for all r's to put in objective function (add_col_a and add_col_c)
+for p in range(len(itinerary_no)):
+    r_obj[p] = add_col_a[p]+add_col_c[p]
+    r_obj[p] = list(set(r_obj[p]))
 
+    
 for p in range(len(itinerary_no)):
     ec_sum = 0.
     bs_sum = 0.
