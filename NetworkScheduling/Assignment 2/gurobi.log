@@ -18272,3 +18272,4205 @@ Solution count 2: 3.40734e+06 3.41085e+06
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 3.407336430374e+06, best bound 3.407320987542e+06, gap 0.0005%
+
+Gurobi 8.1.0 (win64, Python) logging started 04/23/19 20:12:03
+
+Academic license - for non-commercial use only
+Optimize a model with 2320 rows, 4044 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [5e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1177 rows and 1743 columns
+Presolve time: 0.03s
+Presolved: 1143 rows, 2301 columns, 6799 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3953519e+06   6.146322e+03   0.000000e+00      0s
+     616    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 616 iterations and 0.04 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4840 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1150 rows and 2513 columns
+Presolve time: 0.01s
+Presolved: 1170 rows, 2327 columns, 6978 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4132502e+06   6.132260e+03   0.000000e+00      0s
+     608    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 608 iterations and 0.03 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4840 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1150 rows and 2513 columns
+Presolve time: 0.02s
+Presolved: 1170 rows, 2327 columns, 6978 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4132502e+06   6.132260e+03   0.000000e+00      0s
+     608    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 608 iterations and 0.04 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2457 rows, 63512 columns and 12052 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1286 rows and 61116 columns
+Presolve time: 0.03s
+Presolved: 1171 rows, 2396 columns, 7116 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4024804e+06   1.902518e+03   0.000000e+00      0s
+     620    3.2322360e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 620 iterations and 0.06 seconds
+Optimal objective  3.232236011e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2457 rows, 63512 columns and 12052 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1286 rows and 61116 columns
+Presolve time: 0.04s
+Presolved: 1171 rows, 2396 columns, 7116 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4024804e+06   1.902518e+03   0.000000e+00      0s
+     620    3.2322360e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 620 iterations and 0.08 seconds
+Optimal objective  3.232236011e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122184 columns and 12180 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119689 columns
+Presolve time: 0.07s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.13 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122188 columns and 12182 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119693 columns
+Presolve time: 0.06s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.12 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122188 columns and 12182 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119693 columns
+Presolve time: 0.06s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.12 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153068 columns and 12264 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150547 columns
+Presolve time: 0.09s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.16 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153070 columns and 12265 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150549 columns
+Presolve time: 0.04s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.08 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153070 columns and 12265 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150549 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.12 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185494 columns and 12330 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182964 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.09 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185496 columns and 12331 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182966 columns
+Presolve time: 0.11s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.17 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185496 columns and 12331 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182966 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.10 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.11 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.12 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.11 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.11 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.12 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.08s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.17 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2809 rows, 244168 columns and 12418 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1629 rows and 241628 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2540 columns, 7341 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     570    3.3873620e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 570 iterations and 0.14 seconds
+Optimal objective  3.387362045e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2809 rows, 244168 columns and 12418 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1629 rows and 241628 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2540 columns, 7341 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     570    3.3873620e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 570 iterations and 0.11 seconds
+Optimal objective  3.387362045e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2817 rows, 250344 columns and 12426 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1637 rows and 247801 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     584    3.3906227e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.13 seconds
+Optimal objective  3.390622667e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2817 rows, 250344 columns and 12426 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1637 rows and 247801 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     584    3.3906227e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.14 seconds
+Optimal objective  3.390622667e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2820 rows, 253432 columns and 12429 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1640 rows and 250889 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     603    3.3925508e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 603 iterations and 0.16 seconds
+Optimal objective  3.392550776e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2820 rows, 253432 columns and 12429 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1640 rows and 250889 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     603    3.3925508e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 603 iterations and 0.11 seconds
+Optimal objective  3.392550776e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256520 columns and 12432 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253975 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.15 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256522 columns and 12433 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253977 columns
+Presolve time: 0.08s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.18 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256522 columns and 12433 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253977 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.14 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2825 rows, 258066 columns and 12435 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1645 rows and 255521 columns
+Presolve time: 0.08s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     588    3.3950372e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 588 iterations and 0.19 seconds
+Optimal objective  3.395037221e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2825 rows, 258066 columns and 12435 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1645 rows and 255521 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     588    3.3950372e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 588 iterations and 0.17 seconds
+Optimal objective  3.395037221e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2826 rows, 258066 columns and 12436 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255526 columns
+Presolve time: 0.08s
+Presolved: 1178 rows, 2540 columns, 7313 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4660699e+06   1.767375e+03   0.000000e+00      0s
+     606    3.3952803e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.15 seconds
+Optimal objective  3.395280332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2826 rows, 258066 columns and 12436 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255526 columns
+Presolve time: 0.06s
+Presolved: 1178 rows, 2540 columns, 7313 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4660699e+06   1.767375e+03   0.000000e+00      0s
+     606    3.3952803e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.12 seconds
+Optimal objective  3.395280332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255522 columns
+Presolve time: 0.12s
+Presolved: 1179 rows, 2544 columns, 7324 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4698909e+06   1.763750e+03   0.000000e+00      0s
+     606    3.3990563e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.19 seconds
+Optimal objective  3.399056332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255522 columns
+Presolve time: 0.09s
+Presolved: 1179 rows, 2544 columns, 7324 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4698909e+06   1.763750e+03   0.000000e+00      0s
+     606    3.3990563e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.20 seconds
+Optimal objective  3.399056332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Variable types: 257230 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1853 rows and 255993 columns
+Presolve time: 0.27s
+Presolved: 974 rows, 2073 columns, 5344 nonzeros
+Variable types: 1273 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 788 iterations, 0.03 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3406798.89    0   29          - 3406798.89      -     -    0s
+H    0     0                    3410849.0151 3406798.89  0.12%     -    0s
+     0     0 3407155.19    0   10 3410849.02 3407155.19  0.11%     -    0s
+     0     0 3407313.58    0   28 3410849.02 3407313.58  0.10%     -    0s
+     0     0 3407319.84    0   24 3410849.02 3407319.84  0.10%     -    0s
+     0     0 3407320.99    0    4 3410849.02 3407320.99  0.10%     -    0s
+H    0     0                    3407336.4304 3407320.99  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 47
+
+Explored 1 nodes (914 simplex iterations) in 0.97 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40734e+06 3.41085e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.407336430374e+06, best bound 3.407320987542e+06, gap 0.0005%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2835 rows, 264242 columns and 12445 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1860 rows and 262161 columns
+Presolve time: 0.25s
+Presolved: 975 rows, 2081 columns, 5360 nonzeros
+Variable types: 1281 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401174e+06, 804 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401173.60    0  100          - 3401173.60      -     -    0s
+     0     0 3407584.61    0   36          - 3407584.61      -     -    0s
+H    0     0                    3417383.1696 3407584.61  0.29%     -    0s
+H    0     0                    3411347.0151 3407584.61  0.11%     -    0s
+     0     0 3407921.09    0   33 3411347.02 3407921.09  0.10%     -    0s
+     0     0 3408204.49    0   22 3411347.02 3408204.49  0.09%     -    0s
+H    0     0                    3408229.4304 3408204.49  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 14
+  MIR: 53
+
+Explored 1 nodes (948 simplex iterations) in 1.01 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 3.40823e+06 3.41135e+06 3.41738e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408229430374e+06, best bound 3.408204489641e+06, gap 0.0007%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2845 rows, 264242 columns and 12455 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1870 rows and 262158 columns
+Presolve time: 0.28s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.90 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2851 rows, 264242 columns and 12461 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1876 rows and 262158 columns
+Presolve time: 0.27s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.98 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2857 rows, 264242 columns and 12467 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1882 rows and 262158 columns
+Presolve time: 0.36s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.74 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2863 rows, 264242 columns and 12473 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1888 rows and 262158 columns
+Presolve time: 0.33s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.90 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2869 rows, 264242 columns and 12479 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1894 rows and 262158 columns
+Presolve time: 0.27s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 1.00 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2875 rows, 264242 columns and 12485 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1900 rows and 262158 columns
+Presolve time: 0.31s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.98 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2881 rows, 264242 columns and 12491 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1906 rows and 262158 columns
+Presolve time: 0.25s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.89 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2887 rows, 264242 columns and 12497 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1912 rows and 262158 columns
+Presolve time: 0.27s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.92 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2893 rows, 264242 columns and 12503 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1918 rows and 262158 columns
+Presolve time: 0.25s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.90 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2899 rows, 264242 columns and 12509 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1924 rows and 262158 columns
+Presolve time: 0.32s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.95 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2905 rows, 264242 columns and 12515 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1930 rows and 262158 columns
+Presolve time: 0.24s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.90 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2911 rows, 264242 columns and 12521 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1936 rows and 262158 columns
+Presolve time: 0.26s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.90 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2917 rows, 264242 columns and 12527 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1942 rows and 262158 columns
+Presolve time: 0.32s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 1.03 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2923 rows, 264242 columns and 12533 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1948 rows and 262158 columns
+Presolve time: 0.30s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.03 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.94 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2929 rows, 264242 columns and 12539 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1954 rows and 262158 columns
+Presolve time: 0.28s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.93 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4044 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [5e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1177 rows and 1743 columns
+Presolve time: 0.01s
+Presolved: 1143 rows, 2301 columns, 6799 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3953519e+06   6.146322e+03   0.000000e+00      0s
+     616    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 616 iterations and 0.02 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4840 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1150 rows and 2513 columns
+Presolve time: 0.01s
+Presolved: 1170 rows, 2327 columns, 6978 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4132502e+06   6.132260e+03   0.000000e+00      0s
+     608    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 608 iterations and 0.03 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4840 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1150 rows and 2513 columns
+Presolve time: 0.01s
+Presolved: 1170 rows, 2327 columns, 6978 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4132502e+06   6.132260e+03   0.000000e+00      0s
+     608    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 608 iterations and 0.03 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2457 rows, 63512 columns and 12052 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1286 rows and 61116 columns
+Presolve time: 0.04s
+Presolved: 1171 rows, 2396 columns, 7116 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4024804e+06   1.902518e+03   0.000000e+00      0s
+     620    3.2322360e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 620 iterations and 0.08 seconds
+Optimal objective  3.232236011e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2457 rows, 63512 columns and 12052 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1286 rows and 61116 columns
+Presolve time: 0.03s
+Presolved: 1171 rows, 2396 columns, 7116 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4024804e+06   1.902518e+03   0.000000e+00      0s
+     620    3.2322360e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 620 iterations and 0.05 seconds
+Optimal objective  3.232236011e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122184 columns and 12180 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119689 columns
+Presolve time: 0.04s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.08 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122188 columns and 12182 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119693 columns
+Presolve time: 0.03s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.07 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122188 columns and 12182 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119693 columns
+Presolve time: 0.04s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.06 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153068 columns and 12264 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150547 columns
+Presolve time: 0.04s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.08 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153070 columns and 12265 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150549 columns
+Presolve time: 0.04s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.09 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153070 columns and 12265 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150549 columns
+Presolve time: 0.04s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.09 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185494 columns and 12330 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182964 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.12 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185496 columns and 12331 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182966 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.09 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185496 columns and 12331 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182966 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.09 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.10s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.18 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.10 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.16 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.13 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.11 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.11 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2809 rows, 244168 columns and 12418 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1629 rows and 241628 columns
+Presolve time: 0.10s
+Presolved: 1180 rows, 2540 columns, 7341 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     570    3.3873620e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 570 iterations and 0.16 seconds
+Optimal objective  3.387362045e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2809 rows, 244168 columns and 12418 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1629 rows and 241628 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2540 columns, 7341 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     570    3.3873620e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 570 iterations and 0.16 seconds
+Optimal objective  3.387362045e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2817 rows, 250344 columns and 12426 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1637 rows and 247801 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     584    3.3906227e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.13 seconds
+Optimal objective  3.390622667e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2817 rows, 250344 columns and 12426 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1637 rows and 247801 columns
+Presolve time: 0.08s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     584    3.3906227e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.14 seconds
+Optimal objective  3.390622667e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2820 rows, 253432 columns and 12429 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1640 rows and 250889 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     603    3.3925508e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 603 iterations and 0.11 seconds
+Optimal objective  3.392550776e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2820 rows, 253432 columns and 12429 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1640 rows and 250889 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     603    3.3925508e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 603 iterations and 0.12 seconds
+Optimal objective  3.392550776e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256520 columns and 12432 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253975 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.12 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256522 columns and 12433 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253977 columns
+Presolve time: 0.08s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.18 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256522 columns and 12433 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253977 columns
+Presolve time: 0.11s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.20 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2825 rows, 258066 columns and 12435 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1645 rows and 255521 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     588    3.3950372e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 588 iterations and 0.11 seconds
+Optimal objective  3.395037221e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2825 rows, 258066 columns and 12435 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1645 rows and 255521 columns
+Presolve time: 0.07s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     588    3.3950372e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 588 iterations and 0.13 seconds
+Optimal objective  3.395037221e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2826 rows, 258066 columns and 12436 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255526 columns
+Presolve time: 0.06s
+Presolved: 1178 rows, 2540 columns, 7313 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4660699e+06   1.767375e+03   0.000000e+00      0s
+     606    3.3952803e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.15 seconds
+Optimal objective  3.395280332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2826 rows, 258066 columns and 12436 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255526 columns
+Presolve time: 0.07s
+Presolved: 1178 rows, 2540 columns, 7313 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4660699e+06   1.767375e+03   0.000000e+00      0s
+     606    3.3952803e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.15 seconds
+Optimal objective  3.395280332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255522 columns
+Presolve time: 0.08s
+Presolved: 1179 rows, 2544 columns, 7324 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4698909e+06   1.763750e+03   0.000000e+00      0s
+     606    3.3990563e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.17 seconds
+Optimal objective  3.399056332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255522 columns
+Presolve time: 0.07s
+Presolved: 1179 rows, 2544 columns, 7324 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4698909e+06   1.763750e+03   0.000000e+00      0s
+     606    3.3990563e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.12 seconds
+Optimal objective  3.399056332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Variable types: 257230 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1853 rows and 255993 columns
+Presolve time: 0.25s
+Presolved: 974 rows, 2073 columns, 5344 nonzeros
+Variable types: 1273 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 788 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3406798.89    0   29          - 3406798.89      -     -    0s
+H    0     0                    3410849.0151 3406798.89  0.12%     -    0s
+     0     0 3407155.19    0   10 3410849.02 3407155.19  0.11%     -    0s
+     0     0 3407313.58    0   28 3410849.02 3407313.58  0.10%     -    0s
+     0     0 3407319.84    0   24 3410849.02 3407319.84  0.10%     -    0s
+     0     0 3407320.99    0    4 3410849.02 3407320.99  0.10%     -    0s
+H    0     0                    3407336.4304 3407320.99  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 47
+
+Explored 1 nodes (914 simplex iterations) in 1.01 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40734e+06 3.41085e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.407336430374e+06, best bound 3.407320987542e+06, gap 0.0005%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2835 rows, 264242 columns and 12445 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1860 rows and 262161 columns
+Presolve time: 0.21s
+Presolved: 975 rows, 2081 columns, 5360 nonzeros
+Variable types: 1281 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401174e+06, 804 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401173.60    0  100          - 3401173.60      -     -    0s
+     0     0 3407584.61    0   36          - 3407584.61      -     -    0s
+H    0     0                    3417383.1696 3407584.61  0.29%     -    0s
+H    0     0                    3411347.0151 3407584.61  0.11%     -    0s
+     0     0 3407921.09    0   33 3411347.02 3407921.09  0.10%     -    0s
+     0     0 3408204.49    0   22 3411347.02 3408204.49  0.09%     -    0s
+H    0     0                    3408229.4304 3408204.49  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 14
+  MIR: 53
+
+Explored 1 nodes (948 simplex iterations) in 0.91 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 3.40823e+06 3.41135e+06 3.41738e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408229430374e+06, best bound 3.408204489641e+06, gap 0.0007%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2845 rows, 264242 columns and 12455 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1870 rows and 262158 columns
+Presolve time: 0.28s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.90 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2851 rows, 264242 columns and 12461 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1876 rows and 262158 columns
+Presolve time: 0.26s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.92 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2857 rows, 264242 columns and 12467 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1882 rows and 262158 columns
+Presolve time: 0.25s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.92 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2863 rows, 264242 columns and 12473 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1888 rows and 262158 columns
+Presolve time: 0.33s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 1.01 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2869 rows, 264242 columns and 12479 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1894 rows and 262158 columns
+Presolve time: 0.27s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.96 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2875 rows, 264242 columns and 12485 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1900 rows and 262158 columns
+Presolve time: 0.25s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.86 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2881 rows, 264242 columns and 12491 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1906 rows and 262158 columns
+Presolve time: 0.25s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.95 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2887 rows, 264242 columns and 12497 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1912 rows and 262158 columns
+Presolve time: 0.23s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.88 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4044 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [5e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1177 rows and 1743 columns
+Presolve time: 0.00s
+Presolved: 1143 rows, 2301 columns, 6799 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3953519e+06   6.146322e+03   0.000000e+00      0s
+     616    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 616 iterations and 0.02 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4840 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1150 rows and 2513 columns
+Presolve time: 0.02s
+Presolved: 1170 rows, 2327 columns, 6978 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4132502e+06   6.132260e+03   0.000000e+00      0s
+     608    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 608 iterations and 0.02 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4840 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1150 rows and 2513 columns
+Presolve time: 0.02s
+Presolved: 1170 rows, 2327 columns, 6978 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4132502e+06   6.132260e+03   0.000000e+00      0s
+     608    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 608 iterations and 0.02 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2457 rows, 63512 columns and 12052 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1286 rows and 61116 columns
+Presolve time: 0.02s
+Presolved: 1171 rows, 2396 columns, 7116 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4024804e+06   1.902518e+03   0.000000e+00      0s
+     620    3.2322360e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 620 iterations and 0.03 seconds
+Optimal objective  3.232236011e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4044 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [5e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1177 rows and 1743 columns
+Presolve time: 0.02s
+Presolved: 1143 rows, 2301 columns, 6799 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3953519e+06   6.146322e+03   0.000000e+00      0s
+     616    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 616 iterations and 0.02 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4840 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1150 rows and 2513 columns
+Presolve time: 0.02s
+Presolved: 1170 rows, 2327 columns, 6978 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4132502e+06   6.132260e+03   0.000000e+00      0s
+     608    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 608 iterations and 0.03 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4840 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1150 rows and 2513 columns
+Presolve time: 0.02s
+Presolved: 1170 rows, 2327 columns, 6978 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4132502e+06   6.132260e+03   0.000000e+00      0s
+     608    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 608 iterations and 0.03 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2457 rows, 63512 columns and 12052 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1286 rows and 61116 columns
+Presolve time: 0.02s
+Presolved: 1171 rows, 2396 columns, 7116 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4024804e+06   1.902518e+03   0.000000e+00      0s
+     620    3.2322360e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 620 iterations and 0.03 seconds
+Optimal objective  3.232236011e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2457 rows, 63512 columns and 12052 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1286 rows and 61116 columns
+Presolve time: 0.02s
+Presolved: 1171 rows, 2396 columns, 7116 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4024804e+06   1.902518e+03   0.000000e+00      0s
+     620    3.2322360e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 620 iterations and 0.03 seconds
+Optimal objective  3.232236011e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122184 columns and 12180 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119689 columns
+Presolve time: 0.03s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.06 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122188 columns and 12182 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119693 columns
+Presolve time: 0.02s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.04 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122188 columns and 12182 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119693 columns
+Presolve time: 0.03s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.05 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153068 columns and 12264 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150547 columns
+Presolve time: 0.03s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.06 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153070 columns and 12265 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150549 columns
+Presolve time: 0.03s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.05 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153070 columns and 12265 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150549 columns
+Presolve time: 0.03s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.05 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185494 columns and 12330 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182964 columns
+Presolve time: 0.03s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.06 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185496 columns and 12331 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182966 columns
+Presolve time: 0.03s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.08 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185496 columns and 12331 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182966 columns
+Presolve time: 0.04s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.08 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.10 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.10 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.08 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.08 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.10 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.09 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2809 rows, 244168 columns and 12418 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1629 rows and 241628 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2540 columns, 7341 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     570    3.3873620e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 570 iterations and 0.12 seconds
+Optimal objective  3.387362045e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2809 rows, 244168 columns and 12418 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1629 rows and 241628 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2540 columns, 7341 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     570    3.3873620e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 570 iterations and 0.11 seconds
+Optimal objective  3.387362045e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2817 rows, 250344 columns and 12426 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1637 rows and 247801 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     584    3.3906227e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.11 seconds
+Optimal objective  3.390622667e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2817 rows, 250344 columns and 12426 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1637 rows and 247801 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     584    3.3906227e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.09 seconds
+Optimal objective  3.390622667e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2820 rows, 253432 columns and 12429 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1640 rows and 250889 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     603    3.3925508e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 603 iterations and 0.09 seconds
+Optimal objective  3.392550776e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2820 rows, 253432 columns and 12429 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1640 rows and 250889 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     603    3.3925508e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 603 iterations and 0.12 seconds
+Optimal objective  3.392550776e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256520 columns and 12432 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253975 columns
+Presolve time: 0.09s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.16 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256522 columns and 12433 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253977 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.11 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256522 columns and 12433 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253977 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.10 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2825 rows, 258066 columns and 12435 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1645 rows and 255521 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     588    3.3950372e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 588 iterations and 0.10 seconds
+Optimal objective  3.395037221e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2825 rows, 258066 columns and 12435 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1645 rows and 255521 columns
+Presolve time: 0.08s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     588    3.3950372e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 588 iterations and 0.13 seconds
+Optimal objective  3.395037221e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2826 rows, 258066 columns and 12436 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255526 columns
+Presolve time: 0.07s
+Presolved: 1178 rows, 2540 columns, 7313 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4660699e+06   1.767375e+03   0.000000e+00      0s
+     606    3.3952803e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.14 seconds
+Optimal objective  3.395280332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2826 rows, 258066 columns and 12436 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255526 columns
+Presolve time: 0.06s
+Presolved: 1178 rows, 2540 columns, 7313 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4660699e+06   1.767375e+03   0.000000e+00      0s
+     606    3.3952803e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.10 seconds
+Optimal objective  3.395280332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255522 columns
+Presolve time: 0.06s
+Presolved: 1179 rows, 2544 columns, 7324 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4698909e+06   1.763750e+03   0.000000e+00      0s
+     606    3.3990563e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.10 seconds
+Optimal objective  3.399056332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255522 columns
+Presolve time: 0.05s
+Presolved: 1179 rows, 2544 columns, 7324 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4698909e+06   1.763750e+03   0.000000e+00      0s
+     606    3.3990563e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.10 seconds
+Optimal objective  3.399056332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Variable types: 257230 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1853 rows and 255993 columns
+Presolve time: 0.20s
+Presolved: 974 rows, 2073 columns, 5344 nonzeros
+Variable types: 1273 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 788 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3406798.89    0   29          - 3406798.89      -     -    0s
+H    0     0                    3410849.0151 3406798.89  0.12%     -    0s
+     0     0 3407155.19    0   10 3410849.02 3407155.19  0.11%     -    0s
+     0     0 3407313.58    0   28 3410849.02 3407313.58  0.10%     -    0s
+     0     0 3407319.84    0   24 3410849.02 3407319.84  0.10%     -    0s
+     0     0 3407320.99    0    4 3410849.02 3407320.99  0.10%     -    0s
+H    0     0                    3407336.4304 3407320.99  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 47
+
+Explored 1 nodes (914 simplex iterations) in 0.38 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40734e+06 3.41085e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.407336430374e+06, best bound 3.407320987542e+06, gap 0.0005%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2835 rows, 264242 columns and 12445 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1860 rows and 262161 columns
+Presolve time: 0.18s
+Presolved: 975 rows, 2081 columns, 5360 nonzeros
+Variable types: 1281 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401174e+06, 804 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401173.60    0  100          - 3401173.60      -     -    0s
+     0     0 3407584.61    0   36          - 3407584.61      -     -    0s
+H    0     0                    3417383.1696 3407584.61  0.29%     -    0s
+H    0     0                    3411347.0151 3407584.61  0.11%     -    0s
+     0     0 3407921.09    0   33 3411347.02 3407921.09  0.10%     -    0s
+     0     0 3408204.49    0   22 3411347.02 3408204.49  0.09%     -    0s
+H    0     0                    3408229.4304 3408204.49  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 14
+  MIR: 53
+
+Explored 1 nodes (948 simplex iterations) in 0.38 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 3.40823e+06 3.41135e+06 3.41738e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408229430374e+06, best bound 3.408204489641e+06, gap 0.0007%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2839 rows, 264242 columns and 12449 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1864 rows and 262158 columns
+Presolve time: 0.17s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.33 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
+Optimize a model with 2320 rows, 4044 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [5e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1177 rows and 1743 columns
+Presolve time: 0.02s
+Presolved: 1143 rows, 2301 columns, 6799 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3953519e+06   6.146322e+03   0.000000e+00      0s
+     616    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 616 iterations and 0.02 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4840 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1150 rows and 2513 columns
+Presolve time: 0.02s
+Presolved: 1170 rows, 2327 columns, 6978 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4132502e+06   6.132260e+03   0.000000e+00      0s
+     608    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 608 iterations and 0.03 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 205 and 220 have the same name "t_108^{101,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2320 rows, 4840 columns and 11912 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1150 rows and 2513 columns
+Presolve time: 0.00s
+Presolved: 1170 rows, 2327 columns, 6978 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4132502e+06   6.132260e+03   0.000000e+00      0s
+     608    3.1234016e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 608 iterations and 0.02 seconds
+Optimal objective  3.123401551e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2457 rows, 63512 columns and 12052 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1286 rows and 61116 columns
+Presolve time: 0.02s
+Presolved: 1171 rows, 2396 columns, 7116 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4024804e+06   1.902518e+03   0.000000e+00      0s
+     620    3.2322360e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 620 iterations and 0.04 seconds
+Optimal objective  3.232236011e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2457 rows, 63512 columns and 12052 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1286 rows and 61116 columns
+Presolve time: 0.01s
+Presolved: 1171 rows, 2396 columns, 7116 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4024804e+06   1.902518e+03   0.000000e+00      0s
+     620    3.2322360e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 620 iterations and 0.02 seconds
+Optimal objective  3.232236011e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122184 columns and 12180 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119689 columns
+Presolve time: 0.03s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.05 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122188 columns and 12182 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119693 columns
+Presolve time: 0.03s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.06 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2581 rows, 122188 columns and 12182 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1402 rows and 119693 columns
+Presolve time: 0.03s
+Presolved: 1179 rows, 2495 columns, 7278 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4400864e+06   1.882570e+03   0.000000e+00      0s
+     580    3.3010298e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.06 seconds
+Optimal objective  3.301029802e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153068 columns and 12264 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150547 columns
+Presolve time: 0.03s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.06 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153070 columns and 12265 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150549 columns
+Presolve time: 0.03s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.06 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2660 rows, 153070 columns and 12265 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1480 rows and 150549 columns
+Presolve time: 0.03s
+Presolved: 1180 rows, 2521 columns, 7325 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.875188e+03   0.000000e+00      0s
+     584    3.3496118e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.06 seconds
+Optimal objective  3.349611804e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185494 columns and 12330 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182964 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.08 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185496 columns and 12331 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182966 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.08 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2723 rows, 185496 columns and 12331 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1543 rows and 182966 columns
+Presolve time: 0.03s
+Presolved: 1180 rows, 2530 columns, 7337 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     576    3.3676368e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 576 iterations and 0.06 seconds
+Optimal objective  3.367636799e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.08 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.08 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2770 rows, 211744 columns and 12379 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1590 rows and 209206 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2538 columns, 7343 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     580    3.3760697e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 580 iterations and 0.09 seconds
+Optimal objective  3.376069686e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.10 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.20 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2794 rows, 230272 columns and 12403 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1614 rows and 227735 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2537 columns, 7336 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     553    3.3839038e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 553 iterations and 0.12 seconds
+Optimal objective  3.383903818e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2809 rows, 244168 columns and 12418 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1629 rows and 241628 columns
+Presolve time: 0.09s
+Presolved: 1180 rows, 2540 columns, 7341 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     570    3.3873620e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 570 iterations and 0.15 seconds
+Optimal objective  3.387362045e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2809 rows, 244168 columns and 12418 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1629 rows and 241628 columns
+Presolve time: 0.08s
+Presolved: 1180 rows, 2540 columns, 7341 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     570    3.3873620e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 570 iterations and 0.13 seconds
+Optimal objective  3.387362045e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2817 rows, 250344 columns and 12426 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1637 rows and 247801 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     584    3.3906227e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.08 seconds
+Optimal objective  3.390622667e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2817 rows, 250344 columns and 12426 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1637 rows and 247801 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     584    3.3906227e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 584 iterations and 0.10 seconds
+Optimal objective  3.390622667e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2820 rows, 253432 columns and 12429 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1640 rows and 250889 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     603    3.3925508e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 603 iterations and 0.09 seconds
+Optimal objective  3.392550776e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2820 rows, 253432 columns and 12429 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1640 rows and 250889 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2543 columns, 7346 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     603    3.3925508e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 603 iterations and 0.09 seconds
+Optimal objective  3.392550776e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256520 columns and 12432 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253975 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.08 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256522 columns and 12433 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253977 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.12 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2823 rows, 256522 columns and 12433 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1643 rows and 253977 columns
+Presolve time: 0.05s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     596    3.3939009e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 596 iterations and 0.09 seconds
+Optimal objective  3.393900864e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2825 rows, 258066 columns and 12435 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1645 rows and 255521 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     588    3.3950372e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 588 iterations and 0.09 seconds
+Optimal objective  3.395037221e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2825 rows, 258066 columns and 12435 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1645 rows and 255521 columns
+Presolve time: 0.06s
+Presolved: 1180 rows, 2545 columns, 7349 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3977909e+06   1.861813e+03   0.000000e+00      0s
+     588    3.3950372e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 588 iterations and 0.11 seconds
+Optimal objective  3.395037221e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2826 rows, 258066 columns and 12436 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255526 columns
+Presolve time: 0.05s
+Presolved: 1178 rows, 2540 columns, 7313 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4660699e+06   1.767375e+03   0.000000e+00      0s
+     606    3.3952803e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.10 seconds
+Optimal objective  3.395280332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2826 rows, 258066 columns and 12436 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255526 columns
+Presolve time: 0.06s
+Presolved: 1178 rows, 2540 columns, 7313 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4660699e+06   1.767375e+03   0.000000e+00      0s
+     606    3.3952803e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.13 seconds
+Optimal objective  3.395280332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255522 columns
+Presolve time: 0.05s
+Presolved: 1179 rows, 2544 columns, 7324 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4698909e+06   1.763750e+03   0.000000e+00      0s
+     606    3.3990563e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.09 seconds
+Optimal objective  3.399056332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1648 rows and 255522 columns
+Presolve time: 0.06s
+Presolved: 1179 rows, 2544 columns, 7324 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4698909e+06   1.763750e+03   0.000000e+00      0s
+     606    3.3990563e+06   0.000000e+00   0.000000e+00      0s
+
+Solved in 606 iterations and 0.10 seconds
+Optimal objective  3.399056332e+06
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2827 rows, 258066 columns and 12437 nonzeros
+Variable types: 257230 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1853 rows and 255993 columns
+Presolve time: 0.28s
+Presolved: 974 rows, 2073 columns, 5344 nonzeros
+Variable types: 1273 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 788 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3406798.89    0   29          - 3406798.89      -     -    0s
+H    0     0                    3410849.0151 3406798.89  0.12%     -    0s
+     0     0 3407155.19    0   10 3410849.02 3407155.19  0.11%     -    0s
+     0     0 3407313.58    0   28 3410849.02 3407313.58  0.10%     -    0s
+     0     0 3407319.84    0   24 3410849.02 3407319.84  0.10%     -    0s
+     0     0 3407320.99    0    4 3410849.02 3407320.99  0.10%     -    0s
+H    0     0                    3407336.4304 3407320.99  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 47
+
+Explored 1 nodes (914 simplex iterations) in 0.82 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40734e+06 3.41085e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.407336430374e+06, best bound 3.407320987542e+06, gap 0.0005%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2835 rows, 264242 columns and 12445 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1860 rows and 262161 columns
+Presolve time: 0.19s
+Presolved: 975 rows, 2081 columns, 5360 nonzeros
+Variable types: 1281 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401174e+06, 804 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401173.60    0  100          - 3401173.60      -     -    0s
+     0     0 3407584.61    0   36          - 3407584.61      -     -    0s
+H    0     0                    3417383.1696 3407584.61  0.29%     -    0s
+H    0     0                    3411347.0151 3407584.61  0.11%     -    0s
+     0     0 3407921.09    0   33 3411347.02 3407921.09  0.10%     -    0s
+     0     0 3408204.49    0   22 3411347.02 3408204.49  0.09%     -    0s
+H    0     0                    3408229.4304 3408204.49  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 14
+  MIR: 53
+
+Explored 1 nodes (948 simplex iterations) in 0.64 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 3.40823e+06 3.41135e+06 3.41738e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408229430374e+06, best bound 3.408204489641e+06, gap 0.0007%
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Warning: variables 0 and 2 have the same name "t_0^{771,e}"
+Warning: to let Gurobi read it back, use rlp format
+Optimize a model with 2839 rows, 264242 columns and 12449 nonzeros
+Variable types: 263406 continuous, 836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [3e+01, 1e+06]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 8e+02]
+Presolve removed 1864 rows and 262158 columns
+Presolve time: 0.19s
+Presolved: 975 rows, 2084 columns, 5359 nonzeros
+Variable types: 1284 continuous, 800 integer (795 binary)
+
+Root relaxation: objective 3.401130e+06, 802 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3401130.04    0  100          - 3401130.04      -     -    0s
+     0     0 3407732.15    0   35          - 3407732.15      -     -    0s
+H    0     0                    3409802.9876 3407732.15  0.06%     -    0s
+     0     0 3408298.01    0   29 3409802.99 3408298.01  0.04%     -    0s
+     0     0 3408662.65    0   28 3409802.99 3408662.65  0.03%     -    0s
+H    0     0                    3408769.4304 3408662.65  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 15
+  MIR: 52
+
+Explored 1 nodes (925 simplex iterations) in 0.65 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3.40877e+06 3.4098e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.408769430374e+06, best bound 3.408662652743e+06, gap 0.0031%
