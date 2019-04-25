@@ -12,6 +12,9 @@ raw_input = ('Hit Enter to continue')
 
 row_loop = True
 
+
+#Same as 'Iteration.py'
+
 while row_loop == True:
 
     m = grb.Model('MinAllocCost')
@@ -171,6 +174,8 @@ while row_loop == True:
     obj_list.append(m.objVal)
     iters = iters + 1.
 
+
+    
     print "Row Loop" 
         
     row_loop_a = 0.
@@ -184,11 +189,17 @@ while row_loop == True:
             ec_sum = ec_sum + tpre[p,r].x
             if ec_sum > D_p_e(p):
                 #print p, r, D_p_e(p)
-                constr_p_a.append(p)
-                constr_r_a.append(r)
-                rows = rows + 1
-                row_loop_a = row_loop_a + 1
-                #p_sigmae.append(p)
+                it = 0.
+                for k in range(len(constr_p_a)):
+                    if p == constr_p_a[k]:
+                        it = it + 1
+                
+                if it == 0.:
+                    constr_p_a.append(p)
+                    constr_r_a.append(r)
+                    rows = rows + 1
+                    row_loop_a = row_loop_a + 1
+                    p_sigmae.append(p)
         for r in list(add_col_b[p]):
             #bs_sum = bs_sum + tprb[p,771].x
             if tprb[p,771].x > D_p_b(p):
@@ -203,7 +214,7 @@ while row_loop == True:
                     constr_r_b.append(771)
                     rows = rows + 1
                     row_loop_b = row_loop_b + 1
-                    #p_sigmab.append(p)
+                    p_sigmab.append(p)
 
     print row_loop_a + row_loop_b
 
@@ -212,6 +223,15 @@ while row_loop == True:
         
     row_list.append(row_loop_a+row_loop_b)  
     
+#Get dual variables
+#pi = [c.Pi for c in m.getConstrs()]
+#
+#pi_fe = pi[1880:1880+len(Lf)]
+#pi_fb = pi[1880+len(Lf):1880+len(Lf)+len(Lf)]
+#pi_b = pi[1880+len(Lf)+len(Lf):1880+len(Lf)+len(Lf)+len(Lb)]
+#sigma_e = pi[1880+len(Lf)+len(Lf)+len(Lb):1880+len(Lf)+len(Lf)+len(Lb)+len(p_sigmae)]
+#sigma_b = pi[1880+len(Lf)+len(Lf)+len(Lb)+len(p_sigmae):1880+len(Lf)+len(Lf)+len(Lb)+len(p_sigmae)+len(p_sigmab)]
+
     
 t_endbb = time.time()
 print "Generating results"   
@@ -228,12 +248,14 @@ B737 = []
 for v in m.getVars():
     if 'f' == str(v.varName[0]) and v.x > 0:
         fres.append([v.varName, v.x])
-    if 'f' == str(v.varName[0]) and '0' == str(v.varName[-2]) and v.x > 0:
+    if 'f' == str(v.varName[0]) and '1' == str(v.varName[-2]) and v.x > 0:
         A340.append([v.varName, v.x])
     if 'f' == str(v.varName[0]) and ('2' == str(v.varName[-2]) or '3' == str(v.varName[-2])) and v.x > 0:
         B737.append([v.varName, v.x])    
     if 'y' == str(v.varName[0]) and v.x > 0:
         yres.append([v.varName, v.x])        
+#    if 't' == str(v.varName[0]) and 'e' == str(v.varName[-2]) and v.x > 0:
+#        teres.append([v.varName, v.x])
     if 't' == str(v.varName[0]) and 'e' == str(v.varName[-2]) and v.x > 0:
         teres.append([v.varName, v.x])
     if 't' == str(v.varName[0]) and 'b' == str(v.varName[-2]) and v.x > 0:
@@ -262,6 +284,12 @@ with open('RES_ec_reallocation.csv', 'wb') as myfile:
 with open('RES_bus_reallocation.csv', 'wb') as myfile:
     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
     wr.writerows(tbres)
+    
+with open('Deliv.csv', 'wb') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerows([obj_list, col_list, row_list])
+    
+   
 
 print 'final obj:', m.objVal
 print 'runtime:', (t_endbb-t_start)
