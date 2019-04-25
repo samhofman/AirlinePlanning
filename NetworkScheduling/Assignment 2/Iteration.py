@@ -23,18 +23,29 @@ import time
 
 GRB = grb.GRB
 
+
+###Lists and parameters to use in iterations and solution ###
+
+#lists to define which sigma for which constraint
 p_sigmae = []
 p_sigmab = []
+
+#List for which constraints 5a and 5b have to be made
 constr_p_a = []
 constr_p_b = []
 
 constr_r_a = []
 constr_r_b = []
 
+#List with columns to be added
 add_col_a = {}
 add_col_b = {}
 add_col_c = {}
+
+
 r_obj     = {}
+
+#Initiate lists with itinerary 771
 for p in range(len(itinerary_no)):
     add_col_a[p] = [771]
     add_col_b[p] = [771]
@@ -48,11 +59,22 @@ rows = 0
 iters = 0
 z = 0
 
+
+col_loop_a = 0.
+col_loop_b = 0.
+col_loop_c = 0.
+row_loop_a = 0.
+row_loop_b = 0.
+
+
 col_list = []
 row_list = []
 
+
+#Initiate Iteration loop
 while loop == True:
     
+    #Initiate column generation loop
     while col_loop == True:
         print "Column loop"
         row_loop = False
@@ -61,11 +83,15 @@ while loop == True:
         col_loop_c = 0.
         stop = 0.
         
-        for a in list([0, 1, 2]):
+        #Check whether to add columns for each itinerary
+        for a in list([0, 1, 2]):                       #0,1,2 stand for 4a, 4b and 4c
             for p in range(len(recapture_from_to)):
                 for r in range(len(recapture_from_to)):
                     if p == recapture_from_to[r][0]:
+                        
+                        #Definition add_col from Initial_solution -> check price out
                         if add_col(a,p, recapture_from_to[r][1],p_sigmae,p_sigmab,sigma_e,sigma_b,pi_fe,pi_fb,pi_b) < 0:
+                            
                             #Same procedure for each constraint 4a,b or c
                             if a == 0:
                                 it = 0.
@@ -109,17 +135,22 @@ while loop == True:
             r_obj[p] = add_col_a[p]+add_col_c[p]
             r_obj[p] = list(set(r_obj[p]))        
         
+        
+        print 'columns:', (col_loop_a + col_loop_b + col_loop_c)
+#        col_list.append(col_loop_a + col_loop_b + col_loop_c)
+        
+        #If no columns added anymore, continue to check whether to add rows
         if (col_loop_a + col_loop_b + col_loop_c) == 0.:
             row_loop = True
             col_loop = False
             col_count = 1.
-            stop = stop + 1.    
+            stop = stop + 1.  #check to quit the loop, if no rows AND no columns added -> finished  
         
-        print 'columns:', (col_loop_a + col_loop_b + col_loop_c)
-        col_list.append(col_loop_a + col_loop_b + col_loop_c)
+
         col_loop = False
         optimize = True
         
+    #When column added or row added -> Optimize
     while optimize == True:
         
         print 'Optimize loop'
@@ -279,21 +310,25 @@ while loop == True:
         m.write("model.lp")
         
         m.optimize()
-        cont = 0
-        bina = 0
-        for v in m.getVars():
-            if 'f' == str(v.VarName[0]) and v.x > 0:
-                if v.x < 1.:
-                    cont = cont + 1
-                elif v.x == 1.:
-                    bina = bina + 1
+#        cont = 0
+#        bina = 0
+#        for v in m.getVars():
+#            if 'f' == str(v.VarName[0]) and v.x > 0:
+#                if v.x < 1.:
+#                    cont = cont + 1
+#                elif v.x == 1.:
+#                    bina = bina + 1
                 #print (v.varName, v.x)    
-        print 'total:', (cont + bina) 
-        print 'cont: ', cont
-        print 'bin:  ', bina
+#        print 'total:', (cont + bina) 
+#        print 'cont: ', cont
+#        print 'bin:  ', bina
         print ('Obj:', m.objVal)        
-        obj_list.append(m.objVal)
+
+        
+        #count iterations
         iters = iters + 1
+        
+        #Get dual variables
         pi = [c.Pi for c in m.getConstrs()]
         
         pi_fe = pi[1880:1880+len(Lf)]
@@ -302,38 +337,51 @@ while loop == True:
         sigma_e = pi[1880+len(Lf)+len(Lf)+len(Lb):1880+len(Lf)+len(Lf)+len(Lb)+len(p_sigmae)]
         sigma_b = pi[1880+len(Lf)+len(Lf)+len(Lb)+len(p_sigmae):1880+len(Lf)+len(Lf)+len(Lb)+len(p_sigmae)+len(p_sigmab)]
         
-        #print sigma_e
         
-        #raw_input("Press Enter to continue...")
-
-        #print len(p_sigmae)+len(p_sigmab), len(sigma_e)+len(sigma_b)
         print 'optimized'
+        
+        
+        #Create lists of objective values, added columns and added rows per iteration
+        obj_list.append(m.objVal)
+        col_list.append(col_loop_a + col_loop_b + col_loop_c)
+        row_list.append(row_loop_a + row_loop_b)
+        
+        
         optimize = False
         
-        
+        #If column loop previously ran, run row loop
         if col_count == 1.:
             row_loop = True
             col_count = 0.
         
         else:
+#            obj_list.append(m.objVal)
             col_loop = True
         
-
+### Row generation loop ###
+            
     while row_loop == True:
         print "Row Loop" 
         
         col_loop = False
+        
+        #Start counting whether rows are added
+        
         row_loop_a = 0.
         row_loop_b = 0.
         p_sigma = []
+        
+        #For each itinerary check whether constraint 5a and 5b are violated
         for p in range(len(itinerary_no)):
             ec_sum = 0.
             bs_sum = 0.
             bus_sum = 0.
             for r in list(add_col_a[p]):
-                ec_sum = ec_sum + tpre[p,r].x
+                ec_sum = ec_sum + tpre[p,r].x #sum amount of economy passengers in path
                 if ec_sum > D_p_e(p):
                     #print p, r, D_p_e(p)
+                    
+                    #Store p and r for which constraint 5a has to be added
                     constr_p_a.append(p)
                     constr_r_a.append(r)
                     rows = rows + 1
@@ -343,20 +391,35 @@ while loop == True:
                 #bs_sum = bs_sum + tprb[p,771].x
                 if tprb[p,771].x > D_p_b(p):
                     #print p, r, D_p_b(p)
-                    constr_p_b.append(p)
-                    constr_r_b.append(771)
-                    rows = rows + 1
-                    row_loop_b = row_loop_b + 1
-                    p_sigmab.append(p)
-               
+                    
+                    #Store p and r for which constraint 5b has to be added
+                    it = 0.
+                    
+                    for k in range(len(constr_p_b)):
+                        if p == constr_p_b[k]:
+                            it = it + 1
+                    
+                    if it == 0.:                    
+                        constr_p_b.append(p)
+                        constr_r_b.append(771)
+                        rows = rows + 1
+                        row_loop_b = row_loop_b + 1
+                        p_sigmab.append(p)
+
+
+        print 'rows:', (row_loop_a + row_loop_b)
+#        row_list.append(row_loop_a + row_loop_b)
+        
+
+        #If no rows added -> optimize and go to column loop               
         if row_loop_a + row_loop_b == 0.:
             col_loop = True
             row_loop = False
-            stop = stop + 1.
+            stop = stop + 1. 
             
             
-        print 'rows:', (row_loop_a + row_loop_b)
-        row_list.append(row_loop_a + row_loop_b)
+      
+        #If no rows and columns added -> optimal solution found, Jump out of loop
         if stop == 2.:
             t_end = time.time()
             loop = False
@@ -398,13 +461,17 @@ with open('RES_flights.csv', 'wb') as myfile:
     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
     wr.writerows(fres)
 
-with open('RES_ec_reallocation.csv', 'wb') as myfile:
+with open('RES_ec_reallocation_iteration.csv', 'wb') as myfile:
     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
     wr.writerows(teres)     
 
 with open('RES_bus_reallocation.csv', 'wb') as myfile:
     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
     wr.writerows(tbres)
+
+with open('Dual.csv', 'wb') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerows([pi_fe, pi_fb, pi_b, p_sigmae, sigma_e, p_sigmab, sigma_b])     
 
 print 'runtime:', (t_end-t_start)
 print 'iterations:', iters

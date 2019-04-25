@@ -81,7 +81,6 @@ obj = grb.quicksum(grb.quicksum(costki(k,i)*fik[i,k] for k in range(len(k_units)
 m.setObjective(obj,GRB.MINIMIZE) #fill in obj instead of m.getObjective
 
 m.update()
-m.write("model.lp")
 
 print "Objective function created."    
     
@@ -160,41 +159,44 @@ for i in Lb:
 ### Constraints 5a and 5b relaxed in initial solution ###
 
 ### Run 
+m.update()
     
-m.write("model.lp")
+m.write("modelinit.lp")
  
 m.optimize()    
  
 pi = [c.Pi for c in m.getConstrs()]
 
-#sigma = pi[len(arc_no):(len(arc_no)+len(itinerary_no))]
-#pi = pi[:len(arc_no)]
+#No sigmas's yet, #Set zero to use in definition below (add_col)
 sigma_e = []
 sigma_b = []
 
-pi_fe = pi[1880:1880+len(Lf)]
-pi_fb = pi[1880+len(Lf):1880+len(Lf)+len(Lf)]
-pi_b = pi[1880+len(Lf)+len(Lf):1880+len(Lf)+len(Lf)+len(Lb)] 
+#Define range of pi values
+pi_fe = pi[1880:1880+len(Lf)]                                   #Pi values for economy passengers
+pi_fb = pi[1880+len(Lf):1880+len(Lf)+len(Lf)]                   #Pi values for business passengers
+pi_b = pi[1880+len(Lf)+len(Lf):1880+len(Lf)+len(Lf)+len(Lb)]    #Pi values for passengers in bus
 
-c_pi = [pi]
 
 #for var in m.getVars():
 #    # Or use list comprehensions instead 
 #    if 'f' == str(var.VarName[0]) and var.x > 0:
 #        print var.VarName, var.x 
 
-for v in m.getVars():
-    if v.x > 0:
-        print (v.varName, v.x)    
-print ('Obj:', m.objVal)
+#for v in m.getVars():
+#    if v.x > 0:
+#        print (v.varName, v.x)    
+#print ('Obj:', m.objVal)
+
+#Add objective value to list
 obj_list.append(m.objVal)
 
 
-
+#Sigma lists made to call the right sigma for economy and business pax
 p_sigmae = []
 p_sigmab = []
+
 #definition to add column
-def add_col(a,p,r,p_sigmae,p_sigmab,sigma_e,sigma_b,pi_fe,pi_fb,pi_b):
+def add_col(a,p,r,p_sigmae,p_sigmab,sigma_e,sigma_b,pi_fe,pi_fb,pi_b): #All factors called since to let definition read them
     
     tpr_val = 0.
     pi_i = 0.
@@ -205,7 +207,8 @@ def add_col(a,p,r,p_sigmae,p_sigmab,sigma_e,sigma_b,pi_fe,pi_fb,pi_b):
         for i in range(len(flight_no)-1):
             pi_i = pi_i + delta_i_p(i, p) * pi_fe[i]
             pi_j = pi_j + delta_i_p(i, r) * pi_fe[i]
-
+        
+        #Pricing
         if len(p_sigmae) == 0:
             tpr_val = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j)
         
@@ -221,7 +224,8 @@ def add_col(a,p,r,p_sigmae,p_sigmab,sigma_e,sigma_b,pi_fe,pi_fb,pi_b):
         for i in range(len(flight_no)-1):
             pi_i = pi_i + delta_i_p(i, p) * pi_fb[i]
             pi_j = pi_j + delta_i_p(i, r) * pi_fb[i]
-    
+        
+        #Pricing
         if len(p_sigmab) == 0:
             tpr_val = (fare_b(p)-pi_i)
             #tpr = 1 #>0 -> only spill to fictitious
@@ -238,7 +242,8 @@ def add_col(a,p,r,p_sigmae,p_sigmab,sigma_e,sigma_b,pi_fe,pi_fb,pi_b):
         for i in range(len(flight_no_bus)):
             pi_i = pi_i + delta_i_p(i, p) * pi_b[i]
             pi_j = pi_j + delta_i_p(i, r) * pi_b[i]
-    
+        
+        #Pricing
         if len(p_sigmab) == 0:
             tpr_val = (fare_e(p)-pi_i) - b_p_r(p, r) * (fare_e(r) - pi_j)
         
@@ -253,11 +258,34 @@ def add_col(a,p,r,p_sigmae,p_sigmab,sigma_e,sigma_b,pi_fe,pi_fb,pi_b):
     return tpr_val
     
 
+fres = []
+yres = []
+teres = []
+tbres = []
+A340 = []
+B737 = []
+
+for v in m.getVars():
+    if 'f' == str(v.varName[0]) and v.x > 0:
+        fres.append([v.varName, v.x])
+    if 'f' == str(v.varName[0]) and '1' == str(v.varName[-2]) and v.x > 0:
+        A340.append([v.varName, v.x])
+    if 'f' == str(v.varName[0]) and ('2' == str(v.varName[-2]) or '3' == str(v.varName[-2])) and v.x > 0:
+        B737.append([v.varName, v.x])    
+    if 'y' == str(v.varName[0]) and v.x > 0:
+        yres.append([v.varName, v.x])        
+#    if 't' == str(v.varName[0]) and 'e' == str(v.varName[-2]) and v.x > 0:
+#        teres.append([v.varName, v.x])
+    if 't' == str(v.varName[0]) and 'e' == str(v.varName[-2]):
+        teres.append([v.varName, v.x])
+    if 't' == str(v.varName[0]) and 'b' == str(v.varName[-2]) and v.x > 0:
+        tbres.append([v.varName, v.x])
 
 
-
-
-
+print '#fres', len(fres)
+print '#yres', len(yres)
+print '#teres', len(teres)
+print '#tbres', len(tbres)
     
     
     
